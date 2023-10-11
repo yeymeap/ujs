@@ -16,5 +16,4 @@ int main()
         x = x + y;
     }
     printf("Szamok osszege: %d", x);
-    printf("Hello world!\n");
 }
