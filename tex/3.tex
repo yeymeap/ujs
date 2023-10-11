@@ -1,0 +1,107 @@
+\documentclass[10pt]{article}
+\usepackage{booktabs}
+\usepackage{lipsum}
+\begin{document}
+\section{Tabulátor}
+\begin{tabbing}
+tabulátor felvétele \= \\
+\> ugrás \= \\
+\>\> tovább folytatjuk\\
+
+\hspace{1cm}
+valami\\
+\vspace{1cm}
+valami\\
+\end{tabbing}
+
+\begin{tabbing}
+\hspace{2cm} \= \hspace{8cm}
+\= \\
+\= valami \> valami \\
+\= valami \> valami \\
+\= valami \> valami \\
+\= valami \> valami \\
+\= valami \> valami \\
+
+\end{tabbing}
+\section{Táblázatok}
+\begin{tabular}{|c|c|c|}
+\hline \hline
+1 & 2 & 3 \\ \hline
+4 & 5 & 6 \\ \hline
+7 & 8 & 9 \\
+\hline \hline
+\end{tabular}
+\vspace{1cm}
+
+\begin{tabular}{ccccc}
+1 & pont & = & 0,35 & mm \\
+1 & pica & = & 4,22 & mm \\
+1 & inch & = & 25,4 & mm \\
+\end{tabular}
+\vspace{1cm}
+
+\begin{tabular}{@{1 } c @{ = }c @{ mm }}
+
+pont & 0,35 \\
+pica & 4,22 \\
+inch & 25,4 \\
+\end{tabular}
+\vspace{1cm}
+
+\begin{tabular}{|l|c|c|}
+\cline{2-3}
+\multicolumn{1}{c|}{ } &
+\multicolumn{2}{c|}{Év} \\
+\cline{2-3}
+\multicolumn{1}{c|}{ } &
+2021 & 2022 \\ \hline
+Jövedelem & x & y \\ \hline
+Adó & 0.2x & 0.2y \\ \hline
+\end{tabular}
+\vspace{1cm}
+
+\begin{tabular}{|l|c|c|}
+\cline{2-3}
+\multicolumn{1}{c|}{ } &
+\multicolumn{2}{c|}{Év} \\
+\cline{2-3}
+\multicolumn{1}{c|}{ } &
+2021 & 2022 \\ \hline
+Jövedelem & x & y \\ \hline
+Adó & 0.2x & 0.2y \\ \hline
+\end{tabular}
+\vspace{1cm}
+
+\begin{tabular}{lcc}
+\toprule
+& \multicolumn{2}{c|}{Év}\\ \cline{2-3}
+& 2021 & 2022 \\ \midrule
+Jövedelem & x & y \\
+Adó & 0.2x & 0.2y \\
+\bottomrule
+\end{tabular}
+\vspace{1cm}
+
+\begin{tabular}{lllcll}
+\toprule
+& \multicolumn{2}{c}{2021} & & \multicolumn{2}{c}{2022} \\
+\cmidrule{2-3}\cmidrule{4-6}
+Hónap & jan. 1. & dec. 31. & & jan 1. & dec. 31. \\ \midrule
+Jövedelem & x & y & & z & c \\ \midrule
+Adó & 0.2x & 0.25x & & 0.3x & 0.4x \\
+\bottomrule
+
+\end{tabular}
+\vspace{1cm}
+
+\lipsum[1] \\
+
+\begin{tabular}{p{3cm}cp{3cm}cp{3cm}}
+\lipsum[1] & &
+\lipsum[2] & &
+\lipsum[3] \\
+
+\end{tabular}
+
+\end{document}

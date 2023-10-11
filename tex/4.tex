@@ -1,0 +1,112 @@
+\documentclass[12pt]{article}
+\usepackage{booktabs}
+\title{A Sample \LaTeX Document}
+\author{Math 300}
+\date{October 3, 2022}
+\begin{document}
+\maketitle
+\section{Typing text}
+Since \LaTeX is a markup language, any text we type appears on the page,
+unless it contains one of the nine reserved characters of \LaTeX, listed below.
+\begin{verbatim}
+\ { } & _ ^ % ~ #
+\end{verbatim}
+If we want those characters to appear on the page, we must precede them by
+a backslash, or, in the special case of the backslash itself, we must use the
+command \verb|\verb|. In math mode, we can use the command \verb|\backslash|.
+
+Note that there are three kinds of dash-objects. Hyphens are very short,
+and are typed the way you would expect, using ”-”. Dashes, as in the range
+1–2, are wider, and are typed using --. If you feel a need for a wide—dash,
+you can use \verb|---|.
+\section{Units}
+Lengths in \LaTeX can be given in a number of Units.\\
+\begin{tabular}{ll}
+cm & Centimeters\\
+em & The width of the letter M in the current font\\
+ex & The height of the letter x in the current font\\
+in & Inches\\
+pc & Picas 1pc = 12pt)\\
+pt & Points (1in = 72pt)\\
+mm & Millimeters\\
+\end{tabular}
+
+\pagebreak
+\section{Space}
+The most direct way to make spaces is simply to use the \verb|\hspace| and
+\verb|\vspace| commands, for horizontal and vertical space, respectively. Each
+takes one argument: a distance specification for the size of the space. The
+width or height of the space can be positive or negative. Note that \verb|\vspace|
+can only be used in vertical mode; that is, when you are starting a new para-
+graph or starting a float or doing something else that shifts text vertically.\\
+It will not work in a line.
+
+\LaTeX also has a number of predefined spaces. To produce a space with
+fixed width, and which cannot be used as a line break, you may use the \verb|~|
+character. This would typically be used to separate initials of an author,
+or in other situations where we don’t want to have a single letter or initial
+ending a line. More often, we don’t mind a line break, and want the space
+to shrink or grow according to the justification requirements on the line. In
+that case we make a standard space using \verb|\| ; backslash-space.
+
+There are wider stretchy spaces available to us: \verb|\quad| and \verb|\qquad|. There
+is also a “thin space”: \verb|\,|. The following words are separated by a thin space,
+a standard space, a quad, and a qquad, respectively.
+\begin{center}
+space\,space space \quad space \qquad space
+\end{center}
+
+There are also predefined vertical spaces:\quad \verb|\smallskip| \quad \verb|\medskip|, and
+\verb|\bigskip|, that behave as their names imply.
+
+There are also some exceptionally stretchy spaces that we can use to
+push text around. For example, the following line is set using the command \verb|text\hfill text|. The line below it was set using \verb|text\hfill text\hfill text.|\\
+text\hfill text\\
+text\hfill text\hfill text\\
+You get the idea: \verb|\hfill| makes enough space to fill the line in question com-
+pletely. If more than one \verb|\hfill| appears on a line, then the two negotiate
+over how much space they each get.
+\section{Lines and boxes}
+There are a variety of ways to make lines and boxes in \LaTeX. The most
+basic is to make a horizontal rule using \verb|\hrule|.
+\hrule
+\pagebreak
+\verb|\hrule\| makes a new line, and fills it up with a horizontal line. If you
+don’t want an entire line, you can use \verb|\hrulefill| as in \hrulefill . This command works like \verb|\hfill|, but instead of filling with space, it uses a
+horizontal rule to fill the line.
+
+To make a box around some content, you can use the \verb|\framebox| command. The framebox command puts a box around its argument, so that
+\verb|\framebox{text}| looks like \framebox{text}. It takes optional width and position ar-
+guments, so that \verb|\framebox[3in][l]{text}| appears as\\ \framebox[3in][l]{text}.
+\section{Margins}
+This section is mistitled. \LaTeX does not really do margins, so much as it
+places text. It uses several variables in placing the text, which we can set.
+For example, to make the left margin on all even-numbered pages 0.5 inches
+wider than the default (which is 1 inch), we would define\\
+\verb|\evensidemargin=0.5in|.\\
+A list of the variables we can set and their default values follows.
+\begin{verbatim}
+\evensidemargin
+\oddsidemargin
+\topmargin
+\textwidth
+\textheight
+\parskip
+\baselineskip
+\end{verbatim}
+\section{Tables}
+Sometimes we need to typeset tables. For example, consider Table 1. Any
+resemblance of the numbers in Table 1 to those from any authentic poll is
+purely coincidental.
+\section{Homemade commands}
+It was the best of ideas. It was the worst of ideas. LATEX was conceived as
+a programming language. This is what makes it harder to process using a
+\begin{center}
+Table 1: Results from a poll that probably never happened.
+\begin{tabular}{ccc}
+\toprule 
+\multicolumn{3}{c}{\textit{What is your favorite animal}}\\
+\bottomrule\\
+\end{tabular}
+\end{center}
+\end{document}
