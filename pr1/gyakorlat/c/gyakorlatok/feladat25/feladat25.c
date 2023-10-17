@@ -3,9 +3,8 @@
 int main()
 {
 
-    int k, x, y, sum = 0, calc;
-    x = 0;
-    y = 0;
+    int k, sum = 0, calc;
+
     printf("k = ");
     scanf("%d", &k);
     for (int i = 0; i <= k; i++)
