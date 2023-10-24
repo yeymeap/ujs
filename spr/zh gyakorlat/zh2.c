@@ -19,8 +19,8 @@ int main()
         scanf("%d", &max);
         for (i = 0; i != tries; i++)
         {
-            x = rand() % max;
-            y = rand() % max;
+            x = rand() % max + 1;
+            y = rand() % max + 1;
             type = rand() % 4;
             switch (type)
             {
