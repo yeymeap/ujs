@@ -2,7 +2,7 @@
 
 int main()
 {
-    int myArray[10], input, length;
+    int myArray[10], input, length, error;
     for (int i = 0; i < 10; i++)
     {
         printf("%d. szam: ", i + 1);
@@ -22,10 +22,11 @@ int main()
         if (myArray[i] == input)
         {
             printf("Keresendo szam indexe: %d", i);
+            break;
         }
-        else if (myArray[i] != input && i == 10)
+        else if (myArray[i] != input && i >= 9)
         {
-            printf("Keresendo szam nem talalhato");
+            printf("Nem talalhato");
         }
     }
 }
