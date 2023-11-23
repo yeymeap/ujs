@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{pgf-pie}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usetikzlibrary{shadows}
+\definecolor{szin}{HTML}{B48CFA}
+\begin{document}
+
+\begin{tikzpicture}
+\pie[pos={8,0}]{10/Cash, 35/Stocks, 40/Bonds, 15/Real Estate}
+\pie[rotate={180}]{10/Cash, 35/Stocks, 40/Bonds, 15/Real Estate}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\pie[]{10/, 10/, 10/, 10/, 10/, 10/, 10/, 10/, 10/, 10/}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\pie[color={red, green, blue, szin}, rotate={180}]{10/Cash, 35/Stocks, 40/Bonds, 15/Real Estate}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\pie[explode=0.1,color={red, green, blue, szin}, rotate={180}]{10/Cash, 35/Stocks, 40/Bonds, 15/Real Estate}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\pie[hide number, radius=2, explode=0.1,color={red, green, blue, szin}, rotate={180}]{10/Cash, 35/Stocks, 40/Bonds, 15/Real Estate}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\pie[radius=2, explode=0.1, before number =\$, after number=,color={red, green, blue, szin}, rotate={180}]{10/Cash, 35/Stocks, 40/Bonds, 15/Real Estate}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\pie[text=pin, radius=2, explode=0.1,color={red, green, blue, szin}, rotate={180}]{10/Cash, 35/Stocks, 40/Bonds, 15/Real Estate}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\pie[text=inside, after number=, radius=4, explode=0.1,color={red, green, blue, szin}, rotate={180}]{10/Cash, 35/Stocks, 40/Bonds, 15/Real Estate}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\pie[text=legend, radius=3, explode=0.1,color={red, green, blue, szin}]{10/Cash, 35/Stocks, 40/Bonds, 15/Real Estate}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\pie[style=drop shadow, explode=0.1, color={red, green, blue, szin}]{10/Cash, 35/Stocks, 40/Bonds, 15/Real Estate}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\pie[polar, color={red, green, blue, szin}]{10/Cash, 35/Stocks, 40/Bonds, 15/Real Estate}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\pie[square, color={red, green, blue, szin}]{10/Cash, 35/Stocks, 40/Bonds, 15/Real Estate}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\pie[cloud, color={red, green, blue, szin}]{10/Cash, 35/Stocks, 40/Bonds, 15/Real Estate}
+\end{tikzpicture}
+\end{document}
