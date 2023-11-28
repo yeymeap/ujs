@@ -24,13 +24,13 @@ int main()
 
     for (int i = 0; i < n; i++)
     {
-        point1[i] = ((float)rand() / RAND_MAX) * 9.99;
+        point1[i] = ((double)rand() / RAND_MAX) * 9.99;
         printf("%.2lf ", point1[i]);
     }
     printf("\n");
     for (int i = 0; i < n; i++)
     {
-        point2[i] = ((float)rand() / RAND_MAX) * 9.99;
+        point2[i] = ((double)rand() / RAND_MAX) * 9.99;
         printf("%.2lf ", point2[i]);
     }
     printf("\nSzamok osszege:\n");

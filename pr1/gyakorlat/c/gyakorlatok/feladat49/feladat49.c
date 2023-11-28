@@ -2,7 +2,7 @@
 
 int main()
 {
-    int myArray[10], input, length, error;
+    int myArray[10], input, length;
     for (int i = 0; i < 10; i++)
     {
         printf("%d. szam: ", i + 1);

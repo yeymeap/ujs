@@ -29,7 +29,7 @@ int main()
     }
     for (int i = 0; i < n; i++)
     {
-        sum = sum + point1[i];
+        sum += point1[i];
     }
     free(point1);
     point1 = NULL;

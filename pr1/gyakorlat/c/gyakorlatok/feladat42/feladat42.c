@@ -10,7 +10,7 @@ int main()
     {
         myArray[i] = rand() % 30 + 1;
         printf("%d, ", myArray[i]);
-        sum = sum + myArray[i];
+        sum += myArray[i];
     }
     printf("\n");
     printf("Tomb elemeinek osszege: %d\n", sum);

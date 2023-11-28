@@ -7,12 +7,11 @@ A felhasználó beír egy számot, a program kiírja az adott szám hányszor fo
 
 int main()
 {
-    int myArray[50], x, input, count = 0;
+    int myArray[50], input, count = 0;
     srand(time(NULL));
     for (int i = 0; i < 50; i++)
     {
-        x = rand() % 10;
-        myArray[i] = x;
+        myArray[i] = rand() % 10;
         printf("%d ", myArray[i]);
     }
     printf("\nKeresett szam: ");
