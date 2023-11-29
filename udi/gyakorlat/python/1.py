@@ -136,3 +136,5 @@ sentence.append(random.choice(places))
 sentence.append(random.choice(weapons))
 print(sentence[0], "killed", sentence[1], "with a", sentence[3], "at a", sentence[2]+"!")
 
+import matplotlib.pyplot as plt
+import numpy as np

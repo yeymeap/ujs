@@ -3,5 +3,7 @@
 		"asd": "c"
 	},
 	"python.analysis.autoImportCompletions": true,
-	"python.analysis.typeCheckingMode": "basic"
+	"python.analysis.typeCheckingMode": "basic",
+	"python.autoComplete.extraPaths": [],
+	"python.analysis.extraPaths": []
 }
