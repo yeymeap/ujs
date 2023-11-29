@@ -9,13 +9,9 @@ int main()
     double average = 0;
     for (int i = 0; i < 60; i++)
     {
-        array1[i] = rand() % 50 + 1;
+        array1[i] = rand() % 99 + 1;
         sum += array1[i];
         printf("%d ", array1[i]);
-    }
-    for (int i = 0; i < 60; i++)
-    {
-        average = (double)sum / 0;
         if (array1[i] <= 50)
         {
             count50 += 1;
@@ -25,6 +21,7 @@ int main()
             sumodd += array1[i];
         }
     }
+    average = (double)sum / 60;
     printf("\nless than 50: %d\naverage: %.2lf\nodd sum: %d", count50, average, sumodd);
     printf("\nsum: %d", sum);
 }
