@@ -1,24 +1,183 @@
-\documentclass[a4paper,12pt]{article}
+\documentclass[a4paper,11pt]{article}
 \usepackage[left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
-\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{graphicx}
 \begin{document}
-\begin{center}
-\begin{huge}
-10. Síkgeometria
-\end{huge}
-\end{center}
-\section*{I. Elméleti összefoglaló}
-\subsection*{Szögek, nevezetes szögpárok}
+\setcounter{page}{4}
 \begin{itemize}
-\item Egy adott pontból kiinduló két félegyenes a síkot két részre bontja. Egy-egy ilyen rész neve szög-
-tartomány, vagy szög. A két félegyenest a szög szárainak, közös kezdőpontjukat a szög csúcsá-
-nak nevezzük.
+\item A Thalész-tétel és megfordítása: Egy háromszög akkor és csak akkor derékszögű, ha köré írható körének középpontja az egyik oldalának felezőpontja.
 \end{itemize}
+\subsection*{\textbf{Magasságtétel, befogótétel}}
 \begin{itemize}
-\item Szögfajták
+\item Magasságtétel: Egy derékszögű háromszög magasságának hossza mértani közepe azon két szakasz hosszának, amelyekre a magasság az átfogót osztja.
+\item Befogótétel: Egy derékszögű háromszög befogójának hossza mértani közepe az átfogó és a befogó átfogóra eső merőleges vetülete hosszának.
+\end{itemize}
+\subsection*{A háromszög néhány további területképlete}
+\begin{list}{}{\leftmargin=1.5em}
+\item Jelölje $a$, $b$, $c$ a háromszög oldalainak hosszát, $\alpha$, $\beta$, $\gamma$ a megfelelő belső szögeket, $m_a, m_b, m_c$, a magasságok hosszait, \textit{s} a kerület felét és \textit{R} a köré írható kör sugarát!
+\end{list}
+\begin{itemize}
+\item $ t = \frac{a \cdot m_a}{2} = \frac{b \cdot m_b}{2} = \frac{c \cdot m_c}{2}$.
+\item $ t = \frac{a \cdot b \cdot \sin\!\gamma} {2} = \frac{b \cdot c \cdot \sin\!\alpha} {2} = \frac{a \cdot c \cdot \sin\!\beta} {2}$.
+\item $t = \frac{a^2 \cdot \sin\!\beta \cdot \sin\!\gamma}{2 \cdot \sin\!\alpha}$.
+\item $t = 2 \cdot R^2 \cdot \sin\!\alpha \cdot \sin\!\beta \cdot \sin\!\gamma$.
+\item $t = \frac{R^2}{2} \cdot (\sin\!2\alpha + \sin\!2\beta + \sin\!2\gamma)$.
+\item $t = \sqrt{s(s-a)(s-b)(s-c)}$, Heron-képlet.
+\end{itemize}
+\subsection*{Négyszögek}
+\begin{itemize}
+\item A négyszög belső szögeinek összege $360^\circ$ .
+\item \textbf{Trapéz} 
 \begin{itemize}[label=$\circ$]
-\item Nullszögnek nevezzük azt a szöget, amelynek szárai egybeesnek, és szögtartományát a két
-egybeeső szára alkotja.
+\item Ha egy négyszögnek van két párhuzamos oldala, akkor \textbf{trapéznak} nevezzük.
+\item A trapéz párhuzamos oldalait \textbf{alapoknak}, a másik két oldalát \textbf{száraknak} nevezzük.
+\item A \textbf{trapéz magassága} az alapokat merőlegesen összekötő szakasz. (az alapok távolsága)
+\item A \textbf{trapéz középvonala} a szárak felezőpontjait összekötő szakasz.
+\item A trapéz szárainak felezőpontjait összekötő középvonala párhuzamos az alapokkal, hossza pedig az alapok hosszainak számtani közepe.
+\item A trapézban az egy száron fekvő szögek összege 180 fok. (társszögek)
+\item A \textbf{trapéz derékszögű}, ha van derékszöge.
+\item A \textbf{trapéz egyenlő szárú}, ha szárai egyenlő hosszúak.
+\item Ha egy trapéz tengelyesen szimmetrikus, akkor \textbf{szimmetrikus trapéznak} nevezzük
+\item A szimmetrikus trapéz alapon fekvő szögei egyenlők.
+\item Minden szimmetrikus trapéz egyenlő szárú, de nem minden egyenlő szárú trapéz szimmetrikus.
+\item A szimmetrikus trapézok köré kör írható (húrtrapéz).
+\item A szimmetrikus trapéz szimmetria-tengelye felezi az alapokat és merőleges azokra.
+\item A trapéz területét megkapjuk, ha az alapok hosszainak számtani közepét megszorozzuk a trapéz magasságának hosszával.
+\end{itemize}
+\item \textbf{Paralelogramma}
+\begin{itemize}[label=$\circ$]
+\item Ha egy négyszög szemközti oldalai párhuzamosak, akkor \textbf{paralelogrammának} nevezzük.
+\item Egy négyszög akkor és csak akkor paralelogramma, ha
+\begin{itemize}[label=$\cdot$]
+\item szemközti szögei egyenlők;
+\item az egy oldalon fekvő szögeinek összege $180^\circ$;
+\item szemközti oldalai egyenlők;
+\item ha van két szemközti oldala, amelyek egyenlők és párhuzamosak;
+\item középpontosan szimmetrikus;
+\item átlói felezik egymást.
+\end{itemize}
+\item A paralelogramma két szemközti oldalának felezési pontjait összekötő szakaszt a \textbf{paralelogramma} középvonalának nevezzük.
+\item A paralelogramma két szemközti oldalának felezési pontjait összekötő középvonala párhuzamos a másik két oldallal és velük egyenlő hosszú.
+\item A paralelogramma adott oldalához tartozó \textbf{magassága} a szemközti oldal egy pontjából az
+adott oldal egyenesére bocsátott merőleges szakasz.
+\item A paralelogramma területét megkapjuk, ha egyik oldalának hosszát megszorozzuk a hozzá tartozó magasság hosszával.
+\end{itemize}
+\item \textbf{Deltoid}
+\begin{itemize}[label=$\circ$]
+\item Ha egy négyszög valamelyik átlójára tengelyesen szimmetrikus, akkor \textbf{deltoidnak} nevezzük.
+\item A deltoid átlói merőlegesek egymásra.
+\item A deltoid szimmetriaátlója felezi a másik átlót.
+\item A deltoidnak két-két szomszédos oldala egyenlő hosszú.
+\item A deltoid szimmetriaátlóval szemközti szögei egyenlők.
+\item Van konkáv deltoid is.
+\item A deltoid területe egyenlő az átlók hosszai szorzatának felével.
+\end{itemize}
+\item \textbf{Rombusz}
+\begin{itemize}[label=$\circ$]
+\item Ha egy négyszög oldalai egyenlő hosszúak, akkor \textbf{rombusznak} nevezzük.
+\item Minden rombusz paralelogramma is (tehát rendelkezik a paralelogramma összes tulajdonságával).
+\item Minden rombusz deltoid is (tehát rendelkezik a deltoid összes tulajdonságával).
+\end{itemize}
+\item \textbf{Téglalap}
+\begin{itemize}[label=$\circ$]
+\item Ha egy négyszög szögei egyenlők, akkor \textbf{téglalapnak} nevezzük.
+\item A téglalap szögei 90 fokosak
+\item A téglalap
+\begin{itemize}[label=$\cdot$]
+\item szemközti oldalai egyenlők és párhuzamosak egymással;
+\item átlói felezik egymást;
+\item középpontosan szimmetrikus az átlók felezéspontjára nézve;
+\item tengelyesen szimmetrikus a szemközti oldalfelező pontokon átmenő egyenesekre.
+\end{itemize}
+\item A téglalap területe egyenlő az egy csúcsában összefutó oldalak hosszainak szorzatával.
+\item Minden téglalap húrtrapéz, derékszögű trapéz, paralelogramma is.
+\end{itemize}
+\item \textbf{Négyzet}
+\begin{itemize}[label=$\circ$]
+\item Ha egy négyszög minden oldala egyenlő hosszú és minden szöge egyenlő, akkor \textbf{négyzetnek} nevezzük.
+\item A négyzet területe egyenlő oldalhosszának négyzetével.
+\end{itemize}
+\item Egy négyszög két középvonala felezve metszi egymást.
+\item \textbf{Érintőnégyszögek}
+\begin{itemize}[label=$\circ$]
+\item Azokat a négyszögeket, amelyeknek van beírt körük, \textbf{érintőnégyszögeknek} nevezzük.
+\item Egy konvex négyszög akkor és csak akkor érintőnégyszög, ha a szemközti oldalak hosszainak összege egyenlő.
+\item Az érintőnégyszög területét úgy is megkaphatjuk, ha beírt körének sugarát megszorozzuk a kerület felével.
+\end{itemize}
+\item \textbf{Húrnégyszögek}
+\begin{itemize}[label=$\circ$]
+\item Azokat a négyszögeket, amelyeknek van körülírt körük, \textbf{húrnégyszögeknek} nevezzük.
+\item Egy négyszög akkor és csak akkor húrnégyszög, ha szemközti szögeinek összege $180^\circ$.
+\item Ptolemaiosz-tétel: A húrnégyszög átlóinak szorzata egyenlő a szemközti oldalpárok szorzatának összegével.
 \end{itemize}
 \end{itemize}
+\subsection*{Sokszögek}
+\begin{itemize}
+\item Egy \textbf{sokszög konvex}, ha minden szöge konvex, egy \textbf{sokszög konkáv}, ha van konkáv szöge.
+\item Az n-oldalú konvex sokszög átlóinak száma: $\frac{n(n-3)}{2}$.
+\item Az n-oldalú sokszög belső szögeinek összege: $(n-2) \cdot 180^\circ$
+\item Egy sokszög szabályos, ha minden oldala egyenlő hosszú, és minden szöge egyenlő nagyságú.
+\end{itemize}
+\subsection*{Kör és részei, körív hossza, körcikk területe}
+\begin{itemize}
+\item A \textbf{kör} azon pontok halmaza a síkon, amelyek a sík egy adott O pontjától adott $r$ távolságra vannak.
+\item A kör két különböző pontját összekötő szakaszt \textbf{húrnak}, a húrt tartalmazó egyenest \textbf{szelőnek} nevezzük.
+\item A kör középpontján átmenő húrt \textbf{átmérőnek} nevezzük.
+\item A kört két különböző pontja két \textbf{körívre} osztja fel.
+\item A körlap azon részét, amelyet a kör egy íve és az ív végpontjaiba húzott sugarak határolnak, \textbf{körcikknek} nevezzük.
+\item A körlap azon részét, amelyet a kör egy íve és az ív végpontjait összekötő húrja határolnak, \textbf{körszeletnek} nevezzük.
+\item A sík két koncentrikus köre által közrefogott részét \textbf{körgyűrűnek} nevezzük.
+\item A \textbf{kör érintője} a kör síkjának olyan egyenese, amelynek egyetlen közös pontja van a körrel.
+\item A kör érintője merőleges az érintési pontba húzott sugárra.
+\item Egy külső pontból a körhöz húzott két érintőszakasz egyenlő hosszú.
+\item (Körhöz húzott érintő- és szelőszakaszok tétele) Adott körhöz adott külső pontból húzott érintőszakaszok hossza mértani közepe azon két szakasz hosszának, amelyek az adott ponton átmenő szelőn a ponttól a körrel alkotott metszéspontokig terjednek.
+\item (Körhöz külső pontból húzott szelőszakaszok tétele) Adott körhöz adott külső ponton át húzott szelőn az adott ponttól a körrel alkotott metszéspontokig terjedő szelőszakaszok hosszának szorzata állandó, csak a körtől és az adott ponttól függ.
+\item Adott körhöz adott belső pontján át húzott szelőn az adott ponttól a körrel alkotott metszéspontokig terjedő szelőszakaszok hosszának szorzata állandó, csak a körtől és az adott ponttól függ.
+\item Ha egy szög csúcsa egy adott kör középpontja, akkor középponti szögnek nevezzük.
+\item Egy körben a középponti szögek nagysága és a hozzájuk tartozó körívek hosszai egyenesen arányosak. $\frac{\alpha}{\beta} = \frac{i_\alpha}{i_\beta}$.
+\item Ívmérték: \textbf{1 radián} az szög, amelyhez mint középponti szöghöz a kör sugarával egyenlő hosszú körív tartozik. $\pi$ radián $= 180^\circ$.
+\item Adott $r$ sugarú körben az $\alpha$ középponti szöghöz tartozó körív hossza:
+\begin{center}
+$i_{\alpha^\circ} = \frac{r\pi}{180^\circ}\alpha$, illetve $i_{\hat{\alpha}} = r\hat{\alpha}$.
+\end{center}
+\item Egy körben a középponti szögek nagysága és a hozzájuk tartozó körcikkek területei egyenesen arányosak. $ \frac{\alpha}{\beta} = \frac{t_\alpha}{t_\beta}$.
+\item Adott $r$ sugarú körben az $\alpha$ középponti szöghöz tartozó körcikk területe:
+\begin{center}
+$t_{a^\circ} = \frac{r^2\pi}{360^\circ}\alpha$, illetve $t_{\hat{a}}=$  $\frac{^i\hat{a}^r}{2}$.
+\end{center}
+\end{itemize}
+\subsection*{Kerületi szögek, látókör}
+\begin{itemize}
+\item Ha egy szög csúcsa egy adott körvonal pontja, szárai pedig vagy a kör két húrjára, vagy egy húrra és egy érintőre illeszkednek, akkor a kör \textbf{kerületi szögének} nevezzük. Ha a kerületi szög egyik szára egy érintőre illeszkedik, akkor \textbf{érintőszárú kerületi szögnek} nevezzük.
+\item (Kerületi és középponti szögek tétele) Egy körben egy adott ívhez tartozó középponti szög kétszerese az ugyanazon ívhez tartozó kerületi szögnek.
+\item (Kerületi szögek tétele) Egy körben egy adott ívhez tartozó kerületi szögek egyenlők.
+\item (Látószög-körív; látókör) A síkon azoknak a pontoknak a halmaza, amelyekből egy adott $AB$ szakasz adott $(0^\circ < \alpha < 180^\circ)$ szögben látszik, két szimmetrikus körív.
+\begin{itemize}[label=$\circ$]
+\item Az $AB$ szakasz  a két körív közös húrja, és az $A$ és $B$ pontok nem tartoznak a látószögkörívhez.
+\item (Thalész-tétel) Adott kör egy tetszőleges $AB$ átmérője a kör bármely $A$-tól és $B$-től különböző pontjából derékszögben látszik.
+\item (A Thalész-tétel megfordítása) Ha egy háromszög $AB$ oldala a szemközti $C$ csúcsból derékszögben látszik, akkor a $C$ csúcs az $AB$ átmérőjű kör $A$-tól és $B$-től különböző pontja.
+\end{itemize}
+\end{itemize}
+\section*{II. Kidolgozott feladatok}
+\begin{enumerate}
+\item[1.\quad] Az ábrán látható szakaszok közül $O A = AB = BC = CD = DE$. Mekkora $\alpha$ szög esetén lesz $O D = O E$
+\begin{center}
+\includegraphics[scale=1]{1.png}
+\end{center}
+\item[2.\quad] Bizonyítsa be, hogy ha $P$ az $ABC$ háromszög egy belső pontja, akkor $PB + PC < AB + AC$!
+\item[3.\quad] Az $ABC$ háromszögben $AC \neq BC$, és a háromszög körülírható körének sugara 10 cm.
+\begin{enumerate}[left=2.5em]
+\item[a)] Hány olyan pont van a háromszög síkjában, amely a háromszög $AC$ és $BC$ oldalegyeneseitől, valamint az $A$ és $B$ csúcsoktól egyenlő távol van? 
+\item[b)] Mekkora távolságra vannak ezek a pontok egymástól?
+\end{enumerate}
+\item[4.\quad] Igazolja, hogy a háromszög köré írt körének középpontja a háromszög bármelyik oldalától fele olyan távol van, mint az ugyanazon oldallal szemközti csúcs a magasságponttól!
+\item[5.\quad] Egy derékszögű trapézba az oldalakat érintő kör írható. A kör középpontjának az alapokra nem merőleges szár végpontjaitól mért távolsága 6 és 8 egység. Számítsa ki a trapéz oldalait!
+\item[6.\quad] Egy paralelogramma egyik szöge $30^\circ$,és egyik oldala 5 cm-rel hosszabb a másiknál. Mekkora a paralelogramma belső szögfelezői által meghatározott négyszög területe?
+\item[7.\quad] Az $ABC$ háromszög $C$ csúcsából állítson merőlegeseket az $A$ és $B$ súcsból induló belső és külső szögfelezőkre! Mutassa meg, hogy a négy merőleges talppontja egy egyenesre illeszkedik!
+\item[8. \quad] Tükrözze egy tetszőleges háromszög magasságpontját az egyik oldal felezőpontjára! Bizonyítsa be, hogy a tükörkép illeszkedik a háromszög köré írt körére!
+\item[9. \quad] Legyen $AB$ egy adott kör rögzített húrja, és mozogjon a $C$ pont a körön. A $C$ pont milyen helyzetében lesz az $ABC \Delta$ területe, illetve kerülete maximális?
+\item[10. \quad] Egy 13 és egy 6 cm sugarú korong középpontjainak távolsága 35 cm. Milyen hosszú feszes szíjra van szükség keresztezett szíjhajtás esetén?
+\item[11. \quad] Egy 12 egységnyi hosszú $AB$ szakasz $A$-hoz közelebbi harmadoló pontja a $C$ pont. Az $AB$, $AC$ és $CB$ szakaszok, mint átmérők fölé félköröket rajzolunk az $AB$ egyenes ugyanazon oldalán. Mekkora annak a körnek a sugara, amely érinti mindhárom félkört?
+\item[12. \quad] Igazolja, hogy ha egy húrnégyszög átlói merőlegesek egymásra, akkor az átlók szeleteire mint átmérőkre rajzolt körök területeinek összege egyenlő a négyszög köré írt kör területével.
+\end{enumerate}
 \end{document}
