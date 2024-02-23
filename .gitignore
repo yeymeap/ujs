@@ -1,7 +1,10 @@
-
 *.toc
 *.nav
 *.log
 *.aux
 *.gz
 *.ipynb
+*.exe
+*.ilk
+*.obj
+*.pdb
