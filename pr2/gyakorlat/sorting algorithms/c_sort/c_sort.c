@@ -24,10 +24,9 @@ void SimpleSort(int size, int a1[])
 {
     for (int i = 0; i < size; i++)
     {
-        for (int j = i + 1; j < N; j++)
+        for (int j = i + 1; j < size; j++)
         {
             compare++;
-            ;
             if (a1[i] > a1[j])
             {
                 int temp = a1[i];
@@ -46,7 +45,6 @@ void BubbleSort(int size, int a1[])
         for (int j = 0; j < i - 1; j++)
         {
             compare++;
-            ;
             if (a1[j] > a1[j + 1])
             {
                 int temp = a1[j];
@@ -90,7 +88,7 @@ void ChooseSort(int type, int a1[])
         break;
     default:
         printf("\nError during sort type choice!");
-        exit(0);
+        return;
     }
 }
 
@@ -101,7 +99,13 @@ int main()
     RandomArray(N, array1);
     PrintArray(N, array1);
     printf("\n\nWhat sort do you want?\n\n1. Simple Sort\n2. Bubble Sort\n3. Insertion Sort\n\n");
-    scanf("%d", &sortType);
+    while (scanf("%d", &sortType) != 1 || sortType < 1 || sortType > 3)
+    {
+        printf("Invalid input. Please enter a number between 1 and 3: ");
+
+        while (getchar() != '\n')
+            ;
+    }
     ChooseSort(sortType, array1);
     printf("\n");
     PrintArray(N, array1);
