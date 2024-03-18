@@ -77,7 +77,7 @@ void InsertionSort(int size, int a1[])
 void MaxSort(int size, int a1[])
 {
     int max, temp;
-    for (int i = size; i >= 0; i--)
+    for (int i = size - 1; i > 0; i--)
     {
         max = 0;
         for (int j = 0; j <= i; j++)
@@ -147,7 +147,6 @@ int main()
     while (scanf("%d", &sortType) != 1 || sortType < 1 || sortType > 5)
     {
         printf("Invalid input. Please enter a number between 1 and 5: ");
-
         while (getchar() != '\n')
             ;
     }
