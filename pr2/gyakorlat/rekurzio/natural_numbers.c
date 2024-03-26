@@ -4,10 +4,12 @@ int NaturalNumSum(int nat)
 {
     if (nat != 0)
     {
+        printf("%d + ", nat);
         return nat + NaturalNumSum(nat - 1);
     }
     else
     {
+        printf("%d = ", nat);
         return nat;
     }
 }

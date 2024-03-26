@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Példák</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+    <style> 
+        div {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid black;
+        }
+		.stilus1 {
+			 margin: 10px;
+            padding: 10px;
+            border: 0px;
+		}
+    </style>
+</head>
+<body>
+
+<div>
+    <h2>1. Kattintással színváltás</h2>
+    <button onclick="szinvaltas()">Kattints!</button>
+    <div id="szinvaltas-div" style="width: 100px; height: 100px; background-color: blue;"></div>
+</div>
+
+<div>
+    <h2>2. Egyéni animáció létrehozása</h2>
+    <button onclick="animacio()">Animáció</button>
+    <div class="stilus1" id="animacio-div" ><img src="https://fei.ujs.sk/images/Selye.logo.png" alt="ujs" width="100" height="140"></div>
+</div>
+
+<div>
+    <h2>3. Érték ellenőrzése egy űrlapon</h2>
+    <input type="text" id="szovegmezo">
+    <button onclick="ellenorzes()">Ellenőrzés</button>
+    <strong id="kiiras"></strong>
+</div>
+
+<div>
+    <h2>Nagyitas kicsinyites</h2>
+    <button id="gomb1" onclick="resizing()">Kattints!</button>
+    <div id="square" style="width: 100px; height: 100px; background-color: blue;"></div>
+</div>
+
+<script>
+    // 1. Kattintással színváltás
+    function szinvaltas() {
+        var szin = $('#szinvaltas-div').css("background-color");
+        var ujszin;
+        if(szin === "rgb(0, 0, 255)"){
+            ujszin = "red";
+        }
+        else{
+            ujszin = "blue";
+        }
+        $("#szinvaltas-div").css("background-color", ujszin);
+    }
+
+    // 2. Egyéni animáció létrehozása
+    function animacio() {
+        $("#animacio-div").animate({
+            width: "toggle",
+            height: "toggle"
+        }, 1000);
+    }
+
+    // 3. Érték ellenőrzése egy űrlapon
+    function ellenorzes() {
+        var inputValue = $("#szovegmezo").val();
+        $("#kiiras").text("Beírt érték: " + inputValue);
+    }
+
+    function resizing(){
+        var meret = 100;
+        if(meret == 100){
+            meret = 50;
+        }
+        else{
+            meret = 100;
+        }
+        $("#square").animate({
+            width: meret,
+            height: meret
+        }, 1000)
+    }
+
+
+</script>
+<p><strong>1. Feladat:</strong> Készíts jegyzetet a példákhoz.</p>
+<p><strong>2. Feladat:</strong> Módosítsd az 1. példát úgy, hogy minden kattintásra váltson színt.</p>
+<p><strong>3. Feladat:</strong> Módosítsd a 3. példát úgy, hogy a szövegmezőbe beírt értéket kiírja a gomb mellé.</p>
+<p><strong>4. Feladat:</strong> Minden gombkattintásra növeld vagy csökkentsd az 1. példában lévő négyzet méretét.</p>
+<p><strong>5. Feladat:</strong> Készíts egy animációt, a gombra kattintásra megjelenik egy alakzat.</p>
+<p><strong>6. Feladat:</strong> Készíts egy animációt, amely fokozatosan forgatja a képet.</p>
+<p><strong>7. Feladat:</strong> Amikor a felhasználó a kurzort ráhúzza az objektumra, indíts el egy animációt, amely növeli a méretét, és amikor elhúzza a kurzort, akkor csökkenti.</p>
+<a href="https://www.geeksforgeeks.org/jquery-hover-method/" target="_blank">hover() metódus</a> <br>
+<p><strong>8. Feladat:</strong> Keress további (Jquery) animációkat, ezeket mutasd be, írj hozzá jegyzetet.</p>
+
+</body>
+</html>
