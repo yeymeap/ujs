@@ -31,60 +31,60 @@ void checkMalloc(void *pointer)
     }
 }
 
-char *generatePassword(int length, int useLowercase, int useUppercase, int useNumbers, int useSymbols)
+char *passwordGenerate(int length, int lowercase, int uppercase, int number, int symbol, int sum)
 {
     //  karakterek
-    char lowercase[] = "abcdefghijklmnopqrstuvwxyz";
-    char uppercase[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    char digits[] = "0123456789";
-    char symbols[] = "!@#$%^&*()_+-=[]{}|;:,.<>/?";
+    char lowerset[] = "abcdefghijklmnopqrstuvwxyz";
+    char upperset[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    char numberset[] = "0123456789";
+    char symbolset[] = "!@#$%^&*()_+-=[]{}|;:,.<>/?";
 
     // hasznalt karakterkeszlet kiszamitasa
     int charsetSize = 0;
-    if (useLowercase == 1)
+    if (lowercase == 1)
         charsetSize += 26;
-    if (useUppercase == 1)
+    if (uppercase == 1)
         charsetSize += 26;
-    if (useNumbers == 1)
+    if (number == 1)
         charsetSize += 10;
-    if (useSymbols == 1)
+    if (symbol == 1)
         charsetSize += 27;
 
     // memoriafoglalas
     // ezt azert csinalom dinamikusan lefoglalt memoriaval, mert talan hatekonyabb es mert nekem atlathatobb mintsem rand()-al szorakozni minden karaktipusnal
     char *charset = (char *)malloc((charsetSize + 1) * sizeof(char)); // + 1 a nullterminator karakter miatt kell
     checkMalloc(charset);
-    char *passwordString = (char *)malloc((length + 1) * sizeof(char));
-    checkMalloc(passwordString);
+    char *passwordS = (char *)malloc((length + 1) * sizeof(char));
+    checkMalloc(passwordS);
 
     // felhasznalhato karakterek beirasa charset-be
     int index = 0;
-    if (useLowercase == 1)
+    if (lowercase == 1)
     {
         for (int i = 0; i < 26; i++)
         {
-            charset[index++] = lowercase[i];
+            charset[index++] = lowerset[i];
         }
     }
-    if (useUppercase == 1)
+    if (uppercase == 1)
     {
         for (int i = 0; i < 26; i++)
         {
-            charset[index++] = uppercase[i];
+            charset[index++] = upperset[i];
         }
     }
-    if (useNumbers == 1)
+    if (number == 1)
     {
         for (int i = 0; i < 10; i++)
         {
-            charset[index++] = digits[i];
+            charset[index++] = numberset[i];
         }
     }
-    if (useSymbols == 1)
+    if (symbol == 1)
     {
         for (int i = 0; i < 27; i++)
         {
-            charset[index++] = symbols[i];
+            charset[index++] = symbolset[i];
         }
     }
 
@@ -93,9 +93,9 @@ char *generatePassword(int length, int useLowercase, int useUppercase, int useNu
     for (int i = 0; i < length; i++)
     {
         int randomIndex = rand() % charsetSize;
-        passwordString[i] = charset[randomIndex];
+        passwordS[i] = charset[randomIndex];
     }
-    passwordString[length] = '\0'; // nullterminator
+    passwordS[length] = '\0'; // nullterminator
 
     // keveres elotti jelszo
     // printf("%s", password);
@@ -103,9 +103,9 @@ char *generatePassword(int length, int useLowercase, int useUppercase, int useNu
     for (int i = length - 1; i > 0; i--) // vegso megkevergetes
     {
         int j = rand() % (i + 1);
-        char temp = passwordString[i];
-        passwordString[i] = passwordString[j];
-        passwordString[j] = temp;
+        char temp = passwordS[i];
+        passwordS[i] = passwordS[j];
+        passwordS[j] = temp;
     }
 
     // memoriafelszabaditas
@@ -114,11 +114,10 @@ char *generatePassword(int length, int useLowercase, int useUppercase, int useNu
 
     printf("A jelszo erossege: ");
 
-    int useSum = useLowercase + useUppercase + useNumbers + useSymbols;
-    // jelszo komplexitas
+    //  jelszo komplexitas
     if (length >= 16)
     {
-        if (useSum > 2)
+        if (sum > 2)
         {
             printf("eros");
         }
@@ -127,7 +126,7 @@ char *generatePassword(int length, int useLowercase, int useUppercase, int useNu
             printf("kozepes");
         }
     }
-    else if (length < 16 && useSum > 3)
+    else if (length < 16 && length > 8 && sum > 3)
     {
         printf("kozepes");
     }
@@ -135,17 +134,19 @@ char *generatePassword(int length, int useLowercase, int useUppercase, int useNu
     {
         printf("gyenge");
     }
-    return passwordString;
+
+    return passwordS;
 }
 
 int main()
 {
     srand(time(NULL));
-    int length, useLowercase, useUppercase, useNumbers, useSymbols;
+    int length, useLower, useUpper, useNum, useSymbol, useSum;
 
     // felhasznalo bemenet
     printf("Jelszo hossza (max 100 karakter): ");
-    if (scanf("%d", &length) != 1 || length <= 0 || length > 100)
+    scanf("%d", &length);
+    if (length < 1 || length > 100)
     {
         printf("Hibas bemenet.\n");
         return 1;
@@ -153,42 +154,47 @@ int main()
 
     printf("Valasz legalabb egy karakterfajtat!\n");
 
-    printf("Kisbetuk? (1 - igen, 0 - nem): ");
-    if (scanf("%d", &useLowercase) != 1 || (useLowercase != 0 && useLowercase != 1)) // hibas bemenet hibaellenorzes
+    printf("Kisbetuk (1 - igen, 0 - nem): ");
+    scanf("%d", &useLower);
+    if (useLower != 0 && useLower != 1) // hibas bemenet hibaellenorzes
     {
         printf("Hibas bemenet.\n");
         return 1;
     }
 
-    printf("Nagybetuk? (1 - igen, 0 - nem): ");
-    if (scanf("%d", &useUppercase) != 1 || (useUppercase != 0 && useUppercase != 1))
+    printf("Nagybetuk (1 - igen, 0 - nem): ");
+    scanf("%d", &useUpper);
+    if (useUpper != 0 && useUpper != 1)
     {
         printf("Hibas bemenet.\n");
         return 1;
     }
 
-    printf("Szamok? (1 - igen, 0 - nem): ");
-    if (scanf("%d", &useNumbers) != 1 || (useNumbers != 0 && useNumbers != 1))
+    printf("Szamok (1 - igen, 0 - nem): ");
+    scanf("%d", &useNum);
+    if (useNum != 0 && useNum != 1)
     {
         printf("Hibas bemenet.\n");
         return 1;
     }
 
-    printf("Szimbolumok? (1 - igen, 0 - nem): ");
-    if (scanf("%d", &useSymbols) != 1 || (useSymbols != 0 && useSymbols != 1))
+    printf("Szimbolumok (1 - igen, 0 - nem): ");
+    scanf("%d", &useSymbol);
+    if (useSymbol != 0 && useSymbol != 1)
     {
         printf("Hibas bemenet.\n");
         return 1;
     }
 
-    if (useLowercase == 0 && useUppercase == 0 && useNumbers == 0 && useSymbols == 0) // karaktervalasztas hibaellenorzes
+    useSum = useLower + useUpper + useNum + useSymbol;
+    if (useSum == 0) // karaktervalasztas hibaellenorzes
     {
         printf("Hibas karaktervalasztas.\n");
         return 1;
     }
 
     // jelszogeneralas
-    char *password = generatePassword(length, useLowercase, useUppercase, useNumbers, useSymbols);
+    char *password = passwordGenerate(length, useLower, useUpper, useNum, useSymbol, useSum);
 
     // kimenet
     printf("\nGeneralt jelszo: %s\n", password);
@@ -196,7 +202,7 @@ int main()
     // memoriafelszabaditas
     free(password);
     password = NULL;
-
+    // fel kell szabaditani a passwordS avagy felszabadul?
     return 0;
 }
 
