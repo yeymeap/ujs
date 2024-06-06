@@ -137,7 +137,7 @@ void BuyTicket(int mat[row][col]) // vasarlas
         do
         {
             printf("Hova szeretned a jegyet/jegyeket?\nIrd be a sorszam betujet: ");
-            scanf(" %", &rowLetter);
+            scanf("%c", &rowLetter);
             rowLetter = toupper(rowLetter); // elfogadja kis- es nagybetuket is
             index = rowLetter - 'A';
             if (index < 0 || index >= row)

@@ -1,0 +1,35 @@
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: Arial, sans-serif;
+}
+
+#game {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 20px;
+	width: 60%;
+}
+
+.tower {
+	width: 20px;
+	height: 300px;
+	border: 2px solid black;
+	position: relative;
+}
+
+.disk {
+	position: absolute;
+	height: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	cursor: pointer;
+}
+
+#message {
+	margin-top: 20px;
+	font-size: 18px;
+	font-weight: bold;
+	color: green;
+}
