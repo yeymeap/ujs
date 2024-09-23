@@ -1,0 +1,12 @@
+clc
+clear all
+close all
+
+%r - novekedes rata, x - populacio, t - ido
+global r;
+r = 0.1;
+x = 1;
+t = [1, 30];
+[t, x] = ode45(exp_func, t, x);
+
+plot

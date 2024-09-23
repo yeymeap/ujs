@@ -1,0 +1,33 @@
+body {
+  background-color: cornsilk;
+  margin: 10px;
+  padding: 10px;
+}
+
+p {
+  font-size: large;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.red-colorclass {
+  background-color: red;
+}
+
+.green-colorclass {
+  background-color: green;
+}
+
+.yellow-colorclass {
+  background-color: yellow;
+}
+
+img {
+  width: 200px;
+  height: 100px;
+}
