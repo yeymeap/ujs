@@ -32,3 +32,5 @@ for i in range(0, imageWidth, tile):
             draw.rectangle((x1, y1, x2, y2), fill="blue")
             
 image.show()
+
+# ez meg nem mukodik
