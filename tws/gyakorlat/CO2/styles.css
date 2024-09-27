@@ -1,0 +1,57 @@
+h1 {
+	text-align: center;
+	color: #b8d1cf;
+	font-size: 45px;
+}
+
+img {
+	width: 20%;
+	margin-left: 15%;
+}
+
+p {
+	text-align: justify;
+	margin: 20px;
+}
+
+div {
+	background-color: #b8d1cf;
+	padding: 10px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	overflow: hidden;
+	text-align: center;
+	width: 80%;
+	margin-left: 10%;
+}
+
+table {
+	width: 80%;
+	margin-left: 10%;
+	border-collapse: collapse;
+}
+
+th,
+td {
+	border: 1px solid black;
+	text-align: left;
+}
+
+thead th {
+	background-color: #5f827f;
+	color: black;
+	text-align: center;
+	color: white;
+	font-weight: bold;
+}
+
+tbody td {
+	background-color: #b4e0dd;
+	text-align: left;
+}
+
+tbody tr:nth-child(even) td {
+	background-color: #b8d1cf;
+}

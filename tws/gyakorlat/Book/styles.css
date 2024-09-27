@@ -1,0 +1,48 @@
+body {
+  background-color: #d0a9e8;
+  margin: 0;
+}
+
+header img {
+  width: 100%;
+}
+
+article {
+  width: 80%;
+  margin-left: 10%;
+}
+
+section {
+  background-color: #e6e6e6;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+h2 {
+  margin-top: 0;
+  margin-left: 10px;
+}
+
+p {
+  text-align: justify;
+  margin: 10px;
+}
+
+section p:last-child {
+  margin-bottom: 0;
+}
+
+section img {
+  width: 20%;
+}
+.bal {
+  float: left;
+  margin-right: 10px;
+}
+
+.jobb {
+  float: right;
+  margin-left: 10px;
+}
