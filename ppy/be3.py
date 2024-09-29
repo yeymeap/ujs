@@ -29,5 +29,5 @@ def GenerateImage():
                 print(x1Mirror, y1, x2Mirror, y2)
     image.show()
     
-for i in range(1):
+for i in range(5):
     GenerateImage()
