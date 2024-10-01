@@ -1,0 +1,10 @@
+C:\Users\Student\source\repos\b1\piac\bin\Debug\piac.exe.config
+C:\Users\Student\source\repos\b1\piac\bin\Debug\piac.exe
+C:\Users\Student\source\repos\b1\piac\bin\Debug\piac.pdb
+C:\Users\Student\source\repos\b1\piac\obj\Debug\piac.csproj.AssemblyReference.cache
+C:\Users\Student\source\repos\b1\piac\obj\Debug\piac.Form1.resources
+C:\Users\Student\source\repos\b1\piac\obj\Debug\piac.Properties.Resources.resources
+C:\Users\Student\source\repos\b1\piac\obj\Debug\piac.csproj.GenerateResource.cache
+C:\Users\Student\source\repos\b1\piac\obj\Debug\piac.csproj.CoreCompileInputs.cache
+C:\Users\Student\source\repos\b1\piac\obj\Debug\piac.exe
+C:\Users\Student\source\repos\b1\piac\obj\Debug\piac.pdb
