@@ -1,0 +1,10 @@
+C:\Bence\sje\pr3\gyakorlat\csharp\1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Bence\sje\pr3\gyakorlat\csharp\1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Bence\sje\pr3\gyakorlat\csharp\1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Bence\sje\pr3\gyakorlat\csharp\1\WindowsFormsApp1\obj\Debug\Position_changer.csproj.AssemblyReference.cache
+C:\Bence\sje\pr3\gyakorlat\csharp\1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Bence\sje\pr3\gyakorlat\csharp\1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Bence\sje\pr3\gyakorlat\csharp\1\WindowsFormsApp1\obj\Debug\Position_changer.csproj.GenerateResource.cache
+C:\Bence\sje\pr3\gyakorlat\csharp\1\WindowsFormsApp1\obj\Debug\Position_changer.csproj.CoreCompileInputs.cache
+C:\Bence\sje\pr3\gyakorlat\csharp\1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Bence\sje\pr3\gyakorlat\csharp\1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb

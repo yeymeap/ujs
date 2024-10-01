@@ -1,0 +1,10 @@
+C:\Bence\sje\pr3\gyakorlat\csharp\1\Guess_random_number\bin\Debug\Guess_random_number.exe.config
+C:\Bence\sje\pr3\gyakorlat\csharp\1\Guess_random_number\bin\Debug\Guess_random_number.exe
+C:\Bence\sje\pr3\gyakorlat\csharp\1\Guess_random_number\bin\Debug\Guess_random_number.pdb
+C:\Bence\sje\pr3\gyakorlat\csharp\1\Guess_random_number\obj\Debug\Guess_random_number.csproj.AssemblyReference.cache
+C:\Bence\sje\pr3\gyakorlat\csharp\1\Guess_random_number\obj\Debug\Guess_random_number.Form1.resources
+C:\Bence\sje\pr3\gyakorlat\csharp\1\Guess_random_number\obj\Debug\Guess_random_number.Properties.Resources.resources
+C:\Bence\sje\pr3\gyakorlat\csharp\1\Guess_random_number\obj\Debug\Guess_random_number.csproj.GenerateResource.cache
+C:\Bence\sje\pr3\gyakorlat\csharp\1\Guess_random_number\obj\Debug\Guess_random_number.csproj.CoreCompileInputs.cache
+C:\Bence\sje\pr3\gyakorlat\csharp\1\Guess_random_number\obj\Debug\Guess_random_number.exe
+C:\Bence\sje\pr3\gyakorlat\csharp\1\Guess_random_number\obj\Debug\Guess_random_number.pdb
