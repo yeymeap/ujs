@@ -32,4 +32,6 @@ population = soup.findAll(class_="country-population")
 populationList= []
 for pop in population:
     populationList.append(pop.text.strip())
-print(int(sum(populationList)))
+    
+populationList = list(map(int,populationList))
+print(sum(populationList))
