@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="HU">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Block</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<main>
+			<div class="row">
+				<div class="col-5">Elso</div>
+				<div class="col-5">Masodik</div>
+			</div>
+			<div class="row">
+				<div class="col-2">Elso</div>
+				<div class="col-5">Masodik</div>
+				<div class="col-3">Harmadik</div>
+			</div>
+		</main>
+	</body>
+	<style>
+		body {
+			background-color: red;
+			margin: 0;
+		}
+		main {
+			background-color: aquamarine;
+			width: 80%;
+			margin: 0 10%;
+		}
+		.row {
+			background-color: blueviolet;
+			overflow: hidden;
+		}
+		.row > div {
+			float: left;
+		}
+		.col-1 {
+			width: 10%;
+		}
+		.col-2 {
+			width: 20%;
+		}
+		.col-3 {
+			width: 30%;
+		}
+		.col-4 {
+			width: 40%;
+		}
+		.col-5 {
+			width: 50%;
+		}
+		.col-6 {
+			width: 60%;
+		}
+		.col-7 {
+			width: 70%;
+		}
+		.col-8 {
+			width: 80%;
+		}
+		.col-9 {
+			width: 90%;
+		}
+		.col-10 {
+			width: 100%;
+		}
+		@media only screen and (max-width: 600px) {
+			body {
+				background-color: lightblue;
+			}
+			.col-1 {
+				width: 100%;
+			}
+			.col-2 {
+				width: 100%;
+			}
+			.col-3 {
+				width: 100%;
+			}
+			.col-4 {
+				width: 100%;
+			}
+			.col-5 {
+				width: 100%;
+			}
+			.col-6 {
+				width: 100%;
+			}
+			.col-7 {
+				width: 100%;
+			}
+			.col-8 {
+				width: 100%;
+			}
+			.col-9 {
+				width: 100%;
+			}
+			.col-10 {
+				width: 100%;
+			}
+		}
+	</style>
+</html>
