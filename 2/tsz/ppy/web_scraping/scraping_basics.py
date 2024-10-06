@@ -34,49 +34,49 @@ for capital in capitals:
 population = soup.findAll(class_="country-population") # class alapján keresés
 populationList= []
 for pop in population:
-    populationList.append(pop.text.strip()) # listához hozzáadás, 
+    populationList.append(pop.text.strip()) # listához hozzáadás, helyköz eltávolítása
     
-populationList = list(map(int, populationList))
+populationList = list(map(int, populationList)) # lista elemeinek konvertálása intre
 #print("population sum:", sum(populationList))
 
 
-popMin = min(x for x in populationList if x !=0)
+popMin = min(x for x in populationList if x !=0) # min keresése listában
 #print("population min:", popMin)
-popMax = max(populationList)
+popMax = max(populationList) # max keresése listában
 #print("population max:", popMax)
 
 
-countryArea = soup.findAll(class_="country-area")
+countryArea = soup.findAll(class_="country-area") # class alapján keresés
 countryAreaList = []
 for area in countryArea:
-    countryAreaList.append(area.text.strip())
-countryAreaList = list(map(float, countryAreaList))
+    countryAreaList.append(area.text.strip()) # listához hozzáadás, helyköz eltávolítása
+countryAreaList = list(map(float, countryAreaList)) # lista elemeinek konvertálása floatra
 #print("country area:", countryAreaList)
 
-areaMin = min(x for x in countryAreaList if x != 0)
+areaMin = min(x for x in countryAreaList if x != 0) # min keresése listában
 #print("area min:",areaMin)
-areaMax = max(countryAreaList)
+areaMax = max(countryAreaList) # max keresése listában
 #print("area max:", areaMax)
 
 
 popDensityList = []
 for i in range(len(populationList)):
-    if countryAreaList[i] != 0:
-        popdensity = round(populationList[i] / countryAreaList[i], 2)
-        popDensityList.append(popdensity)
-    elif countryAreaList[i] == 0: #kivetelkezelés az olyan ország(ok)ra, ahol a terület == 0 és populáció > 0
-        popdensity = populationList[i]
-        popDensityList.append(popdensity)
+    if countryAreaList[i] != 0: # ha nem egyenlő 0
+        popdensity = round(populationList[i] / countryAreaList[i], 2) # kiszámolja a népsűrűséget, közben kezeli a 0-val osztást
+        popDensityList.append(popdensity) # listához hozzáadás
+    elif countryAreaList[i] == 0: # kivetelkezelés az olyan ország(ok)ra, ahol a terület == 0 és populáció > 0
+        popdensity = populationList[i] # adott ország populációja
+        popDensityList.append(popdensity) # listához hozzáadás
     
 #print("pop density:", popDensityList)
 
-print("country:",len(countriesList))
-print("capital:",len(capitalsList))
-print("population:",len(populationList))
-print("area:",len(countryAreaList))
-print("density:",len(popDensityList))
+#print("country:",len(countriesList))
+#print("capital:",len(capitalsList))
+#print("population:",len(populationList))
+#print("area:",len(countryAreaList))
+#print("density:",len(popDensityList))
 
-df = pd.DataFrame({
+df = pd.DataFrame({ # táblázat
     'Ország': countriesList,
     'Főváros': capitalsList,
     'Populáció': populationList,
@@ -84,5 +84,4 @@ df = pd.DataFrame({
     'Népsűrűség (ember/km²)': popDensityList
 })
 
-# Display the DataFrame
-print(tabulate(df, headers='keys', tablefmt='grid'))
+print(tabulate(df, headers='keys', tablefmt='grid')) #grid a táblázat köré
