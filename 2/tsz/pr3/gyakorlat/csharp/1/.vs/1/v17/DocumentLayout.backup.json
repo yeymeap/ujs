@@ -1,14 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Bence\\sje\\pr3\\gyakorlat\\csharp\\1\\",
+  "WorkspaceRootPath": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5AA76107-0A25-456A-BD62-7912F4BF9D2D}|Position_changer\\Position_changer.csproj|c:\\bence\\sje\\pr3\\gyakorlat\\csharp\\1\\position_changer\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5AA76107-0A25-456A-BD62-7912F4BF9D2D}|Position_changer\\Position_changer.csproj|solutionrelative:position_changer\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E2FBD5F3-8C1E-4B93-91AB-6059AB20BCF3}|Coffee_machine\\Coffee_machine.csproj|c:\\bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\1\\coffee_machine\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2FBD5F3-8C1E-4B93-91AB-6059AB20BCF3}|Coffee_machine\\Coffee_machine.csproj|solutionrelative:coffee_machine\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5AA76107-0A25-456A-BD62-7912F4BF9D2D}|Position_changer\\Position_changer.csproj|C:\\Bence\\sje\\pr3\\gyakorlat\\csharp\\1\\position_changer\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{5AA76107-0A25-456A-BD62-7912F4BF9D2D}|Position_changer\\Position_changer.csproj|solutionrelative:position_changer\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{E2FBD5F3-8C1E-4B93-91AB-6059AB20BCF3}|Coffee_machine\\Coffee_machine.csproj|c:\\bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\1\\coffee_machine\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E2FBD5F3-8C1E-4B93-91AB-6059AB20BCF3}|Coffee_machine\\Coffee_machine.csproj|solutionrelative:coffee_machine\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -17,32 +17,39 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 328,
+          "DockedWidth": 249,
           "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Bence\\sje\\pr3\\gyakorlat\\csharp\\1\\Position_changer\\Form1.cs",
-              "RelativeDocumentMoniker": "Position_changer\\Form1.cs",
-              "ToolTip": "C:\\Bence\\sje\\pr3\\gyakorlat\\csharp\\1\\Position_changer\\Form1.cs",
-              "RelativeToolTip": "Position_changer\\Form1.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAMwC0AAAAAAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\1\\Coffee_machine\\Form1.cs",
+              "RelativeDocumentMoniker": "Coffee_machine\\Form1.cs",
+              "ToolTip": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\1\\Coffee_machine\\Form1.cs",
+              "RelativeToolTip": "Coffee_machine\\Form1.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAowEoAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T08:10:49.931Z",
+              "WhenOpened": "2024-10-07T10:05:53.276Z",
               "EditorCaption": ""
-            },
+            }
+          ]
+        },
+        {
+          "DockedWidth": 131,
+          "SelectedChildIndex": 0,
+          "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Bence\\sje\\pr3\\gyakorlat\\csharp\\1\\Position_changer\\Form1.cs",
-              "RelativeDocumentMoniker": "Position_changer\\Form1.cs",
-              "ToolTip": "C:\\Bence\\sje\\pr3\\gyakorlat\\csharp\\1\\Position_changer\\Form1.cs [Design]",
-              "RelativeToolTip": "Position_changer\\Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\1\\Coffee_machine\\Form1.cs",
+              "RelativeDocumentMoniker": "Coffee_machine\\Form1.cs",
+              "ToolTip": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\1\\Coffee_machine\\Form1.cs [Design]",
+              "RelativeToolTip": "Coffee_machine\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T08:10:48.442Z"
+              "WhenOpened": "2024-10-07T10:04:08.676Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

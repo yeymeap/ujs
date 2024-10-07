@@ -1,0 +1,10 @@
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\1\Coffee_machine\bin\Debug\Coffee_machine.exe.config
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\1\Coffee_machine\bin\Debug\Coffee_machine.exe
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\1\Coffee_machine\bin\Debug\Coffee_machine.pdb
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\1\Coffee_machine\obj\Debug\Coffee_machine.csproj.AssemblyReference.cache
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\1\Coffee_machine\obj\Debug\Coffee_machine.Form1.resources
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\1\Coffee_machine\obj\Debug\Coffee_machine.Properties.Resources.resources
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\1\Coffee_machine\obj\Debug\Coffee_machine.csproj.GenerateResource.cache
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\1\Coffee_machine\obj\Debug\Coffee_machine.csproj.CoreCompileInputs.cache
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\1\Coffee_machine\obj\Debug\Coffee_machine.exe
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\1\Coffee_machine\obj\Debug\Coffee_machine.pdb
