@@ -5,7 +5,7 @@ while num != 1:
     counter += 1
     if num % 2 == 0:
         var = num
-        num = num / 2
+        num = num // 2
         txt = f"{counter}. Even {var} / 2 = {num}"
         array.append(num)
         print(txt)
