@@ -21,6 +21,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pizza", "Pizza\Pizza.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coffee_machine", "Coffee_machine\Coffee_machine.csproj", "{E2FBD5F3-8C1E-4B93-91AB-6059AB20BCF3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RGB_Color", "RGB_Color\RGB_Color.csproj", "{7EA6E672-2E94-4A71-9BC8-F46AD7FE768B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Slider_calculator", "Slider_calculator\Slider_calculator.csproj", "{C52C42BC-9740-44F2-9581-D733F1FF6BE3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +67,14 @@ Global
 		{E2FBD5F3-8C1E-4B93-91AB-6059AB20BCF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2FBD5F3-8C1E-4B93-91AB-6059AB20BCF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2FBD5F3-8C1E-4B93-91AB-6059AB20BCF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EA6E672-2E94-4A71-9BC8-F46AD7FE768B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EA6E672-2E94-4A71-9BC8-F46AD7FE768B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EA6E672-2E94-4A71-9BC8-F46AD7FE768B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EA6E672-2E94-4A71-9BC8-F46AD7FE768B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C52C42BC-9740-44F2-9581-D733F1FF6BE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C52C42BC-9740-44F2-9581-D733F1FF6BE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C52C42BC-9740-44F2-9581-D733F1FF6BE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C52C42BC-9740-44F2-9581-D733F1FF6BE3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

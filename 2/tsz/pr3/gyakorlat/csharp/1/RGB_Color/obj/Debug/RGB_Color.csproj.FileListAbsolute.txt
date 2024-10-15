@@ -1,0 +1,10 @@
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\1\RGB_Color\bin\Debug\RGB_Color.exe.config
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\1\RGB_Color\bin\Debug\RGB_Color.exe
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\1\RGB_Color\bin\Debug\RGB_Color.pdb
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\1\RGB_Color\obj\Debug\RGB_Color.csproj.AssemblyReference.cache
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\1\RGB_Color\obj\Debug\RGB_Color.Form1.resources
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\1\RGB_Color\obj\Debug\RGB_Color.Properties.Resources.resources
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\1\RGB_Color\obj\Debug\RGB_Color.csproj.GenerateResource.cache
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\1\RGB_Color\obj\Debug\RGB_Color.csproj.CoreCompileInputs.cache
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\1\RGB_Color\obj\Debug\RGB_Color.exe
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\1\RGB_Color\obj\Debug\RGB_Color.pdb

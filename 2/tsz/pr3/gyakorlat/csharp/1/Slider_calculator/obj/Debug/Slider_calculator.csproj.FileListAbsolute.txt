@@ -1,0 +1,10 @@
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\1\Slider_calculator\bin\Debug\Slider_calculator.exe.config
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\1\Slider_calculator\bin\Debug\Slider_calculator.exe
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\1\Slider_calculator\bin\Debug\Slider_calculator.pdb
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\1\Slider_calculator\obj\Debug\Slider_calculator.csproj.AssemblyReference.cache
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\1\Slider_calculator\obj\Debug\Slider_calculator.Form1.resources
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\1\Slider_calculator\obj\Debug\Slider_calculator.Properties.Resources.resources
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\1\Slider_calculator\obj\Debug\Slider_calculator.csproj.GenerateResource.cache
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\1\Slider_calculator\obj\Debug\Slider_calculator.csproj.CoreCompileInputs.cache
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\1\Slider_calculator\obj\Debug\Slider_calculator.exe
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\1\Slider_calculator\obj\Debug\Slider_calculator.pdb
