@@ -21,14 +21,15 @@
 				padding: 5px;
 				background-color: white;
 			}
+
 			td.hover-row {
-				background-color: lightblue;
+				background-color: lightblue; /* td sorok hover */
 			}
 			td.hover-col {
-				background-color: lightblue;
+				background-color: lightblue; /* td oszlopok hover */
 			}
 			td:hover {
-				background-color: pink;
+				background-color: pink; /* td hover a kiválasztott cellán */
 			}
 		</style>
 	</head>
@@ -39,7 +40,7 @@
 					document.write("<tr>");
 					for (let j = 1; j < 16; j++) {
 						document.write(
-							`<td onmouseover="highlight(${i},${j})" onmouseout="unhighlight(${i},${j})">`
+							`<td onmouseover="highlight(${i},${j})" onmouseout="unhighlight(${i},${j})">` // sorok oszlopok highlight functionje
 						);
 						document.write(i * j);
 						document.write("</td>");
@@ -48,32 +49,36 @@
 				}
 
 				function highlight(row, col) {
-					// Highlight the row
-					const table = document.querySelector("table");
-					const rows = table.rows;
+					// sor highlight
+					const table = document.querySelector("table"); // table tag konstansba rakása
+					const rows = table.rows; // sorok konstansba rakása
 
 					for (let i = 0; i < rows[row - 1].cells.length; i++) {
-						rows[row - 1].cells[i].classList.add("hover-row");
+						// sor ciklus
+						rows[row - 1].cells[i].classList.add("hover-row"); // hover-row class hozzáadása
 					}
 
-					// Highlight the column
+					// oszlop highlight
 					for (let i = 0; i < rows.length; i++) {
-						rows[i].cells[col - 1].classList.add("hover-col");
+						// oszlop ciklus
+						rows[i].cells[col - 1].classList.add("hover-col"); // hover-col class hozzáadása
 					}
 				}
 
 				function unhighlight(row, col) {
-					// Remove highlight from the row
-					const table = document.querySelector("table");
-					const rows = table.rows;
+					// sor highlight kivétel
+					const table = document.querySelector("table"); // table tag konstansba rakása
+					const rows = table.rows; // sorok konstansba rakása
 
 					for (let i = 0; i < rows[row - 1].cells.length; i++) {
-						rows[row - 1].cells[i].classList.remove("hover-row");
+						// sor ciklus
+						rows[row - 1].cells[i].classList.remove("hover-row"); // hover-row class eltávolítása
 					}
 
-					// Remove highlight from the column
+					// oszlop highlight kivétel
 					for (let i = 0; i < rows.length; i++) {
-						rows[i].cells[col - 1].classList.remove("hover-col");
+						// oszlop ciklus
+						rows[i].cells[col - 1].classList.remove("hover-col"); // hover-col class eltávolítása
 					}
 				}
 			</script>
