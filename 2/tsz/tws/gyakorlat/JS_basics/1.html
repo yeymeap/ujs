@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Multiplication table</title>
+		<style>
+			table {
+				width: 100%;
+				table-layout: fixed;
+			}
+			table,
+			th,
+			td {
+				border: 1px solid black;
+				border-collapse: collapse;
+				text-align: center;
+				height: 35.5px;
+			}
+			td {
+				padding: 5px;
+				background-color: white;
+			}
+			td.hover-row {
+				background-color: lightblue;
+			}
+			td.hover-col {
+				background-color: lightblue;
+			}
+			td:hover {
+				background-color: pink;
+			}
+		</style>
+	</head>
+	<body>
+		<table>
+			<script>
+				for (let i = 1; i < 16; i++) {
+					document.write("<tr>");
+					for (let j = 1; j < 16; j++) {
+						document.write(
+							`<td onmouseover="highlight(${i},${j})" onmouseout="unhighlight(${i},${j})">`
+						);
+						document.write(i * j);
+						document.write("</td>");
+					}
+					document.write("</tr>");
+				}
+
+				function highlight(row, col) {
+					// Highlight the row
+					const table = document.querySelector("table");
+					const rows = table.rows;
+
+					for (let i = 0; i < rows[row - 1].cells.length; i++) {
+						rows[row - 1].cells[i].classList.add("hover-row");
+					}
+
+					// Highlight the column
+					for (let i = 0; i < rows.length; i++) {
+						rows[i].cells[col - 1].classList.add("hover-col");
+					}
+				}
+
+				function unhighlight(row, col) {
+					// Remove highlight from the row
+					const table = document.querySelector("table");
+					const rows = table.rows;
+
+					for (let i = 0; i < rows[row - 1].cells.length; i++) {
+						rows[row - 1].cells[i].classList.remove("hover-row");
+					}
+
+					// Remove highlight from the column
+					for (let i = 0; i < rows.length; i++) {
+						rows[i].cells[col - 1].classList.remove("hover-col");
+					}
+				}
+			</script>
+		</table>
+	</body>
+</html>
