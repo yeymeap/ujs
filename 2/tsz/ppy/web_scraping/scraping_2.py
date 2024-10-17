@@ -28,6 +28,6 @@ image_link = "https:" + image.get("src") # link
 print(image_link)
 image_jpg = re.get(image_link) # link mentése 
 
-with open("madár.jpg", "wb") as f: #mentés
-    f.write(image_jpg.content) # mentés
+with open("bird.jpg", "wb") as f: # kép mentés
+    f.write(image_jpg.content) # kép mentés írás
     
