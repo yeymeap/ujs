@@ -79,7 +79,7 @@ with open("movies_data.csv", "w", encoding = "utf-8") as f: # csv fájl megnyit�
     for i in range(lists_length):
         f.write(f'"{titles_list[i]}",{year_list[i]},{length_list[i]},"{guide_list[i]}","{rating_list[i]}","{votes_list[i]}"\n') # csv fájlba kiírás, pár adat ""-ba van rakva, hogy ne számolja hibásan a "," delimitert
                 
-with open("movies_imdb_index.html", "w", encoding="utf-8") as f: # html fájlba kiírás
+with open("imdb_index.html", "w", encoding="utf-8") as f: # html fájlba kiírás
     f.write("<!DOCTYPE html>\n")
     f.write("<html>\n")
     f.write("<head>\n")
