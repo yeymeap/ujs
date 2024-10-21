@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C52C42BC-9740-44F2-9581-D733F1FF6BE3}|Slider_calculator\\Slider_calculator.csproj|c:\\bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\1\\slider_calculator\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C52C42BC-9740-44F2-9581-D733F1FF6BE3}|Slider_calculator\\Slider_calculator.csproj|solutionrelative:slider_calculator\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AE4CE871-20B1-491F-978A-C68231596711}|stack\\stack.csproj|c:\\bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\1\\stack\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE4CE871-20B1-491F-978A-C68231596711}|stack\\stack.csproj|solutionrelative:stack\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C52C42BC-9740-44F2-9581-D733F1FF6BE3}|Slider_calculator\\Slider_calculator.csproj|c:\\bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\1\\slider_calculator\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C52C42BC-9740-44F2-9581-D733F1FF6BE3}|Slider_calculator\\Slider_calculator.csproj|solutionrelative:slider_calculator\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{AE4CE871-20B1-491F-978A-C68231596711}|stack\\stack.csproj|c:\\bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\1\\stack\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AE4CE871-20B1-491F-978A-C68231596711}|stack\\stack.csproj|solutionrelative:stack\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,31 +24,25 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\1\\Slider_calculator\\Form1.cs",
-              "RelativeDocumentMoniker": "Slider_calculator\\Form1.cs",
-              "ToolTip": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\1\\Slider_calculator\\Form1.cs",
-              "RelativeToolTip": "Slider_calculator\\Form1.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAgwD0AAAAyAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\1\\stack\\Form1.cs",
+              "RelativeDocumentMoniker": "stack\\Form1.cs",
+              "ToolTip": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\1\\stack\\Form1.cs",
+              "RelativeToolTip": "stack\\Form1.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAawBgAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T10:18:16.593Z",
+              "WhenOpened": "2024-10-21T15:24:46.623Z",
               "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 210,
-          "SelectedChildIndex": 0,
-          "Children": [
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\1\\Slider_calculator\\Form1.cs",
-              "RelativeDocumentMoniker": "Slider_calculator\\Form1.cs",
-              "ToolTip": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\1\\Slider_calculator\\Form1.cs [Design]",
-              "RelativeToolTip": "Slider_calculator\\Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\1\\stack\\Form1.cs",
+              "RelativeDocumentMoniker": "stack\\Form1.cs",
+              "ToolTip": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\1\\stack\\Form1.cs [Design]",
+              "RelativeToolTip": "stack\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T10:17:20.236Z",
+              "WhenOpened": "2024-10-21T15:20:05.858Z",
               "EditorCaption": " [Design]"
             }
           ]

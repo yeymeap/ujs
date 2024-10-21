@@ -1,0 +1,10 @@
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\1\stack\bin\Debug\stack.exe.config
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\1\stack\bin\Debug\stack.exe
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\1\stack\bin\Debug\stack.pdb
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\1\stack\obj\Debug\stack.csproj.AssemblyReference.cache
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\1\stack\obj\Debug\stack.Form1.resources
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\1\stack\obj\Debug\stack.Properties.Resources.resources
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\1\stack\obj\Debug\stack.csproj.GenerateResource.cache
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\1\stack\obj\Debug\stack.csproj.CoreCompileInputs.cache
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\1\stack\obj\Debug\stack.exe
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\1\stack\obj\Debug\stack.pdb
