@@ -1,0 +1,10 @@
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Photo_album\bin\Debug\Photo_album.exe.config
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Photo_album\bin\Debug\Photo_album.exe
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Photo_album\bin\Debug\Photo_album.pdb
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Photo_album\obj\Debug\Photo_album.csproj.AssemblyReference.cache
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Photo_album\obj\Debug\Photo_album.Form1.resources
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Photo_album\obj\Debug\Photo_album.Properties.Resources.resources
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Photo_album\obj\Debug\Photo_album.csproj.GenerateResource.cache
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Photo_album\obj\Debug\Photo_album.csproj.CoreCompileInputs.cache
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Photo_album\obj\Debug\Photo_album.exe
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Photo_album\obj\Debug\Photo_album.pdb

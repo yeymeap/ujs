@@ -1,0 +1,10 @@
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Triangle\bin\Debug\Triangle.exe.config
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Triangle\bin\Debug\Triangle.exe
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Triangle\bin\Debug\Triangle.pdb
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Triangle\obj\Debug\Triangle.csproj.AssemblyReference.cache
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Triangle\obj\Debug\Triangle.Form1.resources
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Triangle\obj\Debug\Triangle.Properties.Resources.resources
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Triangle\obj\Debug\Triangle.csproj.GenerateResource.cache
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Triangle\obj\Debug\Triangle.csproj.CoreCompileInputs.cache
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Triangle\obj\Debug\Triangle.exe
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Triangle\obj\Debug\Triangle.pdb

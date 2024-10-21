@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Triangle", "Triangle\Triangle.csproj", "{C976EE27-E744-4782-8ABB-FCB4C5C79371}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Photo_album", "Photo_album\Photo_album.csproj", "{539852CA-3483-4E2A-AAEB-5AD7B34B3204}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C976EE27-E744-4782-8ABB-FCB4C5C79371}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C976EE27-E744-4782-8ABB-FCB4C5C79371}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C976EE27-E744-4782-8ABB-FCB4C5C79371}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C976EE27-E744-4782-8ABB-FCB4C5C79371}.Release|Any CPU.Build.0 = Release|Any CPU
+		{539852CA-3483-4E2A-AAEB-5AD7B34B3204}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{539852CA-3483-4E2A-AAEB-5AD7B34B3204}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{539852CA-3483-4E2A-AAEB-5AD7B34B3204}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{539852CA-3483-4E2A-AAEB-5AD7B34B3204}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {53663088-60F7-4FE6-8519-818588798C8E}
+	EndGlobalSection
+EndGlobal
