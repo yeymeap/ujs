@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Pénzváltó</title>
+		<link rel="stylesheet" href="styles.css" />
+		<script>
+			function change() {
+				// bemeneti értékek
+				const name = document.getElementById("text1").value;
+				const amount = parseFloat(
+					document.getElementById("num1").value
+				);
+				const fromCurrency = document.querySelector(
+					'input[name="r1"]:checked'
+				)?.value;
+				const toCurrency = document.querySelector(
+					'input[name="r2"]:checked'
+				)?.value;
+
+				// bemeneti értékek ellenőrzése
+				if (
+					!amount ||
+					isNaN(amount) ||
+					amount < 1 ||
+					!fromCurrency ||
+					!toCurrency
+				) {
+					alert(
+						"Kérlek, töltsd ki az összes mezőt érvényes értékekkel."
+					);
+					return;
+				}
+
+				// ha az eredeti pénznem lett kiválasztva
+				if (fromCurrency === toCurrency) {
+					const resultLabel = document.getElementById("result1");
+					resultLabel.style.display = "block";
+					resultLabel.textContent = `${name}, Az átváltott összeg: ${amount.toFixed(
+						2
+					)} ${fromCurrency}`;
+					return;
+				}
+
+				// átváltási értékek
+				const conversionRates = {
+					EUR: { HUF: 403.15, USD: 1.08 },
+					HUF: { EUR: 0.0025, USD: 0.0027 },
+					USD: { EUR: 0.93, HUF: 374.11 },
+				};
+
+				// átváltás
+				let convertedAmount =
+					amount * conversionRates[fromCurrency][toCurrency];
+
+				// kedvezmény
+				if (document.getElementById("check1").checked) {
+					convertedAmount *= 1.05; // Apply a 5% discount
+				}
+
+				// kezelési költség
+				const handlingFee =
+					(parseFloat(document.getElementById("choose1").value) /
+						100) *
+					convertedAmount;
+				convertedAmount -= handlingFee;
+
+				// kijelzés
+				const resultLabel = document.getElementById("result1");
+				resultLabel.style.display = "block";
+				resultLabel.textContent = `${name} Az átváltott összeg: ${convertedAmount.toFixed(
+					2
+				)} ${toCurrency}`;
+			}
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<label for="text1">Név:</label>
+			<input type="text" value="Név" id="text1" />
+			<br />
+			<label for="num1">Összeg:</label>
+			<input type="number" min="1" id="num1" />
+			<br />
+			<label>Miről</label>
+			<br />
+			<div class="radio-group">
+				<div>
+					<input type="radio" id="radio1" name="r1" value="EUR" />
+					<label for="radio1">EUR</label>
+				</div>
+				<div>
+					<input type="radio" id="radio2" name="r1" value="HUF" />
+					<label for="radio2">HUF</label>
+				</div>
+				<div>
+					<input type="radio" id="radio3" name="r1" value="USD" />
+					<label for="radio3">USD</label>
+				</div>
+			</div>
+			<label>Mire</label>
+			<br />
+			<div class="radio-group">
+				<div>
+					<input type="radio" id="radio4" name="r2" value="EUR" />
+					<label for="radio4">EUR</label>
+				</div>
+				<div>
+					<input type="radio" id="radio5" name="r2" value="HUF" />
+					<label for="radio5">HUF</label>
+				</div>
+				<div>
+					<input type="radio" id="radio6" name="r2" value="USD" />
+					<label for="radio6">USD</label>
+				</div>
+			</div>
+			<input type="checkbox" id="check1" />
+			<label for="check1">Kedvezmény (-5%)</label>
+			<br />
+			<label>Kezelési költség</label>
+			<select id="choose1">
+				<option value="0">0,0%</option>
+				<option value="1">1,0%</option>
+				<option value="2">2,0%</option>
+			</select>
+			<br />
+			<input type="button" value="Váltás" onclick="change()" />
+			<br />
+			<label id="result1" style="display: none"></label>
+		</div>
+	</body>
+</html>

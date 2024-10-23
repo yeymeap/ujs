@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>JS Input</title>
+		<script>
+			function fv() {
+				textout1.innerHTML = text1.value;
+			}
+			function fv1() {
+				alert(choose1.value);
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" value="Test" id="text1" />
+		<br />
+		<input type="button" value="Button" onclick="fv()" />
+		<br />
+		<label id="textout1">Empty</label>
+		<br />
+		<input type="number" min="10" max="100" />
+		<br />
+		<select id="choose1">
+			<option value="1">One</option>
+			<option value="2">Two</option>
+			<option value="3">Three</option>
+		</select>
+		<input type="button" value="Button" onclick="fv1()" />
+		<br />
+		<input type="radio" id="radio1" name="r1" checked="true" />
+		<label for="radio1">One</label>
+		<input type="radio" id="radio2" name="r1" checked="true" />
+		<label for="radio2">Two</label>
+		<br />
+		<input type="radio" id="radio3" name="r2" checked="true" />
+		<label for="radio1">Three</label>
+		<input type="radio" id="radio4" name="r2" checked="true" />
+		<label for="radio2">Four</label>
+		<br />
+	</body>
+</html>
