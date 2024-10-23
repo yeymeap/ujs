@@ -21,6 +21,7 @@
 
 				// bemeneti értékek ellenőrzése
 				if (
+					!name ||
 					!amount ||
 					isNaN(amount) ||
 					amount < 1 ||
@@ -37,7 +38,7 @@
 				if (fromCurrency === toCurrency) {
 					const resultLabel = document.getElementById("result1");
 					resultLabel.style.display = "block";
-					resultLabel.textContent = `${name}, Az átváltott összeg: ${amount.toFixed(
+					resultLabel.textContent = `${name}, az átváltott összeg: ${amount.toFixed(
 						2
 					)} ${fromCurrency}`;
 					return;
@@ -69,7 +70,7 @@
 				// kijelzés
 				const resultLabel = document.getElementById("result1");
 				resultLabel.style.display = "block";
-				resultLabel.textContent = `${name} Az átváltott összeg: ${convertedAmount.toFixed(
+				resultLabel.textContent = `${name}, az átváltott összeg: ${convertedAmount.toFixed(
 					2
 				)} ${toCurrency}`;
 			}
@@ -78,7 +79,7 @@
 	<body>
 		<div class="container">
 			<label for="text1">Név:</label>
-			<input type="text" value="Név" id="text1" />
+			<input type="text" id="text1" />
 			<br />
 			<label for="num1">Összeg:</label>
 			<input type="number" min="1" id="num1" />
