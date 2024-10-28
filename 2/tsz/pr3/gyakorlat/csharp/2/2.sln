@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Triangle", "Triangle\Triang
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Photo_album", "Photo_album\Photo_album.csproj", "{539852CA-3483-4E2A-AAEB-5AD7B34B3204}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smart_Array", "SmartArray\Smart_Array.csproj", "{A3E3CC00-B5B9-4D2E-8109-E139D36C6015}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PointCircle", "PointCircle\PointCircle.csproj", "{E9571279-E29A-44B5-8498-CDEDAB6180BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{539852CA-3483-4E2A-AAEB-5AD7B34B3204}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{539852CA-3483-4E2A-AAEB-5AD7B34B3204}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{539852CA-3483-4E2A-AAEB-5AD7B34B3204}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3E3CC00-B5B9-4D2E-8109-E139D36C6015}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3E3CC00-B5B9-4D2E-8109-E139D36C6015}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3E3CC00-B5B9-4D2E-8109-E139D36C6015}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3E3CC00-B5B9-4D2E-8109-E139D36C6015}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9571279-E29A-44B5-8498-CDEDAB6180BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9571279-E29A-44B5-8498-CDEDAB6180BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9571279-E29A-44B5-8498-CDEDAB6180BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9571279-E29A-44B5-8498-CDEDAB6180BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

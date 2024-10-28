@@ -1,87 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{539852CA-3483-4E2A-AAEB-5AD7B34B3204}|Photo_album\\Photo_album.csproj|c:\\bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\photo_album\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{539852CA-3483-4E2A-AAEB-5AD7B34B3204}|Photo_album\\Photo_album.csproj|solutionrelative:photo_album\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{539852CA-3483-4E2A-AAEB-5AD7B34B3204}|Photo_album\\Photo_album.csproj|c:\\bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\photo_album\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{539852CA-3483-4E2A-AAEB-5AD7B34B3204}|Photo_album\\Photo_album.csproj|solutionrelative:photo_album\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{539852CA-3483-4E2A-AAEB-5AD7B34B3204}|Photo_album\\Photo_album.csproj|c:\\bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\photo_album\\bigalbum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{539852CA-3483-4E2A-AAEB-5AD7B34B3204}|Photo_album\\Photo_album.csproj|solutionrelative:photo_album\\bigalbum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{539852CA-3483-4E2A-AAEB-5AD7B34B3204}|Photo_album\\Photo_album.csproj|c:\\bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\photo_album\\album.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{539852CA-3483-4E2A-AAEB-5AD7B34B3204}|Photo_album\\Photo_album.csproj|solutionrelative:photo_album\\album.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 239,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\Photo_album\\Form1.cs",
-              "RelativeDocumentMoniker": "Photo_album\\Form1.cs",
-              "ToolTip": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\Photo_album\\Form1.cs",
-              "RelativeToolTip": "Photo_album\\Form1.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAtwBsAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T10:42:47.724Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BigAlbum.cs",
-              "DocumentMoniker": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\Photo_album\\BigAlbum.cs",
-              "RelativeDocumentMoniker": "Photo_album\\BigAlbum.cs",
-              "ToolTip": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\Photo_album\\BigAlbum.cs",
-              "RelativeToolTip": "Photo_album\\BigAlbum.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T10:32:49.849Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Album.cs",
-              "DocumentMoniker": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\Photo_album\\Album.cs",
-              "RelativeDocumentMoniker": "Photo_album\\Album.cs",
-              "ToolTip": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\Photo_album\\Album.cs",
-              "RelativeToolTip": "Photo_album\\Album.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T10:25:30.683Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\Photo_album\\Form1.cs",
-              "RelativeDocumentMoniker": "Photo_album\\Form1.cs",
-              "ToolTip": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\Photo_album\\Form1.cs [Design]",
-              "RelativeToolTip": "Photo_album\\Form1.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T10:25:51.366Z",
-              "EditorCaption": " [Design]"
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }
