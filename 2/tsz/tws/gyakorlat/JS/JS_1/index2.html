@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function gombfv()
+      {
+          alert("haha");
+      }
+      function textFnc()
+      {
+          alert(text.value);
+      }
+      function textFnc2()
+    {
+          alert(text2.value);
+      }
+      function mouse(){
+        paragraph.innerHTML = "X: "+ event.offsetX + " Y: " + event.offsetY;
+      }
+    </script>
+  </head>
+  <body>
+    <input type="button" value="Gomb" onclick="gombfv()" />
+    <input type="text" onchange="textFnc()" id="text" />
+    <input type="text" onkeypress="textFnc2()" id="text2"/>
+    <br>
+    <img src="img.png" onmousemove="mouse()">
+    <p id="paragraph" onmousemove="mouse()"></p>
+  </body>
+</html>

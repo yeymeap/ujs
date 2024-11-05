@@ -11,6 +11,7 @@ namespace PointCircle
         private double x;
         private double y;
         private static Random rnd = new Random();
+
         public Point(double x, double y)
         {
           this.x = x;
@@ -18,8 +19,8 @@ namespace PointCircle
         }
         public Point(int Xmin, int xMax, int yMin, int yMax)
         {
-            x = rnd.NextDouble() * (xMax - Xmin) + Xmin;
-            y = rnd.NextDouble() * (yMax - yMin) + yMin;
+            x = Math.Round(rnd.NextDouble() * (xMax - Xmin) + Xmin, 2);
+            y = Math.Round(rnd.NextDouble() * (yMax - yMin) + yMin, 2);
         }
         public double GetX()
         {
@@ -35,7 +36,7 @@ namespace PointCircle
         }
         public double DistanceFromOrigin() 
         {
-            return Math.Sqrt(Math.Pow(x, 2) + Math.Pow(y, 2));
+            return Math.Round(Math.Sqrt(Math.Pow(x, 2) + Math.Pow(y, 2)), 2);
         }
 
     }

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Számjáték</title>
+		<style>
+			.scale-container {
+				position: relative;
+				width: 600px;
+				margin: auto;
+			}
+			.scale-container img {
+				width: 100%;
+				display: block;
+			}
+			.number-button {
+				position: absolute;
+				top: 0;
+				width: 1%;
+				height: 100%;
+				cursor: pointer;
+				background: rgba(0, 0, 0, 0);
+			}
+		</style>
+		<script>
+			let random;
+
+			function randNum(min, max) {
+				return Math.floor(Math.random() * (max - min + 1)) + min;
+			}
+
+			function startGame() {
+				random = randNum(1, 100);
+				console.log("Véletlen szám:", random);
+				document.getElementById("paragraph1").innerHTML = "Tipp:!";
+			}
+
+			function playGame(choice) {
+				const num = random;
+
+				if (isNaN(choice)) {
+					document.getElementById("paragraph1").innerHTML =
+						"Írj be számot!";
+					return;
+				}
+
+				if (choice > num) {
+					document.getElementById("paragraph1").innerHTML =
+						"Kisebb szám mint a " + choice;
+				} else if (choice < num) {
+					document.getElementById("paragraph1").innerHTML =
+						"Nagyobb szám mint a " + choice;
+				} else {
+					document.getElementById("paragraph1").innerHTML = "Siker!";
+				}
+			}
+
+			function createButtons() {
+				const container = document.querySelector(".scale-container");
+
+				for (let i = 1; i <= 100; i++) {
+					const button = document.createElement("div");
+					button.className = "number-button";
+					button.style.left = `${i - 1}%`;
+					button.onclick = () => playGame(i);
+					container.appendChild(button);
+				}
+			}
+		</script>
+	</head>
+	<body onload="startGame(), createButtons()">
+		<input type="button" id="button2" value="Indít" onclick="startGame()" />
+		<br />
+		<input type="text" id="text1" />
+		<br />
+		<input type="number" id="number1" value="1" />
+		<input type="button" id="button1" value="Tipp" onclick="playGame()" />
+		<p id="paragraph1"></p>
+		<div class="scale-container">
+			<img src="scale.jpg" alt="Scale" />
+		</div>
+	</body>
+</html>

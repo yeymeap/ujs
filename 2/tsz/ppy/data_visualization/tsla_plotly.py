@@ -1,7 +1,7 @@
 import plotly.graph_objects as go
 import pandas as pd
 
-stock_prices_file = "tsla_plt.csv" # csv fájl neve
+stock_prices_file = "tsla_plotly.csv" # csv fájl neve
 df = pd.read_csv(stock_prices_file) # csv olvasása
 
 fig = go.Figure(data=[go.Candlestick(x=df['Date'], # plotly használata

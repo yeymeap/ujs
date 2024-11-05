@@ -1,0 +1,10 @@
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\PointCircle\bin\Debug\PointCircle.exe.config
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\PointCircle\bin\Debug\PointCircle.exe
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\PointCircle\bin\Debug\PointCircle.pdb
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\PointCircle\obj\Debug\PointCircle.csproj.AssemblyReference.cache
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\PointCircle\obj\Debug\PointCircle.Form1.resources
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\PointCircle\obj\Debug\PointCircle.Properties.Resources.resources
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\PointCircle\obj\Debug\PointCircle.csproj.GenerateResource.cache
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\PointCircle\obj\Debug\PointCircle.csproj.CoreCompileInputs.cache
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\PointCircle\obj\Debug\PointCircle.exe
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\PointCircle\obj\Debug\PointCircle.pdb
