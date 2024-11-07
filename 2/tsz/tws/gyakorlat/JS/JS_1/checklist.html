@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Task Checklist</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				max-width: 600px;
+				margin: 20px auto;
+				padding: 20px;
+				border: 1px solid #ccc;
+				border-radius: 8px;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			}
+			h1 {
+				text-align: center;
+			}
+			#taskInput {
+				width: 80%;
+				padding: 8px;
+			}
+			#addTaskBtn {
+				padding: 8px 12px;
+				cursor: pointer;
+			}
+			.sort-buttons {
+				text-align: center;
+				margin: 10px 0;
+			}
+			.sort-button {
+				cursor: pointer;
+				margin: 0 10px;
+			}
+			.task {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				margin: 8px 0;
+				padding: 10px;
+				border: 1px solid #ddd;
+				border-radius: 5px;
+			}
+			.task.completed label {
+				text-decoration: line-through;
+				color: gray;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Feladatlista</h1>
+		<input type="text" id="taskInput" placeholder="Enter a new task..." />
+		<button id="addTaskBtn">Hozzáadás</button>
+
+		<div class="sort-buttons">
+			<span class="sort-button" id="sortByRank">Rang &#8597;</span>
+			<span class="sort-button" id="sortByStatus">Állapot &#8597;</span>
+		</div>
+
+		<div id="taskList"></div>
+
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const taskInput = document.getElementById("taskInput");
+				const addTaskBtn = document.getElementById("addTaskBtn");
+				const taskList = document.getElementById("taskList");
+				const sortByRank = document.getElementById("sortByRank");
+				const sortByStatus = document.getElementById("sortByStatus");
+
+				let tasks = [];
+				let rankAscending = true;
+				let statusAscending = true;
+
+				function renderTasks() {
+					taskList.innerHTML = "";
+
+					tasks.forEach((task, index) => {
+						const taskDiv = document.createElement("div");
+						taskDiv.classList.add("task");
+						if (task.completed) taskDiv.classList.add("completed");
+
+						const taskNumber = document.createElement("span");
+						taskNumber.textContent = `${index + 1}. `;
+						taskDiv.appendChild(taskNumber);
+
+						const checkbox = document.createElement("input");
+						checkbox.type = "checkbox";
+						checkbox.checked = task.completed;
+						checkbox.addEventListener("change", () => {
+							tasks[index].completed = checkbox.checked;
+							renderTasks();
+						});
+						taskDiv.appendChild(checkbox);
+
+						const taskLabel = document.createElement("label");
+						taskLabel.textContent = task.text;
+						taskDiv.appendChild(taskLabel);
+
+						const editBtn = document.createElement("button");
+						editBtn.textContent = "Edit";
+						editBtn.addEventListener("click", () => {
+							const newTaskText = prompt("Edit Task:", task.text);
+							if (newTaskText !== null) {
+								tasks[index].text = newTaskText;
+								renderTasks();
+							}
+						});
+						taskDiv.appendChild(editBtn);
+
+						const deleteBtn = document.createElement("button");
+						deleteBtn.textContent = "Delete";
+						deleteBtn.addEventListener("click", () => {
+							tasks.splice(index, 1);
+							renderTasks();
+						});
+						taskDiv.appendChild(deleteBtn);
+
+						taskList.appendChild(taskDiv);
+					});
+				}
+
+				addTaskBtn.addEventListener("click", () => {
+					const taskText = taskInput.value.trim();
+					if (taskText) {
+						tasks.push({ text: taskText, completed: false });
+						renderTasks();
+						taskInput.value = "";
+					}
+				});
+
+				sortByRank.addEventListener("click", () => {
+					tasks.sort((a, b) =>
+						rankAscending
+							? a.text.localeCompare(b.text)
+							: b.text.localeCompare(a.text)
+					);
+					rankAscending = !rankAscending;
+					sortByRank.innerHTML = `Rank ${
+						rankAscending ? "&#8593;" : "&#8595;"
+					}`;
+					renderTasks();
+				});
+
+				sortByStatus.addEventListener("click", () => {
+					tasks.sort((a, b) =>
+						statusAscending
+							? a.completed - b.completed
+							: b.completed - a.completed
+					);
+					statusAscending = !statusAscending;
+					sortByStatus.innerHTML = `Status ${
+						statusAscending ? "&#8593;" : "&#8595;"
+					}`;
+					renderTasks();
+				});
+
+				renderTasks();
+			});
+		</script>
+	</body>
+</html>
