@@ -1,0 +1,10 @@
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\tictactoe\bin\Debug\tictactoe.exe.config
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\tictactoe\bin\Debug\tictactoe.exe
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\tictactoe\bin\Debug\tictactoe.pdb
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\tictactoe\obj\Debug\tictactoe.csproj.AssemblyReference.cache
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\tictactoe\obj\Debug\tictactoe.Form1.resources
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\tictactoe\obj\Debug\tictactoe.Properties.Resources.resources
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\tictactoe\obj\Debug\tictactoe.csproj.GenerateResource.cache
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\tictactoe\obj\Debug\tictactoe.csproj.CoreCompileInputs.cache
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\tictactoe\obj\Debug\tictactoe.exe
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\tictactoe\obj\Debug\tictactoe.pdb
