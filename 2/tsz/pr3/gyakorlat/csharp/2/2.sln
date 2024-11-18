@@ -11,7 +11,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smart_Array", "SmartArray\S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PointCircle", "PointCircle\PointCircle.csproj", "{E9571279-E29A-44B5-8498-CDEDAB6180BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tictactoe", "tictactoe\tictactoe.csproj", "{7EBF751B-7600-4539-8D23-0480C50AE2D4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToe", "tictactoe\TicTacToe.csproj", "{7EBF751B-7600-4539-8D23-0480C50AE2D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pexeso", "Pexeso\Pexeso.csproj", "{5EA53BD4-D4A2-470C-A8D6-B842FADAF553}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{7EBF751B-7600-4539-8D23-0480C50AE2D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7EBF751B-7600-4539-8D23-0480C50AE2D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7EBF751B-7600-4539-8D23-0480C50AE2D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EA53BD4-D4A2-470C-A8D6-B842FADAF553}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EA53BD4-D4A2-470C-A8D6-B842FADAF553}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EA53BD4-D4A2-470C-A8D6-B842FADAF553}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EA53BD4-D4A2-470C-A8D6-B842FADAF553}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

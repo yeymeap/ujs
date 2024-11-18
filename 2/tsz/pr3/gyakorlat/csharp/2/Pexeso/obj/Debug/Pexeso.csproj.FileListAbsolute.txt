@@ -1,0 +1,10 @@
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Pexeso\bin\Debug\Pexeso.exe.config
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Pexeso\bin\Debug\Pexeso.exe
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Pexeso\bin\Debug\Pexeso.pdb
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Pexeso\obj\Debug\Pexeso.csproj.AssemblyReference.cache
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Pexeso\obj\Debug\Pexeso.Form1.resources
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Pexeso\obj\Debug\Pexeso.Properties.Resources.resources
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Pexeso\obj\Debug\Pexeso.csproj.GenerateResource.cache
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Pexeso\obj\Debug\Pexeso.csproj.CoreCompileInputs.cache
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Pexeso\obj\Debug\Pexeso.exe
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Pexeso\obj\Debug\Pexeso.pdb

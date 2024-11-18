@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7EBF751B-7600-4539-8D23-0480C50AE2D4}|tictactoe\\tictactoe.csproj|c:\\bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\tictactoe\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7EBF751B-7600-4539-8D23-0480C50AE2D4}|tictactoe\\tictactoe.csproj|solutionrelative:tictactoe\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5EA53BD4-D4A2-470C-A8D6-B842FADAF553}|Pexeso\\Pexeso.csproj|c:\\bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\pexeso\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EA53BD4-D4A2-470C-A8D6-B842FADAF553}|Pexeso\\Pexeso.csproj|solutionrelative:pexeso\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EA53BD4-D4A2-470C-A8D6-B842FADAF553}|Pexeso\\Pexeso.csproj|c:\\bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\pexeso\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EA53BD4-D4A2-470C-A8D6-B842FADAF553}|Pexeso\\Pexeso.csproj|solutionrelative:pexeso\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EA53BD4-D4A2-470C-A8D6-B842FADAF553}|Pexeso\\Pexeso.csproj|c:\\bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\pexeso\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5EA53BD4-D4A2-470C-A8D6-B842FADAF553}|Pexeso\\Pexeso.csproj|solutionrelative:pexeso\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -20,14 +28,39 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\tictactoe\\Form1.cs",
-              "RelativeDocumentMoniker": "tictactoe\\Form1.cs",
-              "ToolTip": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\tictactoe\\Form1.cs",
-              "RelativeToolTip": "tictactoe\\Form1.cs",
-              "ViewState": "AgIAAFUAAAAAAAAAAAAkwFwAAAANAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\Pexeso\\Form1.cs",
+              "RelativeDocumentMoniker": "Pexeso\\Form1.cs",
+              "ToolTip": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\Pexeso\\Form1.cs",
+              "RelativeToolTip": "Pexeso\\Form1.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAQwEIAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T11:08:39.566Z",
+              "WhenOpened": "2024-11-18T10:59:48.576Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Card.cs",
+              "DocumentMoniker": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\Pexeso\\Card.cs",
+              "RelativeDocumentMoniker": "Pexeso\\Card.cs",
+              "ToolTip": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\Pexeso\\Card.cs",
+              "RelativeToolTip": "Pexeso\\Card.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwAwAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T10:37:36.87Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\Pexeso\\Form1.cs",
+              "RelativeDocumentMoniker": "Pexeso\\Form1.cs",
+              "ToolTip": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\Pexeso\\Form1.cs [Design]",
+              "RelativeToolTip": "Pexeso\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T10:31:21.819Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
