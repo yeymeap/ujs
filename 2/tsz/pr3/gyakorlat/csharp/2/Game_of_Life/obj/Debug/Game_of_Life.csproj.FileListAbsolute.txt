@@ -1,0 +1,10 @@
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Game_of_Life\obj\Debug\Game_of_Life.csproj.AssemblyReference.cache
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Game_of_Life\obj\Debug\Game_of_Life.Form1.resources
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Game_of_Life\obj\Debug\Game_of_Life.Properties.Resources.resources
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Game_of_Life\obj\Debug\Game_of_Life.csproj.GenerateResource.cache
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Game_of_Life\obj\Debug\Game_of_Life.csproj.CoreCompileInputs.cache
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Game_of_Life\bin\Debug\Game_of_Life.exe.config
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Game_of_Life\bin\Debug\Game_of_Life.exe
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Game_of_Life\bin\Debug\Game_of_Life.pdb
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Game_of_Life\obj\Debug\Game_of_Life.exe
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Game_of_Life\obj\Debug\Game_of_Life.pdb

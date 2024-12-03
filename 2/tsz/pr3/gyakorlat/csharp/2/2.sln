@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pexeso", "Pexeso\Pexeso.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Color_Game", "Color_Game\Color_Game.csproj", "{B1E07462-BA13-4CB0-A0FD-E0657E807F6B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game_of_Life", "Game_of_Life\Game_of_Life.csproj", "{F6E04DF0-2574-4395-8B00-C8B14A5BC6CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{B1E07462-BA13-4CB0-A0FD-E0657E807F6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1E07462-BA13-4CB0-A0FD-E0657E807F6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1E07462-BA13-4CB0-A0FD-E0657E807F6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6E04DF0-2574-4395-8B00-C8B14A5BC6CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6E04DF0-2574-4395-8B00-C8B14A5BC6CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6E04DF0-2574-4395-8B00-C8B14A5BC6CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6E04DF0-2574-4395-8B00-C8B14A5BC6CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
