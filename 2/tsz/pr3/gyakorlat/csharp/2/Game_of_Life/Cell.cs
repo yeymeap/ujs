@@ -10,8 +10,14 @@ namespace Game_of_Life
 {
     internal class Cells : Button
     {
+        internal enum CellState
+        {
+            Dead,
+            Alive,
+            Suspended
+        }
+        private CellState State = CellState.Dead;
         public const int SIZE = 20;
-        private bool alive = false;
         private bool isMouseDown = false;
         
         public Cells()
@@ -20,16 +26,25 @@ namespace Game_of_Life
             this.BackColor = Color.White;
         }
 
-        public void Alive()
+        public void SetAlive()
         {
-            this.alive = true;
+            this.State = CellState.Alive;
             this.BackColor = Color.Black;
         }
 
-        public void Dead()
+        public void SetDead()
         {
-            this.alive = false;
+            this.State = CellState.Dead;
             this.BackColor = Color.White;
+        }
+        public void SetSuspended()
+        {
+            this.State = CellState.Suspended;
+            this.BackColor = Color.Gray;
+        }
+        public CellState GetState()
+        {
+            return this.State;
         }
     }
 }

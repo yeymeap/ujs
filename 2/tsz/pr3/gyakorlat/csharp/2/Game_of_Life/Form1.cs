@@ -73,13 +73,17 @@ namespace Game_of_Life
         private void Clicked(object sender,EventArgs e)
         {
             Cells c = (Cells)sender;
-            if (c.BackColor == Color.White)
+            switch (c.GetState())
             {
-                c.Alive();
-            }
-            else
-            {
-                c.Dead();
+                case Cells.CellState.Dead:
+                    c.SetAlive();
+                    break;
+                case Cells.CellState.Alive:
+                    c.SetAlive();
+                    break;
+                case Cells.CellState.Suspended:
+                    c.SetSuspended();
+                    break;
             }
         }
     }

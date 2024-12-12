@@ -3,24 +3,16 @@
   "WorkspaceRootPath": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F6E04DF0-2574-4395-8B00-C8B14A5BC6CB}|Game_of_Life\\Game_of_Life.csproj|c:\\bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\game_of_life\\cell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6E04DF0-2574-4395-8B00-C8B14A5BC6CB}|Game_of_Life\\Game_of_Life.csproj|solutionrelative:game_of_life\\cell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F6E04DF0-2574-4395-8B00-C8B14A5BC6CB}|Game_of_Life\\Game_of_Life.csproj|c:\\bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\game_of_life\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6E04DF0-2574-4395-8B00-C8B14A5BC6CB}|Game_of_Life\\Game_of_Life.csproj|solutionrelative:game_of_life\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6E04DF0-2574-4395-8B00-C8B14A5BC6CB}|Game_of_Life\\Game_of_Life.csproj|C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\game_of_life\\cells.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6E04DF0-2574-4395-8B00-C8B14A5BC6CB}|Game_of_Life\\Game_of_Life.csproj|solutionrelative:game_of_life\\cells.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F6E04DF0-2574-4395-8B00-C8B14A5BC6CB}|Game_of_Life\\Game_of_Life.csproj|C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\game_of_life\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{F6E04DF0-2574-4395-8B00-C8B14A5BC6CB}|Game_of_Life\\Game_of_Life.csproj|solutionrelative:game_of_life\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EA53BD4-D4A2-470C-A8D6-B842FADAF553}|Pexeso\\Pexeso.csproj|C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\pexeso\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EA53BD4-D4A2-470C-A8D6-B842FADAF553}|Pexeso\\Pexeso.csproj|solutionrelative:pexeso\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EA53BD4-D4A2-470C-A8D6-B842FADAF553}|Pexeso\\Pexeso.csproj|C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\pexeso\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EA53BD4-D4A2-470C-A8D6-B842FADAF553}|Pexeso\\Pexeso.csproj|solutionrelative:pexeso\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,56 +22,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 239,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\Pexeso\\Form1.cs",
-              "RelativeDocumentMoniker": "Pexeso\\Form1.cs",
-              "ToolTip": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\Pexeso\\Form1.cs",
-              "RelativeToolTip": "Pexeso\\Form1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T10:36:51.976Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Card.cs",
-              "DocumentMoniker": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\Pexeso\\Card.cs",
-              "RelativeDocumentMoniker": "Pexeso\\Card.cs",
-              "ToolTip": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\Pexeso\\Card.cs",
-              "RelativeToolTip": "Pexeso\\Card.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T10:37:58.402Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\Game_of_Life\\Form1.cs",
               "RelativeDocumentMoniker": "Game_of_Life\\Form1.cs",
               "ToolTip": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\Game_of_Life\\Form1.cs",
               "RelativeToolTip": "Game_of_Life\\Form1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFUAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-02T10:34:33.743Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Cells.cs",
-              "DocumentMoniker": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\Game_of_Life\\Cells.cs",
-              "RelativeDocumentMoniker": "Game_of_Life\\Cells.cs",
-              "ToolTip": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\Game_of_Life\\Cells.cs",
-              "RelativeToolTip": "Game_of_Life\\Cells.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAQwCAAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Cell.cs",
+              "DocumentMoniker": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\Game_of_Life\\Cell.cs",
+              "RelativeDocumentMoniker": "Game_of_Life\\Cell.cs",
+              "ToolTip": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\Game_of_Life\\Cell.cs",
+              "RelativeToolTip": "Game_of_Life\\Cell.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAwBQAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T10:37:42.86Z"
+              "WhenOpened": "2024-12-02T10:37:42.86Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -90,7 +59,8 @@
               "ToolTip": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\Game_of_Life\\Form1.cs [Design]",
               "RelativeToolTip": "Game_of_Life\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T10:34:26.174Z"
+              "WhenOpened": "2024-12-02T10:34:26.174Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
