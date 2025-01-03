@@ -36,7 +36,7 @@ namespace Game_of_Life
             }
             GroupBox radioGroup = new GroupBox()
             {
-                Text = "Játék fajtája",
+                Text = "Type",
                 Location = new Point(gridWidth + 10, 10),
                 Size = new Size(100, 100)
             };
@@ -52,7 +52,7 @@ namespace Game_of_Life
                 };
                 radioGroup.Controls.Add(radio);
             }
-            string[] buttons = { "Start", "Stop", "Törlés" };
+            string[] buttons = { "Start", "Stop", "Reset" };
             int buttonHeight = 30;
             for(int i = 0; i < buttons.Length; i++)
             {
@@ -62,6 +62,18 @@ namespace Game_of_Life
                     Location = new Point(gridWidth + 10, 120 + i * buttonHeight),
                     Size = new Size(100, 30)
                 };
+                if (i == 0)
+                {
+                    button.Click += new EventHandler(StartClicked);
+                }
+                else if(i == 1)
+                {
+                    button.Click += new EventHandler(StopClicked);
+                }
+                else if (i == 2)
+                {
+                    button.Click += new EventHandler(ResetClicked);
+                }
                 this.Controls.Add(button);
             }
             this.Controls.Add(radioGroup);  
@@ -70,6 +82,7 @@ namespace Game_of_Life
             this.MinimizeBox = true;
             this.MaximizeBox = false;
         }
+        private List<Cells> activeCells = new List<Cells>();
         private void Clicked(object sender,EventArgs e)
         {
             Cells c = (Cells)sender;
@@ -77,14 +90,25 @@ namespace Game_of_Life
             {
                 case Cells.CellState.Dead:
                     c.SetAlive();
+                    activeCells.Add(c);
                     break;
                 case Cells.CellState.Alive:
-                    c.SetAlive();
+                    c.SetDead();
+                    activeCells.Remove(c);
                     break;
                 case Cells.CellState.Suspended:
-                    c.SetSuspended();
+                    c.SetDead();
+                    activeCells.Remove(c);
                     break;
             }
         }
+        private void ResetClicked(object sender, EventArgs e)
+        {
+            foreach(Cells c in activeCells)
+            {
+                c.SetDead();
+            }
+        }
+
     }
 }
