@@ -19,7 +19,8 @@ namespace Game_of_Life
         private int rows;
         private int cols;
         private List<Cells> activeCells = new List<Cells>();
-        private bool gameState = false;
+        private bool gameRunning = false;
+       
         public Form1()
         {
             InitializeComponent();
@@ -66,10 +67,10 @@ namespace Game_of_Life
                 radioGroup.Controls.Add(radio);
             }
             this.Controls.Add(radioGroup);
-            string[] buttons = { "Start", "Stop", "Clear", "Reset" }; // combine buttons by making them change text and functionality based on state
+            string[] buttons = { "Start", "Reset/Clear"}; // combine buttons by making them change text and functionality based on state
             int buttonWidth = 100;
             int buttonHeight = 30;
-            EventHandler[] eventHandlers = { StartClicked, StopClicked,ClearClicked, ResetClicked };
+            EventHandler[] eventHandlers = { StartStopClicked, ClearResetClicked };
             for (int i = 0; i < buttons.Length; i++)
             {
                 Button button = new Button()
@@ -88,7 +89,7 @@ namespace Game_of_Life
         }
         private void Clicked(object sender, EventArgs e)
         {
-            if (gameState == false)
+            if (gameRunning == false)
             {
                 Cells c = (Cells)sender;
                 switch (c.GetState())
@@ -108,27 +109,34 @@ namespace Game_of_Life
                 }
             }
         }
-        private void StartClicked(object sender, EventArgs e)
+        private void StartStopClicked(object sender, EventArgs e)
         {
-            timer.Start();
-            //gameState = true;
-        }
-        private void StopClicked(object sender, EventArgs e)
-        {
-            timer.Stop();
-            //gameState = false;
-        }
-        private void ClearClicked(object _, EventArgs __)
-        {
-            foreach (Cells c in activeCells)
+            if (!gameRunning)
             {
-                c.SetDead();
+                gameRunning = true;
+                timer.Start();
+                Button button = (Button)sender;
+                button.Text = "Stop";
             }
-            activeCells.Clear();
+            else
+            {
+                gameRunning = false;
+                timer.Stop();
+                Button button = (Button)sender;
+                button.Text = "Start";
+            }
         }
-        private void ResetClicked(object _, EventArgs __)
+        private void ClearResetClicked(object sender, EventArgs e)
         {
-            
+            if (!gameRunning)
+            {
+
+                foreach (Cells c in activeCells)
+                {
+                    c.SetDead();
+                }
+              activeCells.Clear();
+            }
         }
         private int CountAliveNeighbours(int row, int col)
         {
@@ -203,11 +211,15 @@ namespace Game_of_Life
             {
                 activeCells.Remove(c);
             }
+            CopyGrid(nextGrid, cells);
+        }
+        private void CopyGrid(Cells[,] source, Cells[,] destination)
+        {
             for (int i = 0; i < rows; i++)
             {
                 for (int j = 0; j < cols; j++)
                 {
-                    cells[i, j].SetState(nextGrid[i, j].GetState());
+                    destination[i, j].SetState(source[i, j].GetState());
                 }
             }
         }
