@@ -23,7 +23,14 @@ namespace Game_of_Life
         private bool gameRunning = false;
         private Label runningText;
         private List<Button> buttonList = new List<Button>();
-        private List<RadioButton> radioButtonList = new List<RadioButton>();
+        private List<RadioButton> radioButtonGameTypeList = new List<RadioButton>();
+        private List<RadioButton> radioButtonGridTypeList = new List<RadioButton>();
+        private int selectedRadioButtonGridTypeIndex = -1;
+        private Bitmap[] images = { Properties.Resources.Checkmark, Properties.Resources.Ex };
+        private Bitmap bmp1;
+        private Bitmap bmp2;
+        private MyImage imageDisplay;
+
         public Form1()
         {
             InitializeComponent();
@@ -34,7 +41,7 @@ namespace Game_of_Life
         private void Form1_Load(object sender, EventArgs e)
         {
             this.Icon = Properties.Resources.icon;
-            this.Text = "Game of Life";
+            this.Text = "Cellular Automaton";
             rows = 30;
             cols = 30;
             cells = new Cells[rows, cols];
@@ -50,14 +57,35 @@ namespace Game_of_Life
                     this.Controls.Add(cells[i, j]);
                 }
             }
-            GroupBox radioGroup = new GroupBox()
+            GroupBox radioGroupGameType = new GroupBox()
             {
-                Text = "Type",
+                Text = "Game Type",
                 Location = new Point(gridWidth + 10, 10),
-                Size = new Size(100, 100)
+                Size = new Size(100, 80)
             };
-            string[] options = { "Game of Life", "Brian's Brain", "Seeds" };// add more colors, especially for brians brain, add checkmark/x image based on game state
+            string[] optionsGameType = { "Game of Life", "Brian's Brain", "Seeds" };// add more colors, especially for brians brain
             int radioHeight = 20;
+            for (int i = 0; i < optionsGameType.Length; i++)
+            {
+                RadioButton radio = new RadioButton()
+                {
+                    Text = optionsGameType[i],
+                    Location = new Point(10, 20 + i * radioHeight),
+                    AutoSize = true,
+                    Checked = i == 0
+                };
+                radioGroupGameType.Controls.Add(radio);
+                radioButtonGameTypeList.Add(radio);
+                radio.CheckedChanged += new EventHandler(ChangingGameType);
+            }
+            this.Controls.Add(radioGroupGameType);
+            GroupBox radioGroupGridType = new GroupBox()
+            {
+                Text = "Grid Type",
+                Location = new Point(gridWidth + 10, 100),
+                Size = new Size(100, 60),
+            };
+            string[] options = { "Basic", "Toroid" };
             for (int i = 0; i < options.Length; i++)
             {
                 RadioButton radio = new RadioButton()
@@ -67,12 +95,12 @@ namespace Game_of_Life
                     AutoSize = true,
                     Checked = i == 0
                 };
-                radioGroup.Controls.Add(radio);
-                radioButtonList.Add(radio);
-                radio.CheckedChanged += new EventHandler(ChangingType);
+                radioGroupGridType.Controls.Add(radio);
+                radioButtonGameTypeList.Add(radio);
+                radio.CheckedChanged += new EventHandler(ChangingGridType);
             }
-            this.Controls.Add(radioGroup);
-            string[] buttonTexts = { "Start", "Reset/Clear"}; // combine buttons by making them change text and functionality based on state, disable reset/clear when game is running
+            this.Controls.Add(radioGroupGridType);
+            string[] buttonTexts = { "Start", "Reset/Clear"}; // combine buttons by making them change text and functionality based on state
             int buttonWidth = 100;
             int buttonHeight = 30;
             EventHandler[] eventHandlers = { StartStopClicked, ClearResetClicked };
@@ -81,7 +109,7 @@ namespace Game_of_Life
                 Button button = new Button()
                 {
                     Text = buttonTexts[i],
-                    Location = new Point(gridWidth + 10, 120 + i * buttonHeight),
+                    Location = new Point(gridWidth + 10, 170 + i * buttonHeight),
                     Size = new Size(buttonWidth, buttonHeight)
                 };
                 button.Click += eventHandlers[i];
@@ -90,14 +118,18 @@ namespace Game_of_Life
             }
             runningText = new Label()
             {
-                Text = "Game is not running",
-                Location = new Point(gridWidth + 10, 200),
+                Text = "Game is not running!",
+                Location = new Point(gridWidth + 10, 350),
                 AutoSize = true,
                 ForeColor = Color.Red,
                 TextAlign = ContentAlignment.MiddleCenter
             };
+            bmp1 = new Bitmap(Properties.Resources.Ex);
+            bmp2 = new Bitmap(Properties.Resources.Checkmark);
+            imageDisplay = new MyImage(bmp1);
+            imageDisplay.ShowImage(this, new Point(gridWidth + 10, 240));
             this.Controls.Add(runningText);
-            this.ClientSize = new Size(gridWidth + radioGroup.Width + 20, Math.Max(gridHeight, radioGroup.Height + 10));
+            this.ClientSize = new Size(gridWidth + radioGroupGameType.Width + 20, Math.Max(gridHeight, radioGroupGameType.Height + 10));
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MinimizeBox = true;
             this.MaximizeBox = false;
@@ -106,7 +138,7 @@ namespace Game_of_Life
         {
             if (gameRunning == false)
             {
-                if (radioButtonList[0].Checked || radioButtonList[2].Checked)
+                if (radioButtonGameTypeList[0].Checked || radioButtonGameTypeList[2].Checked)
                 {
                     Cells c = (Cells)sender;
                     switch (c.GetState())
@@ -121,7 +153,7 @@ namespace Game_of_Life
                             break;
                     }
                 }
-                else if(radioButtonList[1].Checked)
+                else if(radioButtonGameTypeList[1].Checked)
                 {
                     Cells c = (Cells)sender;
                     switch (c.GetState())
@@ -147,17 +179,13 @@ namespace Game_of_Life
             {
                 gameRunning = true;
                 timer.Start();
-                StartStopButtonTextUpdate();
-                GameStateTextUpdate(runningText);
-                RadioEnableDisable();
+                GameStateHelper();
             }
             else if (gameRunning)
             {
                 gameRunning = false;
                 timer.Stop();
-                StartStopButtonTextUpdate();
-                GameStateTextUpdate(runningText);
-                RadioEnableDisable();
+                GameStateHelper();
             }
         }
         private void ClearResetClicked(object sender, EventArgs e)
@@ -169,45 +197,45 @@ namespace Game_of_Life
                 {
                     c.SetDead();
                 }
-              activeCells.Clear();
+                activeCells.Clear();
             }
         }
         private void GameStateTextUpdate(Label label)
         {
             if (gameRunning)
             {
-                label.Text = "Game is running";
+                label.Text = "Game is running!";
                 label.ForeColor = Color.Green;
             }
             else if(!gameRunning)
             {
-                label.Text = "Game is not running";
+                label.Text = "Game is not running!";
                 label.ForeColor = Color.Red;
             }
         }
         private int CountAliveNeighbours(int row, int col)
         {
-            int aliveCount = 0;
-            for(int i = -1; i <= 1; i++)
-            {
-                for(int j = -1; j <= 1; j++)
+                int aliveCount = 0;
+                for (int i = -1; i <= 1; i++)
                 {
-                    if (i == 0 && j == 0)
+                    for (int j = -1; j <= 1; j++)
                     {
-                        continue;
-                    }
-                    int neighbourRow = row + i;
-                    int neighbourCol = col + j;
-                    if (neighbourRow >= 0 && neighbourRow < rows && neighbourCol >= 0 && neighbourCol < cols)
-                    {
-                        Cells.CellState state = cells[neighbourRow, neighbourCol].GetState();
-                        if (state == Cells.CellState.Alive)
+                        if (i == 0 && j == 0)
                         {
-                            aliveCount++;
+                            continue;
+                        }
+                        int neighbourRow = row + i;
+                        int neighbourCol = col + j;
+                        if (neighbourRow >= 0 && neighbourRow < rows && neighbourCol >= 0 && neighbourCol < cols)
+                        {
+                            Cells.CellState state = cells[neighbourRow, neighbourCol].GetState();
+                            if (state == Cells.CellState.Alive)
+                            {
+                                aliveCount++;
+                            }
                         }
                     }
                 }
-            }
             return aliveCount;
         }
         private void UpdateCellsGameOfLife()
@@ -246,6 +274,7 @@ namespace Game_of_Life
                         {
                             nextGrid[i, j].SetDead();
                             cellsToRemove.Add(cells[i, j]);
+                            Console.WriteLine("problem");
                         }
                     }
                 }
@@ -344,7 +373,7 @@ namespace Game_of_Life
         }
         private void TimerTick(object sender, EventArgs e)
         {
-            int index = radioButtonList.IndexOf(radioButtonList.Find(r => r.Checked));
+            int index = radioButtonGameTypeList.IndexOf(radioButtonGameTypeList.Find(r => r.Checked));
             switch(index)
             {
                 case 0:
@@ -359,11 +388,9 @@ namespace Game_of_Life
             }
             if(activeCells.Count == 0)
             {
-                timer.Stop();
                 gameRunning = false;
-                GameStateTextUpdate(runningText);
-                StartStopButtonTextUpdate();
-                RadioEnableDisable();
+                timer.Stop();
+                GameStateHelper();
             }
         }
         private void StartStopButtonTextUpdate()
@@ -382,27 +409,26 @@ namespace Game_of_Life
         {
             if (gameRunning)
             {
-                foreach (RadioButton r in radioButtonList)
+                foreach (RadioButton r in radioButtonGameTypeList)
                 {
                     r.Enabled = false;
                 }
             }
             else if(!gameRunning)
             {
-                foreach (RadioButton r in radioButtonList)
+                foreach (RadioButton r in radioButtonGameTypeList)
                 {
                     r.Enabled = true;
                 }
             }
         }
-
-        private void ChangingType(object sender, EventArgs e)
+        private void ChangingGameType(object sender, EventArgs e)
         {
             RadioButton radioButton = (RadioButton)sender;
             List<Cells> cellsToRemove = new List<Cells>();
             if (radioButton != null && radioButton.Checked)
             {
-                int index = radioButtonList.IndexOf(radioButton);
+                int index = radioButtonGameTypeList.IndexOf(radioButton);
                 
                 switch(index)
                 {
@@ -438,6 +464,39 @@ namespace Game_of_Life
                         break;
                 }
             }
+        }
+        private void ChangingGridType(object sender, EventArgs e)
+        {
+        }
+        private void ClearButtonEnableDisable()
+        {
+            if (gameRunning)
+            {
+                buttonList[1].Enabled = false;
+            }
+            else if (!gameRunning)
+            {
+                buttonList[1].Enabled = true;
+            }
+        }
+        private void ImageCheckmarkEx()
+        {
+            if (gameRunning)
+            {
+                imageDisplay.ChangeImage(bmp2);
+            }
+            else if (!gameRunning)
+            {
+                imageDisplay.ChangeImage(bmp1);
+            }
+        }
+        private void GameStateHelper()
+        {
+            GameStateTextUpdate(runningText);
+            StartStopButtonTextUpdate();
+            RadioEnableDisable();
+            ClearButtonEnableDisable();
+            ImageCheckmarkEx();
         }
     }
 }
