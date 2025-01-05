@@ -25,7 +25,7 @@ namespace Game_of_Life
         private List<Button> buttonList = new List<Button>();
         private List<RadioButton> radioButtonGameTypeList = new List<RadioButton>();
         private List<RadioButton> radioButtonGridTypeList = new List<RadioButton>();
-        private int selectedRadioButtonGridTypeIndex = -1;
+        private int selectedRadioButtonGridTypeIndex = 0;
         private Bitmap[] images = { Properties.Resources.Checkmark, Properties.Resources.Ex };
         private Bitmap bmp1;
         private Bitmap bmp2;
@@ -63,7 +63,7 @@ namespace Game_of_Life
                 Location = new Point(gridWidth + 10, 10),
                 Size = new Size(100, 80)
             };
-            string[] optionsGameType = { "Game of Life", "Brian's Brain", "Seeds" };// add more colors, especially for brians brain
+            string[] optionsGameType = { "Game of Life", "Brian's Brain", "Seeds" };
             int radioHeight = 20;
             for (int i = 0; i < optionsGameType.Length; i++)
             {
@@ -96,11 +96,11 @@ namespace Game_of_Life
                     Checked = i == 0
                 };
                 radioGroupGridType.Controls.Add(radio);
-                radioButtonGameTypeList.Add(radio);
+                radioButtonGridTypeList.Add(radio);
                 radio.CheckedChanged += new EventHandler(ChangingGridType);
             }
             this.Controls.Add(radioGroupGridType);
-            string[] buttonTexts = { "Start", "Reset/Clear"}; // combine buttons by making them change text and functionality based on state
+            string[] buttonTexts = { "Start", "Clear"};
             int buttonWidth = 100;
             int buttonHeight = 30;
             EventHandler[] eventHandlers = { StartStopClicked, ClearResetClicked };
@@ -215,27 +215,65 @@ namespace Game_of_Life
         }
         private int CountAliveNeighbours(int row, int col)
         {
-                int aliveCount = 0;
-                for (int i = -1; i <= 1; i++)
+            int index = ReturnSelectedRadioButtonGridTypeIndex();
+            switch (index)
+            {
+                case 0:
+                    return CountAliveNeighboursBasic(row, col);
+                case 1:
+                    return CountAliveNeighboursToroid(row, col);
+                default:
+                    return 0;
+            }
+            
+        }
+        private int CountAliveNeighboursBasic(int row, int col)
+        {
+            int aliveCount = 0;
+            for (int i = -1; i <= 1; i++)
+            {
+                for (int j = -1; j <= 1; j++)
                 {
-                    for (int j = -1; j <= 1; j++)
+                    if (i == 0 && j == 0)
                     {
-                        if (i == 0 && j == 0)
+                        continue;
+                    }
+                    int neighbourRow = row + i;
+                    int neighbourCol = col + j;
+                    if (neighbourRow >= 0 && neighbourRow < rows && neighbourCol >= 0 && neighbourCol < cols)
+                    {
+                        Cells.CellState state = cells[neighbourRow, neighbourCol].GetState();
+                        if (state == Cells.CellState.Alive)
                         {
-                            continue;
-                        }
-                        int neighbourRow = row + i;
-                        int neighbourCol = col + j;
-                        if (neighbourRow >= 0 && neighbourRow < rows && neighbourCol >= 0 && neighbourCol < cols)
-                        {
-                            Cells.CellState state = cells[neighbourRow, neighbourCol].GetState();
-                            if (state == Cells.CellState.Alive)
-                            {
-                                aliveCount++;
-                            }
+                            aliveCount++;
                         }
                     }
                 }
+            }
+            return aliveCount;
+        }
+        private int CountAliveNeighboursToroid(int row, int col)
+        {
+            int aliveCount = 0;
+            for (int i = -1; i <= 1; i++)
+            {
+                for (int j = -1; j <= 1; j++)
+                {
+                    if (i == 0 && j == 0)
+                    {
+                        continue;
+                    }
+                    int neighbourRow = (row + i + rows) % rows;
+                    int neighbourCol = (col + j + cols) % cols;
+                    {
+                        Cells.CellState state = cells[neighbourRow, neighbourCol].GetState();
+                        if (state == Cells.CellState.Alive)
+                        {
+                            aliveCount++;
+                        }
+                    }
+                }
+            }
             return aliveCount;
         }
         private void UpdateCellsGameOfLife()
@@ -274,7 +312,6 @@ namespace Game_of_Life
                         {
                             nextGrid[i, j].SetDead();
                             cellsToRemove.Add(cells[i, j]);
-                            Console.WriteLine("problem");
                         }
                     }
                 }
@@ -413,10 +450,18 @@ namespace Game_of_Life
                 {
                     r.Enabled = false;
                 }
+                foreach (RadioButton r in radioButtonGridTypeList)
+                {
+                    r.Enabled = false;
+                }
             }
             else if(!gameRunning)
             {
                 foreach (RadioButton r in radioButtonGameTypeList)
+                {
+                    r.Enabled = true;
+                }
+                foreach (RadioButton r in radioButtonGridTypeList)
                 {
                     r.Enabled = true;
                 }
@@ -467,6 +512,12 @@ namespace Game_of_Life
         }
         private void ChangingGridType(object sender, EventArgs e)
         {
+            RadioButton radioButton = (RadioButton)sender;
+            selectedRadioButtonGridTypeIndex = radioButtonGridTypeList.IndexOf(radioButton);
+        }
+        private int ReturnSelectedRadioButtonGridTypeIndex()
+        {
+            return selectedRadioButtonGridTypeIndex;
         }
         private void ClearButtonEnableDisable()
         {

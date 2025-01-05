@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pexeso", "Pexeso\Pexeso.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Color_Game", "Color_Game\Color_Game.csproj", "{B1E07462-BA13-4CB0-A0FD-E0657E807F6B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game_of_Life", "Game_of_Life\Game_of_Life.csproj", "{F6E04DF0-2574-4395-8B00-C8B14A5BC6CB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cellular_Automaton", "Game_of_Life\Cellular_Automaton.csproj", "{F6E04DF0-2574-4395-8B00-C8B14A5BC6CB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

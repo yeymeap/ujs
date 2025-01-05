@@ -39,7 +39,7 @@ namespace Game_of_Life
         public void SetSuspended()
         {
             this.State = CellState.Suspended;
-            this.BackColor = Color.Gray;
+            this.BackColor = Color.Red;
         }
         public CellState GetState()
         {
@@ -57,7 +57,7 @@ namespace Game_of_Life
                     this.BackColor = Color.White;
                     break;
                 case CellState.Suspended:
-                    this.BackColor = Color.Gray;
+                    this.BackColor = Color.Red;
                     break;
             }
         }
