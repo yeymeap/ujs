@@ -35,6 +35,7 @@ namespace Game_of_Life
         private int simulationSpeed = 500;
         private int generation = 0;
         private Label generationLabel;
+        private Label activeCellsLabel;
 
         public Form1()
         {
@@ -112,6 +113,13 @@ namespace Game_of_Life
                 AutoSize = true
             };
             this.Controls.Add(generationLabel);
+            activeCellsLabel = new Label()
+            {
+                Text = "Active cells: " + activeCells.Count,
+                Location = new Point(gridWidth + 10, 450),
+                AutoSize = true
+            };
+            this.Controls.Add(activeCellsLabel);
             speedLabel = new Label()
             {
                 Text = "Simulation speed: " + simulationSpeed,
@@ -132,7 +140,7 @@ namespace Game_of_Life
             };
             speedScrollBar.Scroll += new ScrollEventHandler(SpeedChangeScroll);
             Controls.Add(speedScrollBar);
-            string[] buttonTexts = { "Start", "Clear"};
+            string[] buttonTexts = { "Start", "Clear" };
             int buttonWidth = 100;
             int buttonHeight = 30;
             EventHandler[] eventHandlers = { StartStopClicked, ClearResetClicked };
@@ -187,7 +195,7 @@ namespace Game_of_Life
                             break;
                     }
                 }
-                else if(radioButtonGameTypeList[1].Checked)
+                else if (radioButtonGameTypeList[1].Checked)
                 {
                     Cells c = (Cells)sender;
                     switch (c.GetState())
@@ -206,6 +214,7 @@ namespace Game_of_Life
                     }
                 }
             }
+            activeCellsLabelUpdate();
         }
         private void StartStopClicked(object sender, EventArgs e)
         {
@@ -233,6 +242,7 @@ namespace Game_of_Life
                 }
                 activeCells.Clear();
                 generationLabelReset();
+                activeCellsLabelUpdate();
             }
         }
         private void GameStateTextUpdate(Label label)
@@ -260,7 +270,7 @@ namespace Game_of_Life
                 default:
                     return 0;
             }
-            
+
         }
         private int CountAliveNeighboursBasic(int row, int col)
         {
@@ -362,6 +372,7 @@ namespace Game_of_Life
             CopyGrid(nextGrid, cells);
             generation++;
             generationLabelUpdate();
+            activeCellsLabelUpdate();
         }
         private void UpdateCellsSeeds()
         {
@@ -380,7 +391,7 @@ namespace Game_of_Life
                         nextGrid[i, j].SetAlive();
                         cellsToAdd.Add(cells[i, j]);
                     }
-                    else if(state == Cells.CellState.Alive)
+                    else if (state == Cells.CellState.Alive)
                     {
                         nextGrid[i, j].SetDead();
                         cellsToRemove.Add(cells[i, j]);
@@ -398,6 +409,7 @@ namespace Game_of_Life
             CopyGrid(nextGrid, cells);
             generation++;
             generationLabelUpdate();
+            activeCellsLabelUpdate();
         }
         private void UpdateCellsBriansBrain()
         {
@@ -438,6 +450,7 @@ namespace Game_of_Life
             CopyGrid(nextGrid, cells);
             generation++;
             generationLabelUpdate();
+            activeCellsLabelUpdate();
         }
         private void CopyGrid(Cells[,] source, Cells[,] destination)
         {
@@ -452,7 +465,7 @@ namespace Game_of_Life
         private void TimerTick(object sender, EventArgs e)
         {
             int index = radioButtonGameTypeList.IndexOf(radioButtonGameTypeList.Find(r => r.Checked));
-            switch(index)
+            switch (index)
             {
                 case 0:
                     UpdateCellsGameOfLife();
@@ -464,7 +477,7 @@ namespace Game_of_Life
                     UpdateCellsSeeds();
                     break;
             }
-            if(activeCells.Count == 0)
+            if (activeCells.Count == 0)
             {
                 gameRunning = false;
                 timer.Stop();
@@ -496,7 +509,7 @@ namespace Game_of_Life
                     r.Enabled = false;
                 }
             }
-            else if(!gameRunning)
+            else if (!gameRunning)
             {
                 foreach (RadioButton r in radioButtonGameTypeList)
                 {
@@ -516,7 +529,7 @@ namespace Game_of_Life
             {
                 generationLabelReset();
                 int index = radioButtonGameTypeList.IndexOf(radioButton);
-                switch(index)
+                switch (index)
                 {
                     case 0:
                         foreach (Cells c in activeCells)
@@ -543,10 +556,10 @@ namespace Game_of_Life
                                 cellsToRemove.Add(c);
                             }
                         }
-                            foreach(Cells c in cellsToRemove)
-                            {
-                                activeCells.Remove(c);
-                            }
+                        foreach (Cells c in cellsToRemove)
+                        {
+                            activeCells.Remove(c);
+                        }
                         break;
                 }
             }
@@ -605,6 +618,10 @@ namespace Game_of_Life
         {
             generation = 0;
             generationLabelUpdate();
+        }
+        private void activeCellsLabelUpdate()
+        {
+            activeCellsLabel.Text = "Active cells: " + activeCells.Count;
         }
     }
 }
