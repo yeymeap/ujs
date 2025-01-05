@@ -30,12 +30,17 @@ namespace Game_of_Life
         private Bitmap bmp1;
         private Bitmap bmp2;
         private MyImage imageDisplay;
+        private HScrollBar speedScrollBar;
+        private Label speedLabel;
+        private int simulationSpeed = 500;
+        private int generation = 0;
+        private Label generationLabel;
 
         public Form1()
         {
             InitializeComponent();
             timer = new Timer();
-            timer.Interval = 500;
+            timer.Interval = simulationSpeed;
             timer.Tick += new EventHandler(TimerTick);
         }
         private void Form1_Load(object sender, EventArgs e)
@@ -100,6 +105,33 @@ namespace Game_of_Life
                 radio.CheckedChanged += new EventHandler(ChangingGridType);
             }
             this.Controls.Add(radioGroupGridType);
+            generationLabel = new Label()
+            {
+                Text = "Generation: " + generation,
+                Location = new Point(gridWidth + 10, 430),
+                AutoSize = true
+            };
+            this.Controls.Add(generationLabel);
+            speedLabel = new Label()
+            {
+                Text = "Simulation speed: " + simulationSpeed,
+                Location = new Point(gridWidth + 10, 240),
+                AutoSize = true,
+                TextAlign = ContentAlignment.MiddleCenter
+            };
+            this.Controls.Add(speedLabel);
+            speedScrollBar = new HScrollBar()
+            {
+                Location = new Point(gridWidth + 10, 260),
+                Size = new Size(100, 20),
+                Minimum = 100,
+                Maximum = 2000,
+                Value = 500,
+                SmallChange = 1,
+                LargeChange = 10
+            };
+            speedScrollBar.Scroll += new ScrollEventHandler(SpeedChangeScroll);
+            Controls.Add(speedScrollBar);
             string[] buttonTexts = { "Start", "Clear"};
             int buttonWidth = 100;
             int buttonHeight = 30;
@@ -119,7 +151,7 @@ namespace Game_of_Life
             runningText = new Label()
             {
                 Text = "Game is not running!",
-                Location = new Point(gridWidth + 10, 350),
+                Location = new Point(gridWidth + 10, 410),
                 AutoSize = true,
                 ForeColor = Color.Red,
                 TextAlign = ContentAlignment.MiddleCenter
@@ -127,17 +159,19 @@ namespace Game_of_Life
             bmp1 = new Bitmap(Properties.Resources.Ex);
             bmp2 = new Bitmap(Properties.Resources.Checkmark);
             imageDisplay = new MyImage(bmp1);
-            imageDisplay.ShowImage(this, new Point(gridWidth + 10, 240));
+            imageDisplay.ShowImage(this, new Point(gridWidth + 10, 300));
             this.Controls.Add(runningText);
             this.ClientSize = new Size(gridWidth + radioGroupGameType.Width + 20, Math.Max(gridHeight, radioGroupGameType.Height + 10));
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MinimizeBox = true;
             this.MaximizeBox = false;
+            this.BackColor = Color.White;
         }
         private void Clicked(object sender, EventArgs e)
         {
             if (gameRunning == false)
             {
+                generationLabelReset();
                 if (radioButtonGameTypeList[0].Checked || radioButtonGameTypeList[2].Checked)
                 {
                     Cells c = (Cells)sender;
@@ -198,6 +232,7 @@ namespace Game_of_Life
                     c.SetDead();
                 }
                 activeCells.Clear();
+                generationLabelReset();
             }
         }
         private void GameStateTextUpdate(Label label)
@@ -325,6 +360,8 @@ namespace Game_of_Life
                 activeCells.Remove(c);
             }
             CopyGrid(nextGrid, cells);
+            generation++;
+            generationLabelUpdate();
         }
         private void UpdateCellsSeeds()
         {
@@ -359,6 +396,8 @@ namespace Game_of_Life
                 activeCells.Remove(c);
             }
             CopyGrid(nextGrid, cells);
+            generation++;
+            generationLabelUpdate();
         }
         private void UpdateCellsBriansBrain()
         {
@@ -397,6 +436,8 @@ namespace Game_of_Life
                 activeCells.Remove(c);
             }
             CopyGrid(nextGrid, cells);
+            generation++;
+            generationLabelUpdate();
         }
         private void CopyGrid(Cells[,] source, Cells[,] destination)
         {
@@ -473,8 +514,8 @@ namespace Game_of_Life
             List<Cells> cellsToRemove = new List<Cells>();
             if (radioButton != null && radioButton.Checked)
             {
+                generationLabelReset();
                 int index = radioButtonGameTypeList.IndexOf(radioButton);
-                
                 switch(index)
                 {
                     case 0:
@@ -512,6 +553,7 @@ namespace Game_of_Life
         }
         private void ChangingGridType(object sender, EventArgs e)
         {
+            generationLabelReset();
             RadioButton radioButton = (RadioButton)sender;
             selectedRadioButtonGridTypeIndex = radioButtonGridTypeList.IndexOf(radioButton);
         }
@@ -548,6 +590,21 @@ namespace Game_of_Life
             RadioEnableDisable();
             ClearButtonEnableDisable();
             ImageCheckmarkEx();
+        }
+        private void SpeedChangeScroll(object sender, EventArgs e)
+        {
+            simulationSpeed = speedScrollBar.Value;
+            speedLabel.Text = "Simulation speed: " + simulationSpeed;
+            timer.Interval = simulationSpeed;
+        }
+        private void generationLabelUpdate()
+        {
+            generationLabel.Text = "Generation: " + generation;
+        }
+        private void generationLabelReset()
+        {
+            generation = 0;
+            generationLabelUpdate();
         }
     }
 }
