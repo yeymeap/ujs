@@ -338,12 +338,17 @@ namespace Game_of_Life
                         if (aliveNeighbours < 2 || aliveNeighbours > 3)
                         {
                             nextGrid[i, j].SetDead();
-                            cellsToRemove.Add(cells[i, j]);
+                            if (activeCells.Contains(cells[i, j])){
+                                cellsToRemove.Add(cells[i, j]);
+                            }
                         }
                         else
                         {
                             nextGrid[i, j].SetAlive();
-                            cellsToAdd.Add(cells[i, j]);
+                            if (!activeCells.Contains(cells[i, j]))
+                            {
+                                cellsToAdd.Add(cells[i, j]);
+                            }
                         }
                     }
                     else
@@ -351,12 +356,18 @@ namespace Game_of_Life
                         if (aliveNeighbours == 3)
                         {
                             nextGrid[i, j].SetAlive();
-                            cellsToAdd.Add(cells[i, j]);
+                            if (!activeCells.Contains(cells[i, j]))
+                            {
+                                cellsToAdd.Add(cells[i, j]);
+                            }
                         }
                         else
                         {
                             nextGrid[i, j].SetDead();
-                            cellsToRemove.Add(cells[i, j]);
+                            if (activeCells.Contains(cells[i, j]))
+                            {
+                                cellsToRemove.Add(cells[i, j]);
+                            }
                         }
                     }
                 }
@@ -563,6 +574,7 @@ namespace Game_of_Life
                         break;
                 }
             }
+            activeCellsLabelUpdate();
         }
         private void ChangingGridType(object sender, EventArgs e)
         {
