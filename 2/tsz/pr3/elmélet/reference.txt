@@ -58,7 +58,9 @@ Control Flow:
     throw: Throws an exception, signaling an error or abnormal situation.
     try / catch: Defines a block of code to attempt, and a catch block to handle exceptions if any occur.
     finally: A block of code that executes after try and catch, regardless of whether an exception was thrown.
-
+	yield: Pauses the execution of a method and returns the next value in an iteration, allowing for lazy evaluation and efficient memory usage by generating values on demand.
+	when: Adds a condition to a switch case or catch block, executing the case or block only if the condition is true.
+	
 Type and Type Checking:
 
     var: Implicitly typed variable. The type is inferred from the right-hand side of the assignment.

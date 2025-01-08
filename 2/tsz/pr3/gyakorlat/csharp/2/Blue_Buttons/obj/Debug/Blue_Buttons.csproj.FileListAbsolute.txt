@@ -1,0 +1,10 @@
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Blue_Buttons\bin\Debug\Blue_Buttons.exe.config
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Blue_Buttons\bin\Debug\Blue_Buttons.exe
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Blue_Buttons\bin\Debug\Blue_Buttons.pdb
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Blue_Buttons\obj\Debug\Blue_Buttons.csproj.AssemblyReference.cache
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Blue_Buttons\obj\Debug\Blue_Buttons.Form1.resources
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Blue_Buttons\obj\Debug\Blue_Buttons.Properties.Resources.resources
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Blue_Buttons\obj\Debug\Blue_Buttons.csproj.GenerateResource.cache
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Blue_Buttons\obj\Debug\Blue_Buttons.csproj.CoreCompileInputs.cache
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Blue_Buttons\obj\Debug\Blue_Buttons.exe
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Blue_Buttons\obj\Debug\Blue_Buttons.pdb
