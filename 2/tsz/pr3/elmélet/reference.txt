@@ -1,0 +1,88 @@
+C# Keywords and Definitions:
+Access Modifiers (define the accessibility of members or types):
+
+    public: The member is accessible from anywhere.
+    private: The member is accessible only within the class or struct where it is defined.
+    protected: The member is accessible within its class and by derived class instances.
+    internal: The member is accessible only within the same assembly (project).
+    protected internal: The member is accessible within the same assembly and by derived classes.
+    private protected: The member is accessible within its class and by derived classes within the same assembly.
+
+Modifiers (define how members or types behave):
+
+    static: Specifies that a member or class belongs to the type itself, not instances of the type. Static members can be accessed without creating an instance.
+    readonly: Indicates that a field can only be assigned during its declaration or in a constructor of the class it is defined in.
+    const: Defines a constant value that cannot be changed once it’s assigned.
+    abstract: Indicates that a class or method is incomplete and must be implemented in derived classes. Abstract classes cannot be instantiated.
+    sealed: Prevents a class from being inherited or a method from being overridden.
+    virtual: Allows a method to be overridden in derived classes.
+    override: Used to provide a new implementation of a method that was defined as virtual or abstract in a base class.
+    new: Used to hide a base class member with a new implementation in the derived class.
+    extern: Indicates that a method is defined outside of the C# code (typically in unmanaged code or a DLL).
+    unsafe: Allows the use of pointer types, enabling unsafe code (requires compiling with the unsafe keyword).
+
+Class and Object-Oriented Programming (OOP) Keywords:
+
+    class: Defines a class, which is a blueprint for creating objects that encapsulate data and behavior.
+    struct: Defines a structure, a value type that is similar to a class but is stored on the stack.
+    interface: Defines a contract that classes or structs can implement. It specifies methods or properties without providing implementations.
+    enum: Defines an enumeration, a set of named constants representing integral values.
+    delegate: Defines a type that references methods with a specific parameter list and return type, often used for event handling and callbacks.
+    event: Used to declare an event, which is a mechanism to provide notifications to other classes when something happens (typically used in event-driven programming).
+    object: The base type from which all types (classes, structs, etc.) derive. It represents an instance of any type.
+    dynamic: Allows for dynamic type binding, where type checking is done at runtime instead of compile-time.
+
+OOP Concepts:
+
+    encapsulation: The concept of bundling data (fields) and methods that operate on the data into a single unit (a class), and restricting access to some of the object's components (using access modifiers like private).
+    inheritance: A mechanism in which one class (subclass/derived class) inherits properties and methods from another class (superclass/base class).
+    polymorphism: The ability to call methods on derived objects via base class references, and have the method calls resolve to the correct method at runtime, either through method overriding or interface implementation.
+    abstraction: Hiding implementation details and showing only the essential features of an object, usually achieved using abstract classes or interfaces.
+
+Methods, Fields, and Properties:
+
+    method: A function defined within a class that performs an action or computation.
+    field: A variable defined inside a class or struct that holds data.
+    property: A member of a class that provides a flexible mechanism to read, write, or compute the value of a private field.
+
+Control Flow:
+
+    if: A conditional statement used to execute a block of code based on whether a condition is true.
+    else: Defines an alternative block of code to execute if the if condition is false.
+    switch: A control statement that executes one out of several possible blocks of code based on the value of an expression.
+    case: Defines a block of code inside a switch statement that is executed if the value matches the case.
+    break: Exits a loop or switch statement prematurely.
+    continue: Skips the current iteration of a loop and proceeds to the next iteration.
+    return: Exits a method and optionally returns a value.
+    goto: Jumps to a specific labeled statement in the code (rarely used).
+    throw: Throws an exception, signaling an error or abnormal situation.
+    try / catch: Defines a block of code to attempt, and a catch block to handle exceptions if any occur.
+    finally: A block of code that executes after try and catch, regardless of whether an exception was thrown.
+
+Type and Type Checking:
+
+    var: Implicitly typed variable. The type is inferred from the right-hand side of the assignment.
+    dynamic: A type that bypasses compile-time type checking, and type checking occurs at runtime.
+    typeof: Used to get the Type object associated with a type at compile-time.
+    is: Used to check if an object is of a specific type or if it can be cast to a specific type.
+    as: Attempts to cast an object to a specific type and returns null if the cast fails, instead of throwing an exception.
+    null: Represents a null or empty reference, used for reference types.
+
+Other Keywords:
+
+    null: Represents the absence of a value or reference.
+    this: Refers to the current instance of the class.
+    base: Refers to the base class, allowing access to members of the base class.
+    new: Used to create a new object or hide a member in a derived class.
+    const: Defines a constant value.
+    default: Used to define the default value of a type or as part of a switch statement.
+    async: Indicates that a method is asynchronous and can be awaited.
+    await: Pauses the execution of an asynchronous method until a task is completed.
+
+Other Concepts:
+
+    void: Indicates that a method does not return a value.
+    params: Allows passing a variable number of arguments to a method.
+    ref: Indicates that a parameter is passed by reference, allowing modifications to the argument in the calling method.
+    out: Similar to ref, but the parameter must be assigned a value in the method before returning.
+    in: Indicates that a parameter is passed by reference but is read-only inside the method.

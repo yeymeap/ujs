@@ -1,0 +1,10 @@
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\colorgames\bin\Debug\colorgames.exe.config
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\colorgames\bin\Debug\colorgames.exe
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\colorgames\bin\Debug\colorgames.pdb
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\colorgames\obj\Debug\colorgames.csproj.AssemblyReference.cache
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\colorgames\obj\Debug\colorgames.Form1.resources
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\colorgames\obj\Debug\colorgames.Properties.Resources.resources
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\colorgames\obj\Debug\colorgames.csproj.GenerateResource.cache
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\colorgames\obj\Debug\colorgames.csproj.CoreCompileInputs.cache
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\colorgames\obj\Debug\colorgames.exe
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\colorgames\obj\Debug\colorgames.pdb

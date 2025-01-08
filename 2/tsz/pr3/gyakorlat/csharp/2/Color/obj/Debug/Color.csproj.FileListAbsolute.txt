@@ -1,0 +1,5 @@
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Color\obj\Debug\Color.csproj.AssemblyReference.cache
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Color\obj\Debug\Color.Form1.resources
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Color\obj\Debug\Color.Properties.Resources.resources
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Color\obj\Debug\Color.csproj.GenerateResource.cache
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\Color\obj\Debug\Color.csproj.CoreCompileInputs.cache
