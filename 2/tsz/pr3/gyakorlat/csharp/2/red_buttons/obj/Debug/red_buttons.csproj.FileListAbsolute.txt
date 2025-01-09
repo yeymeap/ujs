@@ -1,0 +1,10 @@
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\red_buttons\bin\Debug\red_buttons.exe.config
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\red_buttons\bin\Debug\red_buttons.exe
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\red_buttons\bin\Debug\red_buttons.pdb
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\red_buttons\obj\Debug\red_buttons.csproj.AssemblyReference.cache
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\red_buttons\obj\Debug\red_buttons.Form1.resources
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\red_buttons\obj\Debug\red_buttons.Properties.Resources.resources
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\red_buttons\obj\Debug\red_buttons.csproj.GenerateResource.cache
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\red_buttons\obj\Debug\red_buttons.csproj.CoreCompileInputs.cache
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\red_buttons\obj\Debug\red_buttons.exe
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\red_buttons\obj\Debug\red_buttons.pdb

@@ -25,6 +25,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blue_Buttons", "Blue_Button
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calendar", "Calendar\Calendar.csproj", "{CCBC6507-701E-4A4E-93B5-B6C600346BE9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "red_buttons", "red_buttons\red_buttons.csproj", "{9B54BBB0-FFBF-4222-A13C-E0200F11501F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "buttoncolorer", "buttoncolorer\buttoncolorer.csproj", "{7A4F2FA2-1BEE-4441-A263-42F59B1A6CD9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +79,14 @@ Global
 		{CCBC6507-701E-4A4E-93B5-B6C600346BE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCBC6507-701E-4A4E-93B5-B6C600346BE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCBC6507-701E-4A4E-93B5-B6C600346BE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B54BBB0-FFBF-4222-A13C-E0200F11501F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B54BBB0-FFBF-4222-A13C-E0200F11501F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B54BBB0-FFBF-4222-A13C-E0200F11501F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B54BBB0-FFBF-4222-A13C-E0200F11501F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A4F2FA2-1BEE-4441-A263-42F59B1A6CD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A4F2FA2-1BEE-4441-A263-42F59B1A6CD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A4F2FA2-1BEE-4441-A263-42F59B1A6CD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A4F2FA2-1BEE-4441-A263-42F59B1A6CD9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

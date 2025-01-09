@@ -1,0 +1,10 @@
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\buttoncolorer\bin\Debug\buttoncolorer.exe.config
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\buttoncolorer\bin\Debug\buttoncolorer.exe
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\buttoncolorer\bin\Debug\buttoncolorer.pdb
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\buttoncolorer\obj\Debug\buttoncolorer.csproj.AssemblyReference.cache
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\buttoncolorer\obj\Debug\buttoncolorer.Form1.resources
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\buttoncolorer\obj\Debug\buttoncolorer.Properties.Resources.resources
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\buttoncolorer\obj\Debug\buttoncolorer.csproj.GenerateResource.cache
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\buttoncolorer\obj\Debug\buttoncolorer.csproj.CoreCompileInputs.cache
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\buttoncolorer\obj\Debug\buttoncolorer.exe
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\buttoncolorer\obj\Debug\buttoncolorer.pdb
