@@ -1,0 +1,10 @@
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\binarycolor\bin\Debug\binarycolor.exe.config
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\binarycolor\bin\Debug\binarycolor.exe
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\binarycolor\bin\Debug\binarycolor.pdb
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\binarycolor\obj\Debug\binarycolor.csproj.AssemblyReference.cache
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\binarycolor\obj\Debug\binarycolor.Form1.resources
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\binarycolor\obj\Debug\binarycolor.Properties.Resources.resources
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\binarycolor\obj\Debug\binarycolor.csproj.GenerateResource.cache
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\binarycolor\obj\Debug\binarycolor.csproj.CoreCompileInputs.cache
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\binarycolor\obj\Debug\binarycolor.exe
+C:\Bence\sje\2\tsz\pr3\gyakorlat\csharp\2\binarycolor\obj\Debug\binarycolor.pdb
