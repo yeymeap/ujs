@@ -29,13 +29,14 @@ namespace binarycolor
             for (int i = 0; i < rows; i++) {
                 for (int j = 0; j < cols; j++)
                 {
-                    buttons[i, j] = new Button();
-                    buttons[i, j].Size = new Size(buttonSize, buttonSize);
-                    buttons[i, j].Location = new Point(j * buttonSize, i * buttonSize + rowHeight);
-                    buttons[i, j].BackColor = Color.White;
-                    buttons[i, j].Text = "0";
-                    buttons[i, j].Click += new EventHandler(buttonClick);
-                    this.Controls.Add(buttons[i, j]);
+                    Button b = buttons[i, j];
+                    b = new Button();
+                    b.Size = new Size(buttonSize, buttonSize);
+                    b.Location = new Point(j * buttonSize, i * buttonSize + rowHeight);
+                    b.BackColor = Color.White;
+                    b.Text = "0";
+                    b.Click += new EventHandler(buttonClick);
+                    this.Controls.Add(b);
                 }
             }
             radio1 = new RadioButton()
