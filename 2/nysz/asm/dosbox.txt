@@ -1,0 +1,11 @@
+dosbox:
+
+mount c c:\Assembly
+c:
+masm elso
+// enterezés 3x
+link elso
+// enterezés 3x
+elso
+
+mount -u

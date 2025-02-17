@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{813BE97E-0438-4ED6-969F-8B6F39EC4BEE}|binarycolor\\binarycolor.csproj|c:\\bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\binarycolor\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{813BE97E-0438-4ED6-969F-8B6F39EC4BEE}|binarycolor\\binarycolor.csproj|solutionrelative:binarycolor\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A4F2FA2-1BEE-4441-A263-42F59B1A6CD9}|buttoncolorer\\buttoncolorer.csproj|C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\buttoncolorer\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A4F2FA2-1BEE-4441-A263-42F59B1A6CD9}|buttoncolorer\\buttoncolorer.csproj|solutionrelative:buttoncolorer\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F6E04DF0-2574-4395-8B00-C8B14A5BC6CB}|Game_of_Life\\Cellular_Automaton.csproj|c:\\bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\game_of_life\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6E04DF0-2574-4395-8B00-C8B14A5BC6CB}|Game_of_Life\\Cellular_Automaton.csproj|solutionrelative:game_of_life\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,26 +20,14 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\binarycolor\\Form1.cs",
-              "RelativeDocumentMoniker": "binarycolor\\Form1.cs",
-              "ToolTip": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\binarycolor\\Form1.cs",
-              "RelativeToolTip": "binarycolor\\Form1.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwCYAAAAnAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\Game_of_Life\\Form1.cs",
+              "RelativeDocumentMoniker": "Game_of_Life\\Form1.cs",
+              "ToolTip": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\Game_of_Life\\Form1.cs",
+              "RelativeToolTip": "Game_of_Life\\Form1.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAADAAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T20:12:32.784Z",
+              "WhenOpened": "2025-02-11T09:09:10.235Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\buttoncolorer\\Form1.cs",
-              "RelativeDocumentMoniker": "buttoncolorer\\Form1.cs",
-              "ToolTip": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\buttoncolorer\\Form1.cs",
-              "RelativeToolTip": "buttoncolorer\\Form1.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAAwBQAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T18:28:15.261Z"
             }
           ]
         }
