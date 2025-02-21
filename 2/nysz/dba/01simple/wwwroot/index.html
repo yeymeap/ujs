@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <h1>Welcome!</h1>
+    <button onclick="Load()">Load</button>
+    <p id="ParIntro"></p>
+    <p id="ParFirst"></p>
+    <script>
+      function Load() {
+        $.get("/Content/ParIntro", (data) => {
+          $("#ParIntro").text(data);
+        });
+        $.get("/Content/ParFirst", (data) => {
+          $("#ParFirst").text(data);
+        });
+      }
+    </script>
+  </body>
+</html>

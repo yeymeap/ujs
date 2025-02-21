@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "MgNM7exiOl1h+lM9FCq1AJf4VzOslaYXhWxEYMR+Z68=",
+  "Source": "01simple",
+  "BasePath": "_content/01simple",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "01simple\\wwwroot",
+      "Source": "01simple",
+      "ContentRoot": "C:\\Users\\Student\\Documents\\b1\\01simple\\wwwroot\\",
+      "BasePath": "_content/01simple",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Student\\Documents\\b1\\01simple\\wwwroot\\index.html",
+      "SourceId": "01simple",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Student\\Documents\\b1\\01simple\\wwwroot\\",
+      "BasePath": "_content/01simple",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    }
+  ]
+}
