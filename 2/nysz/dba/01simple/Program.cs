@@ -3,5 +3,5 @@ builder.Services.AddControllers();
 var app = builder.Build();
 app.UseStaticFiles();
 app.MapControllers();
-app.MapGet("/", () => "Hello World!");
+app.MapGet("/", () => Results.Redirect("/index.html"));
 app.Run();
