@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      td,
+      th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome!</h1>
+    <button onclick="Load()">Load All</button>
+    <p id="ParIntro"></p>
+    <p id="ParFirst"></p>
+    <span id="CurrentTime">Loaded on</span>
+    <form action="/action_page.php">
+      <label for="FirstName">First Name:</label><br />
+      <input type="text" id="FirstName" name="FirstName" /><br />
+      <label for="lname">Last Name:</label><br />
+      <input type="text" id="LastName" name="LastName" /><br /><br />
+    </form>
+    <button onclick="Load()">Send</button>
+    <button onclick="Load()">Load Specific</button>
+    <p id="Welcome"></p>
+    <p id="Albums"></p>
+    <table id="table">
+      <tr>
+        <th>Album Title</th>
+      </tr>
+    </table>
+    <script>
+      function Load() {
+        $.get("/Content/ParIntro", (data) => {
+          $("#ParIntro").text(data);
+        });
+        $.get("/Content/ParFirst", (data) => {
+          $("#ParFirst").text(data);
+        });
+        $.get("/Content/CurrentTime", (data) => {
+          $("#CurrentTime").text(data);
+        });
+
+        var FirstName = $("#FirstName").val();
+        var LastName = $("#LastName").val();
+
+        $.get(`/Content/Welcome/${FirstName}/${LastName}`, (data) => {
+          $("#Welcome").text(data);
+        });
+
+        $.get(`/Content/GetAlbumNames`, (albums) => {
+          albums.forEach((title) => {
+            console.log(title);
+            var row = $(
+              `<tr><td>${albumid}</td></tr><tr><td>${title}</td></tr>`
+            );
+            $("#table").append(row);
+          });
+        });
+      }
+    </script>
+  </body>
+</html>

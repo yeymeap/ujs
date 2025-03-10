@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Bence\\sje\\2\\nysz\\dba\\simple\\wwwroot\\chinook.db",
+      "PackagePath": "staticwebassets\\chinook.db"
+    },
+    {
+      "Id": "C:\\Bence\\sje\\2\\nysz\\dba\\simple\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Bence\\sje\\2\\nysz\\dba\\simple\\wwwroot\\index2.html",
+      "PackagePath": "staticwebassets\\index2.html"
+    },
+    {
+      "Id": "C:\\Bence\\sje\\2\\nysz\\dba\\simple\\wwwroot\\indexPost.html",
+      "PackagePath": "staticwebassets\\indexPost.html"
+    },
+    {
+      "Id": "C:\\Bence\\sje\\2\\nysz\\dba\\simple\\wwwroot\\login.html",
+      "PackagePath": "staticwebassets\\login.html"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.simple.props",
+      "PackagePath": "build\\simple.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.simple.props",
+      "PackagePath": "buildMultiTargeting\\simple.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.simple.props",
+      "PackagePath": "buildTransitive\\simple.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.simple.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.simple.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
