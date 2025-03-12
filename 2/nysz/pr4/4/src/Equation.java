@@ -14,9 +14,9 @@ public class Equation {
     }
 
     public double GetX1(){
-        return (-b + Math.sqrt(GetD()) / 2 * a);
+        return (-b + Math.sqrt(GetD())) / ( 2 * a);
     }
     public double GetX2(){
-        return (-b - Math.sqrt(GetD()) / 2 * a);
+        return (-b - Math.sqrt(GetD())) / ( 2 * a);
     }
 }

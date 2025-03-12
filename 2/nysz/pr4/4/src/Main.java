@@ -12,9 +12,19 @@ public class Main{
         }
         Time t = new Time(3823);
         System.out.println(t.getHour() + "hour(s) " + t.getMinute() + "minute(s) " + t.getSecond() + "second(s) " );
-        Equation eq = new Equation(3, 4, 5);
-        
-        System.out.println("Discriminant = " + eq.GetD() + "Possible solutions = " + eq.GetPossible() + "X1 = " + eq.GetX1() + "X2 = " + eq.GetX2());
+
+        Equation eq = new Equation(-1, 2, 3);
+        if(eq.GetPossible() == 0){
+            System.out.println("No real solutions");
+        }
+        else{
+            if (eq.GetPossible() == 1){
+                System.out.println("X1, X2 = " + eq.GetX1());
+            }
+            else{
+                System.out.println("X1 = " + eq.GetX1() + " X2 = " + eq.GetX2());
+            }
+        }
     }
 
 }
