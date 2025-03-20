@@ -1,0 +1,28 @@
+1. Hozz létre az eddigiekhez egy diploma táblát, amelyben egy diák azonosítója, egy tanár azonosítója és egy diplomacím szerepel.
+Ez fogja tartalmazni, hogy kinek ki a témavezetője, és mi a diplomamunka címe.
+Tölts fel két sort ebbe a táblába a tárolt adatok alapján!
+Listázd ki a felvitt két sort!
+
+2. Listázzuk ki azokat a tanárokat, akik több mint egy tantárgyat tanítanak!
+
+3. Listázzuk ki azokat a diákokat, akik az összes vizsgájukon legalább 'C' (tehát 'A', 'B' vagy 'C') jegyet kaptak!
+
+4. Listázzuk ki azokat a tanárokat, akik olyan tantárgyat tanítanak, amelyből legalább egy diák megbukott!
+
+5. Listázzuk ki azokat a tantárgyakat, amelyeket a legtöbb diák tanul!
+
+6. Módosítsd a tantárgyakat úgy, hogy a Testnevelés ne legyen kötelező (0 legyen a kotelezo mező értéke)! Listázd ki a tantárgyakat a változás után.
+
+7. Legyen A,B,C,D,E,F jegyek értéke 6,5,4,3,2,1. Listázzuk a vizsgák alapján tárgyanként, hogy hányan vizsgáztak, és mennyi az átlagos jegy.
+
+8. Listázzuk ki, hogy mennyi össztöndíjat kapnak összesen azok, akik megbuktak valamiből! 
+
+9. Listázzuk ki, kik azok a hallgatók és hol laknak, akik tanulnak informatikát és matematikát is.
+
+10. Listázzuk ki azokat a tantárgykódokat, amelyeket valaki tanít, de nem szerepelnek a tantárgyak között!
+
+11. Töröljük a 10. feladattal kapott rekord(oka)t a tanít táblából! Listázd ki a tanít táblát a változtatás után.
+
+12. Aki legalább 'C' jegyet kapott matematikából, annak duplázzuk meg az ösztöndíját! Listázzuk ki a változás után a tanulókat!
+
+13. Listázzuk ki, hány különböző tanuló vizsgázott legalább egyszer!
