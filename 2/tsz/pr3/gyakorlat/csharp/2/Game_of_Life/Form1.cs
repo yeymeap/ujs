@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.Design;
 using System.Data;
 using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
@@ -10,6 +11,8 @@ using System.Runtime.Remoting.Channels;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
+// todo - add neumann neighborhood
 
 namespace Game_of_Life
 {
@@ -25,7 +28,9 @@ namespace Game_of_Life
         private List<Button> buttonList = new List<Button>();
         private List<RadioButton> radioButtonGameTypeList = new List<RadioButton>();
         private List<RadioButton> radioButtonGridTypeList = new List<RadioButton>();
+        private List<RadioButton> radioButtonNeighbourhoodList = new List<RadioButton>();
         private int selectedRadioButtonGridTypeIndex = 0;
+        private int selectedRadioButtonNeighbourhoodTypeIndex = 0;
         private Bitmap[] images = { Properties.Resources.Checkmark, Properties.Resources.Ex };
         private Bitmap bmp1;
         private Bitmap bmp2;
@@ -91,12 +96,12 @@ namespace Game_of_Life
                 Location = new Point(gridWidth + 10, 100),
                 Size = new Size(100, 60),
             };
-            string[] options = { "Basic", "Toroid" };
-            for (int i = 0; i < options.Length; i++)
+            string[] gridOptions = { "Basic", "Toroid" };
+            for (int i = 0; i < gridOptions.Length; i++)
             {
                 RadioButton radio = new RadioButton()
                 {
-                    Text = options[i],
+                    Text = gridOptions[i],
                     Location = new Point(10, 20 + i * radioHeight),
                     AutoSize = true,
                     Checked = i == 0
@@ -106,31 +111,53 @@ namespace Game_of_Life
                 radio.CheckedChanged += new EventHandler(ChangingGridType);
             }
             this.Controls.Add(radioGroupGridType);
+            GroupBox radioGroupNeighbourhoodType = new GroupBox()
+            {
+                Text = "Neighbourhood",
+                Location = new Point(gridWidth + 10, 170),
+                Size = new Size(100, 60)
+            };
+            string[] neighbourhoodOptions = { "Moore", "Neumann" };
+            for (int i = 0; i < neighbourhoodOptions.Length; i++)
+            {
+                RadioButton radio = new RadioButton()
+                {
+                    Text = neighbourhoodOptions[i],
+                    Location = new Point(10, 20 + i * radioHeight),
+                    AutoSize = true,
+                    Checked = i == 0
+                };
+                radioGroupNeighbourhoodType.Controls.Add(radio);
+                radioButtonNeighbourhoodList.Add(radio);
+                radio.CheckedChanged += new EventHandler(ChangingNeighbourhoodType);
+
+            }
+            this.Controls.Add(radioGroupNeighbourhoodType);
             generationLabel = new Label()
             {
                 Text = "Generation: " + generation,
-                Location = new Point(gridWidth + 10, 430),
+                Location = new Point(gridWidth + 10, 490),
                 AutoSize = true
             };
             this.Controls.Add(generationLabel);
             activeCellsLabel = new Label()
             {
                 Text = "Active cells: " + activeCells.Count,
-                Location = new Point(gridWidth + 10, 450),
+                Location = new Point(gridWidth + 10, 510),
                 AutoSize = true
             };
             this.Controls.Add(activeCellsLabel);
             speedLabel = new Label()
             {
                 Text = "Simulation speed: " + simulationSpeed,
-                Location = new Point(gridWidth + 10, 240),
+                Location = new Point(gridWidth + 10, 335),
                 AutoSize = true,
                 TextAlign = ContentAlignment.MiddleCenter
             };
             this.Controls.Add(speedLabel);
             speedScrollBar = new HScrollBar()
             {
-                Location = new Point(gridWidth + 10, 260),
+                Location = new Point(gridWidth + 10, 310),
                 Size = new Size(100, 20),
                 Minimum = 100,
                 Maximum = 2000,
@@ -149,7 +176,7 @@ namespace Game_of_Life
                 Button button = new Button()
                 {
                     Text = buttonTexts[i],
-                    Location = new Point(gridWidth + 10, 170 + i * buttonHeight),
+                    Location = new Point(gridWidth + 10, 240 + i * buttonHeight),
                     Size = new Size(buttonWidth, buttonHeight)
                 };
                 button.Click += eventHandlers[i];
@@ -159,7 +186,7 @@ namespace Game_of_Life
             runningText = new Label()
             {
                 Text = "Game is not running!",
-                Location = new Point(gridWidth + 10, 410),
+                Location = new Point(gridWidth + 10, 470),
                 AutoSize = true,
                 ForeColor = Color.Red,
                 TextAlign = ContentAlignment.MiddleCenter
@@ -167,7 +194,7 @@ namespace Game_of_Life
             bmp1 = new Bitmap(Properties.Resources.Ex);
             bmp2 = new Bitmap(Properties.Resources.Checkmark);
             imageDisplay = new MyImage(bmp1);
-            imageDisplay.ShowImage(this, new Point(gridWidth + 10, 300));
+            imageDisplay.ShowImage(this, new Point(gridWidth + 10, 360));
             this.Controls.Add(runningText);
             this.ClientSize = new Size(gridWidth + radioGroupGameType.Width + 20, Math.Max(gridHeight, radioGroupGameType.Height + 10));
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -252,7 +279,7 @@ namespace Game_of_Life
                 label.Text = "Game is running!";
                 label.ForeColor = Color.Green;
             }
-            else if(!gameRunning)
+            else if (!gameRunning)
             {
                 label.Text = "Game is not running!";
                 label.ForeColor = Color.Red;
@@ -275,49 +302,96 @@ namespace Game_of_Life
         private int CountAliveNeighboursBasic(int row, int col)
         {
             int aliveCount = 0;
-            for (int i = -1; i <= 1; i++)
+            int neighbourhood = ReturnSelectedRadioButtonNeighbourhoodTypeIndex();
+            switch (neighbourhood)
             {
-                for (int j = -1; j <= 1; j++)
-                {
-                    if (i == 0 && j == 0)
+                case 0:
+                    for (int i = -1; i <= 1; i++)
                     {
-                        continue;
-                    }
-                    int neighbourRow = row + i;
-                    int neighbourCol = col + j;
-                    if (neighbourRow >= 0 && neighbourRow < rows && neighbourCol >= 0 && neighbourCol < cols)
-                    {
-                        Cells.CellState state = cells[neighbourRow, neighbourCol].GetState();
-                        if (state == Cells.CellState.Alive)
+                        for (int j = -1; j <= 1; j++)
                         {
-                            aliveCount++;
+                            if (i == 0 && j == 0)
+                            {
+                                continue;
+                            }
+                            int neighbourRow = row + i;
+                            int neighbourCol = col + j;
+                            if (neighbourRow >= 0 && neighbourRow < rows && neighbourCol >= 0 && neighbourCol < cols)
+                            {
+                                Cells.CellState state = cells[neighbourRow, neighbourCol].GetState();
+                                if (state == Cells.CellState.Alive)
+                                {
+                                    aliveCount++;
+                                }
+                            }
                         }
                     }
-                }
+                    break;
+                case 1:
+                    int[] dRow = { -1, 1, 0, 0 };
+                    int[] dCol = { 0, 0, -1, 1 };
+                    for (int k = 0; k < 4; k++)
+                    {
+                        int neighbourRow = row + dRow[k];
+                        int neighbourCol = col + dCol[k];
+
+                        if (neighbourRow >= 0 && neighbourRow < rows && neighbourCol >= 0 && neighbourCol < cols)
+                        {
+                            Cells.CellState state = cells[neighbourRow, neighbourCol].GetState();
+                            if (state == Cells.CellState.Alive)
+                            {
+                                aliveCount++;
+                            }
+                        }
+                    }
+                    break;
+
             }
             return aliveCount;
         }
         private int CountAliveNeighboursToroid(int row, int col)
         {
             int aliveCount = 0;
-            for (int i = -1; i <= 1; i++)
+            int neighbourhood = ReturnSelectedRadioButtonNeighbourhoodTypeIndex();
+            switch (neighbourhood)
             {
-                for (int j = -1; j <= 1; j++)
-                {
-                    if (i == 0 && j == 0)
+                case 0:
+                    for (int i = -1; i <= 1; i++)
                     {
-                        continue;
+                        for (int j = -1; j <= 1; j++)
+                        {
+                            if (i == 0 && j == 0)
+                            {
+                                continue;
+                            }
+                            int neighbourRow = (row + i + rows) % rows;
+                            int neighbourCol = (col + j + cols) % cols;
+                            {
+                                Cells.CellState state = cells[neighbourRow, neighbourCol].GetState();
+                                if (state == Cells.CellState.Alive)
+                                {
+                                    aliveCount++;
+                                }
+                            }
+                        }
                     }
-                    int neighbourRow = (row + i + rows) % rows;
-                    int neighbourCol = (col + j + cols) % cols;
+                    break;
+                case 1:
+                    int[] dRow = { -1, 1, 0, 0 };
+                    int[] dCol = { 0, 0, -1, 1 };
+
+                    for (int k = 0; k < 4; k++)
                     {
+                        int neighbourRow = (row + dRow[k] + rows) % rows;
+                        int neighbourCol = (col + dCol[k] + cols) % cols;
+
                         Cells.CellState state = cells[neighbourRow, neighbourCol].GetState();
                         if (state == Cells.CellState.Alive)
                         {
                             aliveCount++;
                         }
                     }
-                }
+                    break;
             }
             return aliveCount;
         }
@@ -338,7 +412,8 @@ namespace Game_of_Life
                         if (aliveNeighbours < 2 || aliveNeighbours > 3)
                         {
                             nextGrid[i, j].SetDead();
-                            if (activeCells.Contains(cells[i, j])){
+                            if (activeCells.Contains(cells[i, j]))
+                            {
                                 cellsToRemove.Add(cells[i, j]);
                             }
                         }
@@ -519,6 +594,10 @@ namespace Game_of_Life
                 {
                     r.Enabled = false;
                 }
+                foreach (RadioButton r in radioButtonNeighbourhoodList)
+                {
+                    r.Enabled = false;
+                }
             }
             else if (!gameRunning)
             {
@@ -527,6 +606,10 @@ namespace Game_of_Life
                     r.Enabled = true;
                 }
                 foreach (RadioButton r in radioButtonGridTypeList)
+                {
+                    r.Enabled = true;
+                }
+                foreach (RadioButton r in radioButtonNeighbourhoodList)
                 {
                     r.Enabled = true;
                 }
@@ -634,6 +717,16 @@ namespace Game_of_Life
         private void activeCellsLabelUpdate()
         {
             activeCellsLabel.Text = "Active cells: " + activeCells.Count;
+        }
+        private void ChangingNeighbourhoodType(object sender, EventArgs e)
+        {
+            generationLabelReset();
+            RadioButton radioButton = (RadioButton)sender;
+            selectedRadioButtonNeighbourhoodTypeIndex = radioButtonNeighbourhoodList.IndexOf(radioButton);
+        }
+        private int ReturnSelectedRadioButtonNeighbourhoodTypeIndex()
+        {
+            return selectedRadioButtonNeighbourhoodTypeIndex;
         }
     }
 }
