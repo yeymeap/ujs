@@ -1,0 +1,28 @@
+arduino lábak, mire valók, hogy működik
+led működése, működtetése, gombbal
+pullup, pulldown resistor, analogwrite, digitalwrite
+pwm jel működése, pwm leddel működtetése
+7 szegmenses kijelző
+ultrahangos távolságmérő
+lcd működtetése i2c (master-slave kialakítás)
+usart kommunikáció (tx/rx)
+servo motor működése (potméter, pwm jel)
+hőmérsékletmérő
+fotoellenállás
+3d nyomtatás (
+	xyz,
+	extruder,
+	több extruder fejek,
+	huzalos anyag típusai, tulajdonságai,
+	üst,
+	hőmérséklet,
+	nyomtatás működése,
+	anyagok megfelelő tárolása,
+	anyag visszahűlési ideje,
+	anyagok követelményei: fűtött kabin,
+	probléma: aljáról felvállás, megoldás a fűtött alapzat,
+	raft: segítő platform, nem váll fel, hátránya felület csúnya lesz tőle,
+	support: alátámasztás,
+	csavar nyomtatása 45°
+	beállítások: kitöltés, alak, sűrűség, gyorsaság, hőmérséklet, falvastagság,
+	előnye 3d nyomtatásnak: univerzális, prototípus gyártása)
