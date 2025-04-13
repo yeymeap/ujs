@@ -45,6 +45,11 @@ Methods, Fields, and Properties:
     field: A variable defined inside a class or struct that holds data.
     property: A member of a class that provides a flexible mechanism to read, write, or compute the value of a private field.
 
+Overloading Concepts:
+
+    method overloading: Defining multiple methods in the same class with the same name but different parameter lists (different number, types, or order of parameters). Allows calling the same method name in different ways depending on the arguments.
+	constructor overloading: Defining multiple constructors in the same class with different parameter lists. Allows creating objects with different initial values or setups based on the arguments provided.
+	
 Control Flow:
 
     if: A conditional statement used to execute a block of code based on whether a condition is true.
