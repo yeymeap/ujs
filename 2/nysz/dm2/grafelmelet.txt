@@ -1,0 +1,49 @@
+v - csucs jelolese
+d(v) - csucs foka
+e = el
+teljes graf - minden csucs ossze van kotve minden csuccsal
+regularis graf - minden pont k foku
+egyszeru graf - nincs hurokel es tobbszoros el
+
+n csucsu grafban legfeljebb n kulonbozo csucs fokszam lehet, egyszerre nem lehet 0 es n-1, mindig van legalabb 2 ugyanolyan fokszamu
+										
+									   c1 c2
+szomszedsagi - adjacencia matrix -> c1 0  1
+									c2 1  0
+									
+									   e1 e2
+tartalmazasi - incidencia matrix ->	c1 1  1
+									c2 1  0
+
+ellista ->		e1 | {c1, c6}
+				e2 | {c2, c6}
+  							
+csucslista -> 	c1 | e1, e3, e4
+				c2 | e2
+
+adjacencia matrix:
+	sorosszege - csucs fokszama
+	matrix n hatvanya - i-bol j-be n hosszu utak szama
+
+seta - korseta -> nincs megkotes
+vonal - zart vonal -> minden elen egyszer megyunk at
+ut - kor -> minden csucson egyszer megyunk at
+
+Euler vonal:
+	zart - van benne, ha minden csucs fokszama paros, kezdo es vegpont ugyanaz, barhol kezdodhet
+	nyilt - pontosan ketto paratlan fokszamu csucs, egyik paratlanban kezdodik, masikban vegzodik
+	iranyitott grafban:
+		zart - minden pont ki foka egyenlo a be fokaval
+		nyilt - ket pont ki fokanak es be fokanak 1 illetve -1 a kulonbsege, forras, nyelo
+elegseges feltetel:
+Dirac tetel: egyszeru grafban, n csuccsal, van HK ha minden csucs foka >= n/2 
+Ore tetel: egyszeru grafban, n csuccsal, van HK ha nem szomszedos csucsok fokainak osszege n vagy nagyobb
+
+szukseges feltetel:
+n csucs elhagyasaval a graf ha maximum n reszgrafra esik szet => HK
+n csucs elhagyasaval a graf ha maximum n+1 reszgrafra esik szet => HU
+
+elegseges feltetel, igaz: biztosan van benne HK
+elegseges feltetel, hamis: nem biztos, de lehet benne HK
+szukseges feltetel, igaz: lehet benne HK, de nem biztos
+szukseges feltetel. hamis: nincs benne HK
