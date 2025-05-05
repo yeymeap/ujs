@@ -26,7 +26,7 @@ Read:
 	; jump if true
 	jz True
 	
-	;jump if false
+	; jump if false
 	jmp False
 
 True:
