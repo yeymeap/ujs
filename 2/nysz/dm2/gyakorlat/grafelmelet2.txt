@@ -1,0 +1,29 @@
+Prufer kod hossza: n-2, ahol n a csucsok szama 
+  szam k-szor szerepel: k+1 fokszamu a csucs
+
+Kruskal feszitofa:
+  statisztikat csinalunk elek sulyai szerint, vigyazunk a korre
+
+Prim feszitofa:
+  tetszoleges pontot kivalasztunk, legkisebb elt valasszuk ami egy regi es egy uj csucs kozott fut, korre vigyazunk
+
+Grafok jellemzoi:
+  alfa(G) - fuggetlen pontok maximalis szama
+  tau(G) - lefogo pontok minimalis szama
+  nu(G) - fuggetlen elek maximalis szama
+  ro(G) - lefogo elek minimalis szama
+  
+Gallai tetelek:
+  1. alfa(g) + tau(g) = n
+  2. nu(G) + ro(G) = n
+
+Kronig tetele:
+  alfa(G) <= ro(G)
+  nu(G) <= tau(G)
+  
+Paros grafok:
+  G paros graf, ha G csucsainak halmazat A es B halmazra lehet bontani, ugy, hogy G minden ele egyik vegpontja A-ban, masik B-ben van
+  G paros <=> minde kore paros hosszu
+  parositas - M elhalmaz, melyben semelyik ket elnek nincs kozos pontja 
+  M - fuggetlen elhalmaz
+  teljes parositas - A vagy B halmaz minden pontjat lefedi
