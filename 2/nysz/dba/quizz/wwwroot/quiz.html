@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+			crossorigin="anonymous" />
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+			crossorigin="anonymous"></script>
+		<script
+			src="https://code.jquery.com/jquery-3.7.1.min.js"
+			integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+			crossorigin="anonymous"></script>
+		<title>Quiz</title>
+		<link rel="stylesheet" href="css/styles.css" />
+		<link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+			integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer" />
+		<script src="scripts/main.js"></script>
+	</head>
+	<header class="bg-primary text-white p-3 mb-4">
+		<div class="container">
+			<h1>Autóiskola</h1>
+		</div>
+	</header>
+	<body>
+		<button
+			class="floating-home-button"
+			onclick="backToHome();"
+			title="Home">
+			<i class="fas fa-home"></i>
+		</button>
+		<button
+			class="back-to-top-button"
+			onclick="scrollToTop()"
+			title="Back to Top">
+			<i class="fas fa-arrow-up"></i>
+		</button>
+		<button
+			class="floating-profile-button"
+			onclick="backToProfile();"
+			title="Profile">
+			<i class="fas fa-user"></i>
+		</button>
+		<div id="timer" class="floating-time">Hátralévő idő: 5:00</div>
+		<div class="container">
+			<h1>Kvíz</h1>
+			<form id="quizForm">
+				<div id="questionsContainer"></div>
+				<button type="submit" class="btn btn-primary mt-3">
+					Kvíz küldése
+				</button>
+			</form>
+			<div id="errorMessage" class="time-error"></div>
+			<script>
+				let interval;
+
+				function startTimer() {
+					const totalTime = 299;
+					let timeLeft = totalTime;
+
+					interval = setInterval(() => {
+						const minutes = Math.floor(timeLeft / 60);
+						const seconds = timeLeft % 60;
+						$("#timer").text(
+							`Hátralévő idő: ${minutes}:${seconds
+								.toString()
+								.padStart(2, "0")}`
+						);
+						timeLeft--;
+
+						if (timeLeft < 0) {
+							clearInterval(interval);
+							$("#quizForm").trigger("submit");
+						}
+					}, 1000);
+				}
+
+				$(document).ready(function () {
+					startTimer();
+
+					$.getJSON("/Quiz/questions", function (data) {
+						let html = "";
+
+						data.forEach((q, i) => {
+							html += `<div class="question-block mb-4">
+					<p><strong>K${i + 1}:</strong> ${q.questionText}</p>`;
+
+							if (q.image) {
+								html += `<img src="${q.image}" alt="Kép" class="img-fluid mb-3"/>`;
+							}
+
+							q.answers.forEach((a) => {
+								html += `<label class="d-block">
+						<input type="radio" name="q${q.questionId}" value="${a.answerId}" />
+						${a.answerText}
+					</label>`;
+							});
+
+							html += "</div><hr/>";
+						});
+
+						$("#questionsContainer").html(html);
+					});
+
+					$("#quizForm").on("submit", function (e) {
+						e.preventDefault();
+
+						const answers = [];
+
+						$("#questionsContainer .question-block").each(
+							function () {
+								const questionId = $(this)
+									.find("input[type=radio]")
+									.attr("name")
+									.substring(1);
+								const selected = $(this)
+									.find("input[type=radio]:checked")
+									.val();
+
+								if (selected) {
+									answers.push({
+										questionId: parseInt(questionId),
+										answerId: parseInt(selected),
+									});
+								}
+							}
+						);
+
+						if (answers.length < 10) {
+							$("#errorMessage").text(
+								"Kérlek válaszolj meg minden kérdést!"
+							);
+							return;
+						}
+
+						$("#errorMessage").text("");
+
+						$.ajax({
+							url: "/Quiz/submit",
+							type: "POST",
+							contentType: "application/json",
+							data: JSON.stringify(answers),
+							success: function (result) {
+								$("#quizForm").html(
+									`<h2>Pontok: ${result.score} / ${result.total}</h2>`
+								);
+							},
+							error: function () {
+								alert("Hiba. Próbáld újra.");
+							},
+						});
+					});
+				});
+			</script>
+		</div>
+	</body>
+	<footer>
+		<img src="img/footerbg.jpg" alt="Footer Decoration" />
+	</footer>
+</html>
