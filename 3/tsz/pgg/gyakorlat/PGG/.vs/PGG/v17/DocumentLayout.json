@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Bence\\sje\\3\\tsz\\pgg\\gyakorlat\\PGG\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{08A80FCC-78AA-4937-BA87-B480A0C9E7A8}|PGG\\PGG.csproj|c:\\bence\\sje\\3\\tsz\\pgg\\gyakorlat\\pgg\\pgg\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08A80FCC-78AA-4937-BA87-B480A0C9E7A8}|PGG\\PGG.csproj|solutionrelative:pgg\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08A80FCC-78AA-4937-BA87-B480A0C9E7A8}|PGG\\PGG.csproj|C:\\Bence\\sje\\3\\tsz\\pgg\\gyakorlat\\PGG\\pgg\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{08A80FCC-78AA-4937-BA87-B480A0C9E7A8}|PGG\\PGG.csproj|solutionrelative:pgg\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Bence\\sje\\3\\tsz\\pgg\\gyakorlat\\PGG\\PGG\\Form1.cs",
+              "RelativeDocumentMoniker": "PGG\\Form1.cs",
+              "ToolTip": "C:\\Bence\\sje\\3\\tsz\\pgg\\gyakorlat\\PGG\\PGG\\Form1.cs",
+              "RelativeToolTip": "PGG\\Form1.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAswGMAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T14:18:44.66Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Bence\\sje\\3\\tsz\\pgg\\gyakorlat\\PGG\\PGG\\Form1.cs",
+              "RelativeDocumentMoniker": "PGG\\Form1.cs",
+              "ToolTip": "C:\\Bence\\sje\\3\\tsz\\pgg\\gyakorlat\\PGG\\PGG\\Form1.cs [Design]",
+              "RelativeToolTip": "PGG\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T14:16:58.786Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
