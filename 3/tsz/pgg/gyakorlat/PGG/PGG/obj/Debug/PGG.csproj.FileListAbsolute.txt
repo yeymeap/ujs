@@ -20,3 +20,14 @@ C:\Bence\sje\3\tsz\pgg\gyakorlat\PGG\PGG\obj\Debug\PGG.csproj.GenerateResource.c
 C:\Bence\sje\3\tsz\pgg\gyakorlat\PGG\PGG\obj\Debug\PGG.csproj.CoreCompileInputs.cache
 C:\Bence\sje\3\tsz\pgg\gyakorlat\PGG\PGG\obj\Debug\PGG.exe
 C:\Bence\sje\3\tsz\pgg\gyakorlat\PGG\PGG\obj\Debug\PGG.pdb
+C:\Bence\ujs\3\tsz\pgg\gyakorlat\PGG\PGG\bin\Debug\PGG.exe.config
+C:\Bence\ujs\3\tsz\pgg\gyakorlat\PGG\PGG\bin\Debug\PGG.exe
+C:\Bence\ujs\3\tsz\pgg\gyakorlat\PGG\PGG\bin\Debug\PGG.pdb
+C:\Bence\ujs\3\tsz\pgg\gyakorlat\PGG\PGG\obj\Debug\PGG.csproj.AssemblyReference.cache
+C:\Bence\ujs\3\tsz\pgg\gyakorlat\PGG\PGG\obj\Debug\PGG.exe.config
+C:\Bence\ujs\3\tsz\pgg\gyakorlat\PGG\PGG\obj\Debug\PGG.Form1.resources
+C:\Bence\ujs\3\tsz\pgg\gyakorlat\PGG\PGG\obj\Debug\PGG.Properties.Resources.resources
+C:\Bence\ujs\3\tsz\pgg\gyakorlat\PGG\PGG\obj\Debug\PGG.csproj.GenerateResource.cache
+C:\Bence\ujs\3\tsz\pgg\gyakorlat\PGG\PGG\obj\Debug\PGG.csproj.CoreCompileInputs.cache
+C:\Bence\ujs\3\tsz\pgg\gyakorlat\PGG\PGG\obj\Debug\PGG.exe
+C:\Bence\ujs\3\tsz\pgg\gyakorlat\PGG\PGG\obj\Debug\PGG.pdb
