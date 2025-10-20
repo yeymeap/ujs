@@ -95,6 +95,17 @@ namespace PGG
             }
             pictureBox2.Image = AdjustContrast((Bitmap)pictureBox1.Image, contrast);
         }
+        private void buttonSobel_Click(object sender, EventArgs e)
+        {
+            Button button = sender as Button;
+            if (button == null) return;
+            if (pictureBox1.Image == null)
+            {
+                MessageBox.Show("No image loaded.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            pictureBox2.Image = ApplySobel((Bitmap)pictureBox1.Image);
+        }
         private void buttonCopy_Click(object sender, EventArgs e)
         {
             Button button = sender as Button;
@@ -360,6 +371,64 @@ namespace PGG
                 }
             }
             return adjusted;
+        }
+        private Bitmap ApplyConvolution(Bitmap original, int[,]kernel)
+        {
+            Bitmap result = new Bitmap(original.Width, original.Height);
+
+            int kCenter = kernel.GetLength(0) / 2;
+            for (int y = kCenter; y < original.Height - kCenter; y++)
+            {
+                for (int x = kCenter; x < original.Width - kCenter; x++)
+                {
+                    int sum = 0;
+
+                    for (int ky = -kCenter; ky <= kCenter; ky++)
+                    {
+                        for (int kx = -kCenter; kx <= kCenter; kx++)
+                        {
+                            Color c = original.GetPixel(x + kx, y + ky);
+                            int gray = (c.R + c.G + c.B) / 3;
+                            sum += gray * kernel[ky + kCenter, kx + kCenter];
+                        }
+                    }
+
+                    sum = Math.Min(Math.Max(sum, 0), 255);
+                    result.SetPixel(x, y, Color.FromArgb(sum, sum, sum));
+                }
+            }
+            return result;
+        }
+        private Bitmap ApplySobel(Bitmap original)
+        {
+            int[,] sobelX = new int[,]
+            {
+                { -1, 0, 1 },
+                { -2, 0, 2 },
+                { -1, 0, 1 }
+            };
+            int[,] sobelY = new int[,]
+            {
+                { -1, -2, -1 },
+                { 0, 0, 0 },
+                { 1, 2, 1 }
+            };
+            Bitmap gx = ApplyConvolution(original, sobelX);
+            Bitmap gy = ApplyConvolution(original, sobelY);
+
+            Bitmap result = new Bitmap(original.Width, original.Height);
+
+            for (int y = 0; y < original.Height; y++)
+            {
+                for (int x = 0; x < original.Width; x++)
+                {
+                    int px = gx.GetPixel(x, y).R;
+                    int py = gy.GetPixel(x, y).R;
+                    int magnitude = (int)Math.Min(Math.Sqrt(px * px + py * py), 255);
+                    result.SetPixel(x, y, Color.FromArgb(magnitude, magnitude, magnitude));
+                }
+            }
+            return result;
         }
     }
 }
