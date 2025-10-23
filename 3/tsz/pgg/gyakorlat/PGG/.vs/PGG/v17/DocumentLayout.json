@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Bence\\ujs\\3\\tsz\\pgg\\gyakorlat\\PGG\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{08A80FCC-78AA-4937-BA87-B480A0C9E7A8}|PGG\\PGG.csproj|C:\\Bence\\ujs\\3\\tsz\\pgg\\gyakorlat\\PGG\\pgg\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{08A80FCC-78AA-4937-BA87-B480A0C9E7A8}|PGG\\PGG.csproj|c:\\bence\\ujs\\3\\tsz\\pgg\\gyakorlat\\pgg\\pgg\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{08A80FCC-78AA-4937-BA87-B480A0C9E7A8}|PGG\\PGG.csproj|solutionrelative:pgg\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -11,7 +11,7 @@
       "RelativeMoniker": "D:0:0:{08A80FCC-78AA-4937-BA87-B480A0C9E7A8}|PGG\\PGG.csproj|solutionrelative:pgg\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08A80FCC-78AA-4937-BA87-B480A0C9E7A8}|PGG\\PGG.csproj|c:\\bence\\ujs\\3\\tsz\\pgg\\gyakorlat\\pgg\\pgg\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{08A80FCC-78AA-4937-BA87-B480A0C9E7A8}|PGG\\PGG.csproj|C:\\Bence\\ujs\\3\\tsz\\pgg\\gyakorlat\\PGG\\pgg\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{08A80FCC-78AA-4937-BA87-B480A0C9E7A8}|PGG\\PGG.csproj|solutionrelative:pgg\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -36,7 +36,7 @@
               "RelativeDocumentMoniker": "PGG\\Form1.cs",
               "ToolTip": "C:\\Bence\\ujs\\3\\tsz\\pgg\\gyakorlat\\PGG\\PGG\\Form1.cs",
               "RelativeToolTip": "PGG\\Form1.cs",
-              "ViewState": "AgIAAHYAAAAAAAAAAAAqwK8BAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAMAAAAAAAAAAAAAiwOwAAABXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-18T14:18:44.66Z",
               "EditorCaption": ""
@@ -50,8 +50,7 @@
               "ToolTip": "C:\\Bence\\ujs\\3\\tsz\\pgg\\gyakorlat\\PGG\\PGG\\Form1.cs [Design]",
               "RelativeToolTip": "PGG\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-18T14:16:58.786Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-09-18T14:16:58.786Z"
             },
             {
               "$type": "Document",
@@ -63,8 +62,7 @@
               "RelativeToolTip": "PGG\\Form1.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T12:01:45.001Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-13T12:01:45.001Z"
             },
             {
               "$type": "Document",
@@ -76,8 +74,7 @@
               "RelativeToolTip": "PGG\\Program.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAArwA8AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T10:29:23.285Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-13T10:29:23.285Z"
             }
           ]
         }
