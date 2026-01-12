@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Game_of_Life.exe" size="147424">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Game_of_Life.exe" size="145376">
       <assemblyIdentity name="Game_of_Life" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ISq4nDpn3DQ4JK74hHIa5ZTHtEOgbOLlhkmUx2zwvUg=</dsig:DigestValue>
+        <dsig:DigestValue>ER05EZCCpV7vbcitbsAQKbmsm/4saLvwxMVsK/7dyUI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

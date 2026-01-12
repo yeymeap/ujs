@@ -1,0 +1,56 @@
+%%writefile rendez.cu
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+#define N 32
+
+__device__ int d_arr[N];
+
+__global__ void simpleSortKernel() {
+    int tid = threadIdx.x;
+
+
+    for (int k = 0; k < N; k++) {
+        int i = tid;
+        int j = i + 1;
+
+        if (j < N && d_arr[i] > d_arr[j]) {
+            int temp = d_arr[i];
+            d_arr[i] = d_arr[j];
+            d_arr[j] = temp;
+        }
+
+        __syncthreads();
+    }
+}
+
+int main() {
+    srand(time(NULL));
+
+    int h_arr[N];
+
+
+    for (int i = 0; i < N; i++) {
+        h_arr[i] = rand() % 100;
+    }
+
+    printf("eredeti tomb:\n");
+    for (int i = 0; i < N; i++) printf("%d ", h_arr[i]);
+    printf("\n");
+
+
+    cudaMemcpyToSymbol(d_arr, h_arr, N * sizeof(int));
+
+    simpleSortKernel<<<1, N>>>();
+    cudaDeviceSynchronize();
+
+
+    cudaMemcpyFromSymbol(h_arr, d_arr, N * sizeof(int));
+
+    printf("rendezett tomb:\n");
+    for (int i = 0; i < N; i++) printf("%d ", h_arr[i]);
+    printf("\n");
+
+    return 0;
+}

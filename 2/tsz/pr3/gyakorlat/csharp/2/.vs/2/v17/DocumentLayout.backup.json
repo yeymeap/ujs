@@ -1,10 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\",
+  "WorkspaceRootPath": "C:\\Bence\\ujs\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F6E04DF0-2574-4395-8B00-C8B14A5BC6CB}|Game_of_Life\\Cellular_Automaton.csproj|c:\\bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\game_of_life\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{F6E04DF0-2574-4395-8B00-C8B14A5BC6CB}|Game_of_Life\\Cellular_Automaton.csproj|c:\\bence\\ujs\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\game_of_life\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6E04DF0-2574-4395-8B00-C8B14A5BC6CB}|Game_of_Life\\Cellular_Automaton.csproj|solutionrelative:game_of_life\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6E04DF0-2574-4395-8B00-C8B14A5BC6CB}|Game_of_Life\\Cellular_Automaton.csproj|c:\\bence\\ujs\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\game_of_life\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{F6E04DF0-2574-4395-8B00-C8B14A5BC6CB}|Game_of_Life\\Cellular_Automaton.csproj|solutionrelative:game_of_life\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6E04DF0-2574-4395-8B00-C8B14A5BC6CB}|Game_of_Life\\Cellular_Automaton.csproj|c:\\bence\\ujs\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\game_of_life\\cells.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6E04DF0-2574-4395-8B00-C8B14A5BC6CB}|Game_of_Life\\Cellular_Automaton.csproj|solutionrelative:game_of_life\\cells.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,10 +27,36 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\Game_of_Life\\Form1.cs",
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Bence\\ujs\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\Game_of_Life\\Form1.cs",
               "RelativeDocumentMoniker": "Game_of_Life\\Form1.cs",
-              "ToolTip": "C:\\Bence\\sje\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\Game_of_Life\\Form1.cs [Design]",
+              "ToolTip": "C:\\Bence\\ujs\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\Game_of_Life\\Form1.cs",
+              "RelativeToolTip": "Game_of_Life\\Form1.cs",
+              "ViewState": "AgIAANICAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-26T19:28:21.04Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Cells.cs",
+              "DocumentMoniker": "C:\\Bence\\ujs\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\Game_of_Life\\Cells.cs",
+              "RelativeDocumentMoniker": "Game_of_Life\\Cells.cs",
+              "ToolTip": "C:\\Bence\\ujs\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\Game_of_Life\\Cells.cs",
+              "RelativeToolTip": "Game_of_Life\\Cells.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-26T19:27:50.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Bence\\ujs\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\Game_of_Life\\Form1.cs",
+              "RelativeDocumentMoniker": "Game_of_Life\\Form1.cs",
+              "ToolTip": "C:\\Bence\\ujs\\2\\tsz\\pr3\\gyakorlat\\csharp\\2\\Game_of_Life\\Form1.cs [Design]",
               "RelativeToolTip": "Game_of_Life\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-22T14:54:44.593Z",
