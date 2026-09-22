@@ -1,0 +1,19 @@
+x értéke: 174
+
+Y értéke: 13.190905958272919170936807732722
+
+y értéke:13.19
+
+az abszolút hiba: 
+
+relatív hiba:
+
+-------------------------------
+
+Y^4 értéke:
+
+y^4 értéke:
+
+az abszolút hiba: 
+
+relatív hiba:
