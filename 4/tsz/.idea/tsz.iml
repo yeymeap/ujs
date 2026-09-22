@@ -3,8 +3,9 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/.venv" />
+      <excludeFolder url="file://$MODULE_DIR$/kry/.venv" />
     </content>
-    <orderEntry type="jdk" jdkName="C:\Bence\ujs\4\tsz\kry\.venv" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="C:\Bence\ujs\4\tsz\.venv" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="PackageRequirementsSettings" />
