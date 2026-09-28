@@ -17,8 +17,8 @@ def caesar_cipher(text, shift, mode="encrypt"):
 
     return "".join(result)
 
-text_value = input("Text to Encrypt or Decrypt : ")
-mode_value = input("Encrypt or Decrypt : ")
+text_value = input("Text to Encrypt or Decrypt: ")
+mode_value = input("Encrypt or Decrypt: ")
 shift_value = int(input("Shift: "))
 
 message = caesar_cipher(text_value, shift_value, mode_value)
