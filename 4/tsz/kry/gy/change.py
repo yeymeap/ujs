@@ -26,6 +26,17 @@ print(f"Frequency map:\n{frequency_map}")
 decrypted_text = ""
 
 for char in encrypted_text:
-    decrypted_text += frequency_map.get(char.lower(), char)
+    if char.isalpha():
+        decrypted_char = frequency_map.get(char.lower(), char)
 
-print(decrypted_text)
+        if char.isupper():
+            decrypted_char = decrypted_char.upper()
+
+        decrypted_text += decrypted_char
+    else:
+        decrypted_text += char
+
+with open("decrypted.txt", "w") as f:
+    f.write(decrypted_text)
+
+print(f"Decrypted text:\n{decrypted_text}")

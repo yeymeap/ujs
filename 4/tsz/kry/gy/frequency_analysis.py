@@ -1,10 +1,6 @@
-
-with open("text.txt", "r") as f:
-    file_text = f.read()
-
-frequency = {}
-
 def frequency_analysis(text):
+    frequency = {}
+
     for letter in "abcdefghijklmnopqrstuvwxyz":
         frequency[letter] = 0
 
@@ -16,6 +12,10 @@ def frequency_analysis(text):
         if frequency[char] > 0:
             print(f"{char}: {frequency[char]}")
 
-    sorted_frequency = sorted(frequency.items(), key=lambda item: item[1], reverse=True)
+    sorted_frequency = sorted(
+        ((char, count) for char, count in frequency.items() if count > 0),
+        key=lambda item: item[1],
+        reverse=True
+    )
 
     return sorted_frequency
